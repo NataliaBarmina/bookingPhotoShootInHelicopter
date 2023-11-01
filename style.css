@@ -1,0 +1,147 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+
+.mainPage {
+    color: blueviolet;
+    width: 1920px;
+    height: 5310px;
+    background-color: beige;
+
+
+}
+
+.headerMainPage {
+    width: 1920px;
+    height: 100px;
+    flex-shrink: 0;
+    border: 1px solid black;
+    display: block;
+    padding-left: 390px;
+    padding-top: 39px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.logo {
+    width: 129px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+.phone {
+    padding-left: 36px;
+    color: #B3B3B3;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.numberPhone {
+    color: #37373F;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 5px;
+}
+
+.mainHelicoptersPictures {
+    width: 1916px;
+    height: 840px;
+    flex-shrink: 0;
+    /* background-image: url('file:///home/natalia/Наталья 24.06.22/УЧЕБА/bookingPhotoShootInHelicopter/helimain.pdf'); */
+    border: 1px solid black;
+}
