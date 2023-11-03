@@ -91,31 +91,23 @@ h6 {
 /*--------------------*/
 
 .mainPage {
-    color: blueviolet;
     width: 1920px;
     height: 5310px;
-    background-color: beige;
-
-
+    background-color: rgb(238, 214, 179);
 }
 
 .headerMainPage {
     width: 1920px;
     height: 100px;
-    flex-shrink: 0;
-    border: 1px solid black;
-    display: block;
     padding-left: 390px;
     padding-top: 39px;
     display: flex;
     flex-direction: row;
-
 }
 
 .logo {
     width: 129px;
     height: 23px;
-    flex-shrink: 0;
 }
 
 .phone {
@@ -139,9 +131,103 @@ h6 {
 }
 
 .mainHelicoptersPictures {
-    width: 1916px;
+    width: 1920px;
     height: 840px;
+    background-image: url('./images/helimain\ .jpg');
+    margin-left: 0px;
+    padding-left: 392px;
+    padding-top: 286px;
+}
+
+.headerBooking {
+    width: 887px;
+    height: 89px;
     flex-shrink: 0;
-    /* background-image: url('file:///home/natalia/Наталья 24.06.22/УЧЕБА/bookingPhotoShootInHelicopter/helimain.pdf'); */
-    border: 1px solid black;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.wordPhotoshoot {
+    color: #FC9B09;
+}
+
+.sticker {
+    margin-left: -5px;
+    padding-top: 29px;
+    position: relative;
+}
+
+.textInsideSticker {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+}
+
+.wordPrice {
+    width: 121px;
+    height: 19px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 151.156%;
+    padding-left: 32px;
+    padding-top: 11px;
+}
+
+.cost {
+    width: 113px;
+    height: 36px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 151.156%;
+    padding-left: 32px;
+    padding-top: 10px;
+}
+
+.row_2 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    margin-left: 25px;
+    margin-top: 21px;
+    border: 1px solid white;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.buttonBooking {
+    margin-top: 12px;
+    width: 304px;
+    height: 68px;
+    border-radius: 3px;
+    border: 3px solid #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textButton {
+    /* width: 230px;
+    height: 21px; */
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
 }
