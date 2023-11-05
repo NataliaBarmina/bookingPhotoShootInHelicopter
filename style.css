@@ -91,128 +91,113 @@ h6 {
 /*--------------------*/
 
 .mainPage {
-    width: 1920px;
-    height: 5310px;
+    width: 100vw;
+    max-width: 1920px;
     background-color: rgb(238, 214, 179);
 }
 
-.headerMainPage {
-    width: 1920px;
-    height: 100px;
-    padding-left: 390px;
-    padding-top: 39px;
+.header {
+    height: 6.25rem;
+    padding-left: 24.38rem;
+    padding-top: 2.44rem;
     display: flex;
     flex-direction: row;
-}
-
-.logo {
-    width: 129px;
-    height: 23px;
-}
-
-.phone {
-    padding-left: 36px;
-    color: #B3B3B3;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.logo {
+    width: 8.0625rem;
+    height: 1.4375rem;
+}
+
+.phone {
+    padding-left: 2.25rem;
+    color: #B3B3B3;
 }
 
 .numberPhone {
     color: #37373F;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-left: 5px;
+    padding-left: 0.19rem;
 }
 
 .mainHelicoptersPictures {
-    width: 1920px;
-    height: 840px;
-    background-image: url('./images/helimain\ .jpg');
-    margin-left: 0px;
-    padding-left: 392px;
-    padding-top: 286px;
-}
-
-.headerBooking {
-    width: 887px;
-    height: 89px;
-    flex-shrink: 0;
-    color: #FFF;
+    width: 119.75rem;
+    height: 52.5rem;
+    background-image: url('./images/helimain.png');
+    background-size: cover;
+    margin-left: 0rem;
+    padding-left: 24.5rem;
+    padding-top: 17.88rem;
     font-family: Montserrat;
-    font-size: 40px;
+    color: #FFF;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
 }
 
-.wordPhotoshoot {
+.headerBooking {
+    width: 55.4375rem;
+    height: 5.5625rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    word-spacing: 0.5rem;
+}
+
+.colorFC9B09 {
     color: #FC9B09;
 }
 
-.sticker {
-    margin-left: -5px;
-    padding-top: 29px;
-    position: relative;
-}
-
 .textInsideSticker {
-    position: absolute;
-    z-index: 100;
+    width: 14rem;
+    height: 6rem;
+    margin-top: 1.81rem;
+    margin-left: -0.31rem;
+    background-image: url(./images/bubble.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: row;
 }
 
 .wordPrice {
-    width: 121px;
-    height: 19px;
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 151.156%;
-    padding-left: 32px;
-    padding-top: 11px;
+    margin-left: 1.37rem;
+    padding-top: 0.5rem;
 }
 
 .cost {
-    width: 113px;
-    height: 36px;
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 35px;
-    font-style: normal;
+    font-size: 2.1875rem;
     font-weight: 800;
-    line-height: 151.156%;
-    padding-left: 32px;
-    padding-top: 10px;
+    margin-left: 1.37rem;
 }
 
-.row_2 {
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 35px;
-    font-style: normal;
+.percent {
+    margin-left: 1.3rem;
+    margin-top: 0.8rem;
+    width: 3rem;
+}
+
+.circle {
+    font-size: 2.1875rem;
     font-weight: 800;
-    margin-left: 25px;
-    margin-top: 21px;
     border: 1px solid white;
-    padding: 3px;
     border-radius: 50%;
+    padding: 0.18rem;
+    display: flex;
+    justify-content: center;
 }
 
 .buttonBooking {
-    margin-top: 12px;
-    width: 304px;
-    height: 68px;
-    border-radius: 3px;
-    border: 3px solid #FFF;
+    margin-top: 0.75rem;
+    width: 19rem;
+    height: 4.25rem;
+    border-radius: 0.18rem;
+    border: 0.18rem solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
     background: transparent;
     display: flex;
@@ -221,13 +206,8 @@ h6 {
 }
 
 .textButton {
-    /* width: 230px;
-    height: 21px; */
     color: #FFF;
     text-align: center;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
+    font-size: 1.125rem;
     font-weight: 900;
-    line-height: normal;
 }
