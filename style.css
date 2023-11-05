@@ -91,57 +91,123 @@ h6 {
 /*--------------------*/
 
 .mainPage {
-    color: blueviolet;
-    width: 1920px;
-    height: 5310px;
-    background-color: beige;
-
-
+    width: 100vw;
+    max-width: 1920px;
+    background-color: rgb(238, 214, 179);
 }
 
-.headerMainPage {
-    width: 1920px;
-    height: 100px;
-    flex-shrink: 0;
-    border: 1px solid black;
-    display: block;
-    padding-left: 390px;
-    padding-top: 39px;
+.header {
+    height: 6.25rem;
+    padding-left: 24.38rem;
+    padding-top: 2.44rem;
     display: flex;
     flex-direction: row;
-
-}
-
-.logo {
-    width: 129px;
-    height: 23px;
-    flex-shrink: 0;
-}
-
-.phone {
-    padding-left: 36px;
-    color: #B3B3B3;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.logo {
+    width: 8.0625rem;
+    height: 1.4375rem;
+}
+
+.phone {
+    padding-left: 2.25rem;
+    color: #B3B3B3;
 }
 
 .numberPhone {
     color: #37373F;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-left: 5px;
+    padding-left: 0.19rem;
 }
 
 .mainHelicoptersPictures {
-    width: 1916px;
-    height: 840px;
-    flex-shrink: 0;
-    /* background-image: url('file:///home/natalia/Наталья 24.06.22/УЧЕБА/bookingPhotoShootInHelicopter/helimain.pdf'); */
-    border: 1px solid black;
+    width: 119.75rem;
+    height: 52.5rem;
+    background-image: url('./images/helimain.png');
+    background-size: cover;
+    margin-left: 0rem;
+    padding-left: 24.5rem;
+    padding-top: 17.88rem;
+    font-family: Montserrat;
+    color: #FFF;
+    font-style: normal;
+    line-height: normal;
+}
+
+.headerBooking {
+    width: 55.4375rem;
+    height: 5.5625rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    word-spacing: 0.5rem;
+}
+
+.text-accent {
+    color: #FC9B09;
+}
+
+.textInsideSticker {
+    width: 14rem;
+    height: 6rem;
+    margin-top: 1.81rem;
+    margin-left: -0.31rem;
+    background-image: url(./images/bubble.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+
+.wordPrice {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-left: 1.37rem;
+    padding-top: 0.5rem;
+}
+
+.cost {
+    font-size: 2.1875rem;
+    font-weight: 800;
+    margin-left: 1.37rem;
+}
+
+.percent {
+    margin-left: 1.3rem;
+    margin-top: 0.8rem;
+    width: 3rem;
+}
+
+.circle {
+    font-size: 2.1875rem;
+    font-weight: 800;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0.18rem;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonBooking {
+    margin-top: 0.75rem;
+    width: 19rem;
+    height: 4.25rem;
+    border-radius: 0.18rem;
+    border: 0.18rem solid #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textButton {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 900;
 }
