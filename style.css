@@ -93,25 +93,21 @@ h6 {
 .mainPage {
     width: 100vw;
     max-width: 1920px;
-    background-color: rgb(238, 214, 179);
 }
 
 .header {
     height: 6.25rem;
-    padding-left: 24.38rem;
-    padding-top: 2.44rem;
+    padding-left: 24.25rem;
+    padding-top: 2.45rem;
     display: flex;
     flex-direction: row;
     font-family: Montserrat;
-    font-size: 0.875rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 .logo {
-    width: 8.0625rem;
-    height: 1.4375rem;
+    width: 8rem;
+    height: 1.45rem;
 }
 
 .phone {
@@ -121,26 +117,23 @@ h6 {
 
 .numberPhone {
     color: #37373F;
-    padding-left: 0.19rem;
+    padding-left: 0.2rem;
 }
 
 .mainHelicoptersPictures {
-    width: 119.75rem;
-    height: 52.5rem;
+    height: 52rem;
     background-image: url('./images/helimain.png');
     background-size: cover;
     margin-left: 0rem;
     padding-left: 24.5rem;
-    padding-top: 17.88rem;
+    padding-top: 17rem;
     font-family: Montserrat;
     color: #FFF;
-    font-style: normal;
-    line-height: normal;
 }
 
 .headerBooking {
-    width: 55.4375rem;
-    height: 5.5625rem;
+    width: 55.5rem;
+    height: 5.5rem;
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -154,8 +147,8 @@ h6 {
 .textInsideSticker {
     width: 14rem;
     height: 6rem;
-    margin-top: 1.81rem;
-    margin-left: -0.31rem;
+    margin-top: 1.8rem;
+    margin-left: -0.3rem;
     background-image: url(./images/bubble.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,24 +159,25 @@ h6 {
 .wordPrice {
     font-size: 1.25rem;
     font-weight: 400;
-    margin-left: 1.37rem;
-    padding-top: 0.5rem;
+    margin-left: 1.4rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.2rem;
 }
 
 .cost {
-    font-size: 2.1875rem;
+    font-size: 2.2rem;
     font-weight: 800;
-    margin-left: 1.37rem;
+    margin-left: 1.4rem;
 }
 
 .percent {
     margin-left: 1.3rem;
-    margin-top: 0.8rem;
-    width: 3rem;
+    margin-top: 1rem;
+    width: 2.7rem;
 }
 
 .circle {
-    font-size: 2.1875rem;
+    font-size: 2.2rem;
     font-weight: 800;
     border: 1px solid white;
     border-radius: 50%;
@@ -196,8 +190,8 @@ h6 {
     margin-top: 0.75rem;
     width: 19rem;
     height: 4.25rem;
-    border-radius: 0.18rem;
-    border: 0.18rem solid #FFF;
+    border-radius: 0.2rem;
+    border: 0.2rem solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
     background: transparent;
     display: flex;
@@ -210,4 +204,105 @@ h6 {
     text-align: center;
     font-size: 1.125rem;
     font-weight: 900;
+}
+
+.leadBlock {
+    display: flex;
+    flex-direction: row;
+    padding-top: 4.4rem;
+    padding-left: 24rem;
+}
+
+.leadBlockRow_1 {
+    width: 35rem;
+}
+
+.headerLeadBlock {
+    height: 2.8rem;
+    color: #37373F;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.textLeadBlock {
+    height: 4.6rem;
+    color: #37373F;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-top: 1.1rem;
+    word-spacing: 0.5rem;
+}
+
+.textIcon {
+    color: #37373F;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.iconCircle,
+.iconCamera,
+.iconMap,
+.iconSpeechBubble {
+    padding-top: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.iconCircle::before {
+    content: url(./images/icons/circle.png);
+    padding-right: 0.5rem;
+}
+
+.iconCamera::before {
+    content: url(./images/icons/camera.png);
+    padding-right: 0.5rem;
+}
+
+.iconMap::before {
+    content: url(./images/icons/map.png);
+    padding-right: 0.5rem;
+}
+
+.iconSpeechBubble::before {
+    content: url(./images/icons/speechBubble.png);
+    padding-right: 0.5rem;
+}
+
+.line {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid grey;
+}
+
+.iconCup {
+    display: flex;
+    align-items: center;
+    color: #37373F;
+}
+
+.iconCup::before {
+    content: url(./images/icons/cup.png);
+    padding-right: 0.5rem;
+}
+
+.iconMap::after {
+    content: url(./images/icons/stars.png);
+    padding-left: 0.9rem;
+}
+
+.textIconCup {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.textIconCup span {
+    font-weight: 600;
+}
+
+.leadBlockRow_2 {
+    margin-left: 5rem;
+    width: 35rem;
+    height: 24rem;
+    border-radius: 0.25rem;
+    background: url(./images/photoKiss.jpg), lightgray 50% / cover no-repeat;
 }
