@@ -305,4 +305,11 @@ h6 {
     height: 24rem;
     border-radius: 0.25rem;
     background: url(./images/photoKiss.jpg), lightgray 50% / cover no-repeat;
+    background-size: cover;
+}
+
+.vector {
+    padding-top: 20rem;
+    padding-left: 31rem;
+
 }
