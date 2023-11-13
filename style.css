@@ -90,42 +90,82 @@ h6 {
 
 /*--------------------*/
 
+/* ШРИФТЫ */
+.text-11 {
+    line-height: 1.1rem;
+    padding-top: 1rem;
+}
+
+.text-500 {
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.text-13 {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+}
+
+.text-11-500-blue {
+    color: #5286EC;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.header-15-500 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header-13-500 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+/* < !-- главная страница --> */
+
 .mainPage {
     width: 100vw;
     max-width: 1920px;
     font-family: Montserrat;
+    color: #37373F;
 }
 
-.header {
-    height: 6.25rem;
-    padding-left: 24.25rem;
+/* < !-- логотип и телефон --> */
+
+.mainPageheader {
+    height: 5.5rem;
+    padding-left: 20rem;
     padding-top: 2.45rem;
     display: flex;
     flex-direction: row;
-    font-weight: 400;
 }
 
 .logo {
-    width: 8rem;
-    height: 1.45rem;
+    width: 7rem;
+    height: 1.2rem;
 }
 
 .phone {
     padding-left: 2.25rem;
     color: #B3B3B3;
+    font-size: 0.8rem;
 }
 
 .numberPhone {
-    color: #37373F;
     padding-left: 0.2rem;
+    font-size: 0.8rem;
 }
+
+/* <!-- фото вертолета --> */
 
 .mainHelicoptersPictures {
     background-image: url(./images/helimain.png);
-    background-size: 100%;
-    padding-left: 15rem;
+    background-size: cover;
+    height: 42.5rem;
+    padding-left: 20rem;
     padding-top: 13rem;
-    padding-bottom: 7rem;
     color: #FFF;
 }
 
@@ -154,7 +194,6 @@ h6 {
 
 .wordPrice {
     font-size: 1.25rem;
-    font-weight: 400;
     margin-left: 1.4rem;
     padding-top: 0.6rem;
     padding-bottom: 0.2rem;
@@ -202,36 +241,26 @@ h6 {
     font-weight: 900;
 }
 
+/* leadBlock */
+
 .leadBlock {
     display: flex;
     flex-direction: row;
     padding-top: 4.4rem;
-    padding-left: 15rem;
+    padding-left: 20rem;
 }
 
 .leadBlockRow_1 {
-    width: 35rem;
+    width: 28rem;
 }
 
 .headerLeadBlock {
-    height: 2.8rem;
-    color: #37373F;
     font-size: 2.5rem;
     font-weight: 500;
-}
-
-.textLeadBlock {
-    height: 4.6rem;
-    color: #37373F;
-    font-size: 1.3rem;
-    font-weight: 400;
-    padding-top: 1.1rem;
-    word-spacing: 0.5rem;
+    margin-bottom: 1.1rem;
 }
 
 .textIcon {
-    color: #37373F;
-    font-size: 1.1rem;
     font-weight: 500;
 }
 
@@ -239,9 +268,10 @@ h6 {
 .iconCamera,
 .iconMap,
 .iconSpeechBubble {
-    padding-top: 1.3rem;
+    padding-top: 0.6rem;
     display: flex;
     align-items: center;
+
 }
 
 .iconCircle::before {
@@ -265,15 +295,14 @@ h6 {
 }
 
 .line {
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
-    border: 1px solid grey;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(227, 225, 225);
 }
 
 .iconCup {
     display: flex;
     align-items: center;
-    color: #37373F;
 }
 
 .iconCup::before {
@@ -281,50 +310,44 @@ h6 {
     padding-right: 0.5rem;
 }
 
-.iconMap::after {
+.iconCup::after {
     content: url(./images/icons/stars.png);
     padding-left: 0.9rem;
 }
 
-.textIconCup {
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-
-.textIconCup span {
+.text-13 span {
     font-weight: 600;
 }
 
 .leadBlockRow_2 {
     margin-left: 3rem;
-    width: 25rem;
-    height: 23rem;
+    width: 30rem;
+    height: 20rem;
     border-radius: 0.25rem;
     background-image: url(./images/photoKiss.jpg);
     background-size: cover;
+    display: flex;
+    align-items: end;
+    justify-content: end;
 }
 
 .vector {
-    padding-top: 20rem;
-    padding-left: 31rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
 }
+
+/* галерея фотографий */
 
 .galleryBlock {
-    padding-left: 15rem;
-    width: 79rem;
-}
-
-.headerGalleryBlock {
-    color: #37373F;
-    font-size: 1.25rem;
-    font-weight: 500;
+    padding-left: 20rem;
+    width: 90rem;
+    margin-top: 1.5rem;
 }
 
 .gallery {
-    margin-top: 2.3rem;
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .girl,
@@ -332,10 +355,10 @@ h6 {
 .photoKiss,
 .helicopterAndGirl {
     width: 15rem;
-    height: 11.6rem;
+    height: 9rem;
     background-size: cover;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
     border-radius: 0.25rem;
 }
 
@@ -361,19 +384,15 @@ h6 {
     padding-top: 1.8rem;
 }
 
-.textShowPhoto p {
-    color: #5286EC;
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
 .arrow {
     height: 1.3rem;
     display: flex;
     align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
+
+/* <!-- блок об авторе --> */
 
 .infrormationAboutPhotographer {
     display: flex;
@@ -381,23 +400,12 @@ h6 {
 }
 
 .textAboutPhotogpapher {
-    padding-left: 15rem;
-    width: 43rem;
+    padding-left: 20rem;
+    width: 48rem;
 }
 
-.headerAboutPhotogpapher {
-    color: #37373F;
-    font-size: 1.15rem;
-    font-weight: 500;
+.textAboutPhotogpapher .header-13-500 {
     padding-top: 2rem;
-}
-
-.text {
-    color: #37373F;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5rem;
-    padding-top: 1rem;
 }
 
 .readMore {
@@ -405,45 +413,45 @@ h6 {
     padding-top: 0.5rem;
 }
 
-.readMore p {
-    color: #5286EC;
-    font-size: 1rem;
-    font-weight: 500;
-    padding-right: 0.5rem;
-}
-
 .photoPhotographer {
     width: 18rem;
     text-align: center;
-    padding-left: 5rem;
-    margin-left: 5rem;
-}
-
-.name {
-    color: #37373F;
-    font-size: 1.125rem;
-    font-weight: 500;
+    margin-left: 10rem;
     padding-top: 2rem;
 }
 
-.wordPhotographer {
-    color: #37373F;
-    font-size: 0.875rem;
-    font-weight: 400;
-    padding-top: 1rem;
+.photoPhotographer .header-13-500 {
+    padding-top: 0.8rem;
+    padding-bottom: 0.4rem;
 }
 
-.showMoreInformation {
+.photoPhotographer .text-500 {
     color: #5286EC;
-    font-size: 0.875rem;
-    font-weight: 500;
-    padding-top: 1rem;
+    padding-top: 0.4rem;
 }
 
-.line_1 {
-    margin-left: 15rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
-    border: 1px solid grey;
-    width: 63rem;
+.container {
+    width: 8.6rem;
+    height: 8.6rem;
+    background-image: url(./images/photoPhotographer.png);
+    background-size: cover;
+    display: inline-block;
 }
+
+/* линия */
+.line_1 {
+    margin-left: 20rem;
+    margin-top: 1rem;
+    border: 1px solid rgb(227, 225, 225);
+    width: 61rem;
+}
+
+/* <!-- Доступная съемка в ближайшее время: --> */
+
+
+/* <!-- карта --> */
+
+/* <!-- отзывы --> */
+
+
+/* <!-- футер --> */
