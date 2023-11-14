@@ -92,20 +92,26 @@ h6 {
 
 /* ШРИФТЫ */
 .text-11 {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
     padding-top: 1.5rem;
-    font-weight: 100;
+
+}
+
+.textNormal {
+    font-family: Montserrat;
 }
 
 .text-500 {
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    font-family: Montserrat;
 }
 
 .text-13 {
-    font-size: 1.5rem;
-    line-height: 1.7rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-family: Montserrat;
 }
 
 .text-13-600 {
@@ -113,22 +119,30 @@ h6 {
     font-weight: 600;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    font-family: Montserrat;
+}
+
+.text-gray {
+    color: #B3B3B3;
+    font-family: Montserrat;
 }
 
 .text-11-500-blue {
     color: #5286EC;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-family: Montserrat;
 }
 
 .header-15-500 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-weight: 500;
+    font-family: Montserrat;
 }
 
 .header-13-500 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 500;
+    font-family: Montserrat;
 }
 
 
@@ -172,9 +186,9 @@ h6 {
 .mainHelicoptersPictures {
     background-image: url(./images/helimain.png);
     background-size: cover;
-    height: 53rem;
+    height: 60rem;
     padding-left: 26rem;
-    padding-top: 18rem;
+    padding-top: 21rem;
     color: #FFF;
 }
 
@@ -182,7 +196,7 @@ h6 {
     width: 55.5rem;
     height: 5.5rem;
     font-size: 3rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-weight: 700;
 }
 
@@ -191,8 +205,8 @@ h6 {
 }
 
 .textInsideSticker {
-    width: 14rem;
-    height: 6rem;
+    width: 16rem;
+    height: 7rem;
     margin-top: 2rem;
     margin-left: -0.3rem;
     background-image: url(./images/bubble.svg);
@@ -203,9 +217,9 @@ h6 {
 }
 
 .wordPrice {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-left: 1.4rem;
-    padding-top: 0.6rem;
+    padding-top: 1rem;
     padding-bottom: 0.2rem;
 }
 
@@ -217,8 +231,9 @@ h6 {
 
 .percent {
     margin-left: 1.3rem;
-    margin-top: 1rem;
-    width: 2.7rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .circle {
@@ -226,9 +241,7 @@ h6 {
     font-weight: 800;
     border: 1px solid white;
     border-radius: 50%;
-    padding: 0.18rem;
-    display: flex;
-    justify-content: center;
+    padding: 0.5rem;
 }
 
 .buttonBooking {
@@ -247,7 +260,7 @@ h6 {
 .textButton {
     color: #FFF;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
 }
 
@@ -265,7 +278,8 @@ h6 {
 }
 
 .headerLeadBlock {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
     font-weight: 500;
     margin-bottom: 1.3rem;
 }
@@ -307,7 +321,7 @@ h6 {
 .line {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
-    border: 1px solid rgb(227, 225, 225);
+    border: 1px solid #B3B3B3;
 }
 
 .iconCup {
@@ -391,7 +405,6 @@ h6 {
 .textShowPhoto {
     display: flex;
     padding-top: 1.8rem;
-    display: flex;
     justify-content: center;
 }
 
@@ -412,7 +425,7 @@ h6 {
 
 .textAboutPhotogpapher {
     padding-left: 26rem;
-    width: 65rem;
+    width: 70rem;
 }
 
 .textAboutPhotogpapher .header-13-500 {
@@ -427,26 +440,33 @@ h6 {
 .photoPhotographer {
     width: 18rem;
     text-align: center;
-    margin-left: 10rem;
-    padding-top: 2rem;
+    margin-left: 12rem;
+    display: flex;
+    flex-direction: row;
 }
 
 .photoPhotographer .header-13-500 {
-    padding-top: 0.8rem;
-    padding-bottom: 0.4rem;
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
 }
 
 .photoPhotographer .text-500 {
     color: #5286EC;
-    padding-top: 0.4rem;
+    padding-top: 0.8rem;
 }
 
-.container {
-    width: 8.6rem;
-    height: 8.6rem;
+.photoContainer {
+    margin-top: 2rem;
+    width: 10rem;
+    height: 10rem;
     background-image: url(./images/photoPhotographer.png);
     background-size: cover;
     display: inline-block;
+}
+
+.heart {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
 }
 
 /* линия */
@@ -454,7 +474,7 @@ h6 {
     margin-left: 26rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    border: 1px solid rgb(227, 225, 225);
+    border: 1px solid #B3B3B3;
     width: 79rem;
 }
 
@@ -470,6 +490,7 @@ h6 {
 
 .availableSlots .header-15-500 {
     margin-bottom: 2rem;
+    line-height: 2rem;
 }
 
 .availableSlotsHeader {
@@ -487,13 +508,13 @@ h6 {
 }
 
 .textInsideAvailableSlots {
-    border: 1px solid rgb(227, 225, 225);
+    border: 1px solid #B3B3B3;
     margin-bottom: 2rem;
 }
 
 .line_2 {
     margin-bottom: 1rem;
-    border: 1px solid rgb(227, 225, 225);
+    border: 1px solid #B3B3B3;
     width: 40rem;
 }
 
@@ -507,7 +528,7 @@ h6 {
     margin-left: 27rem;
     margin-top: 1.5rem;
     color: #FC9B09;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
     width: 9rem;
     height: 3.5rem;
@@ -534,7 +555,7 @@ h6 {
 .textInsideMap {
     width: 26rem;
     height: 29rem;
-    border: 1px solid #C7C7C7;
+    border: 1px solid #B3B3B3;
     background: #FFF;
     margin-left: 26rem;
 }
@@ -572,7 +593,8 @@ h6 {
 .number p {
     color: white;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: Montserrat;
 }
 
 .cont {
@@ -588,5 +610,58 @@ h6 {
 
 /* <!-- отзывы --> */
 
+.comment {
+    padding-top: 4rem;
+    margin-left: 26rem;
+    width: 44rem;
+}
+
+.textInsideComment {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment_1,
+.comment_2,
+.comment_3 {
+    height: 6.5rem;
+    width: 6.5rem;
+    background-size: cover;
+    margin-right: 1rem;
+}
+
+.comment_1 {
+    background-image: url(./images/comment_1.png);
+}
+
+.comment_2 {
+    background-image: url(./images/commant_2.png);
+}
+
+.comment_3 {
+    background-image: url(./images/comment_3.png);
+}
+
+.comment .header-13-500 {
+    padding-bottom: 0.6rem;
+}
+
+.commentRow_2 {
+    width: 32rem;
+}
+
+.starsAndText {
+    padding-top: 0.6rem;
+}
+
+.stars {
+    padding-right: 2.5rem;
+}
+
+.comment .textShowPhoto {
+    justify-content: end;
+}
 
 /* <!-- футер --> */
+s

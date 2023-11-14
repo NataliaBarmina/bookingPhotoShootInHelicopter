@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=?, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -32,7 +37,9 @@
                     <p class="cost">1500₽</p>
                 </div>
                 <div class="percent">
-                    <p class="circle">%</p>
+                    <div>
+                        <p class="circle">%</p>
+                    </div>
                 </div>
             </div>
 
@@ -125,12 +132,15 @@
 
 
             <div class="photoPhotographer">
-                <div class="container"></div>
-                <!-- <img src="./images/photoPhotographer.png" alt="#"> -->
-                <img src="./images/icons/heart.png" alt="">
-                <p class="header-13-500">Марина Иванова</p>
-                <p>Фотограф</p>
-                <p class="text-500">Показать больше<br> информации о фотографе</p>
+                <div>
+                    <div class="photoContainer"></div>
+                    <p class="header-13-500">Марина Иванова</p>
+                    <p>Фотограф</p>
+                    <p class="text-500">Показать больше<br> информации о фотографе</p>
+                </div>
+
+                <div class="heart"><img src="./images/icons/heart.png" alt="#"></div>
+
             </div>
 
         </div>
@@ -210,14 +220,78 @@
                 </div>
             </div>
         </div>
-
-        <!-- отзывы -->
-        <div class="block2"></div>
-
-        <!-- футер -->
-        <div class="footerMainPage"></div>
-
     </div>
+    <!-- отзывы -->
+    <div class="comment">
+        <p class="header-15-500">Отзывы:</p>
+        <div class="textInsideComment">
+            <div class="comment_1">
+            </div>
+            <div class="commentRow_2">
+                <p class="header-13-500">Валерия Антонова</p>
+                <p class="textNormal">Арт-директор</p>
+                <div class="starsAndText">
+                    <img class="stars" src="./images/icons/stars.png" alt="#">
+                    <img src="./images/icons/tick.png" alt="#">
+                    <span class="text-gray">Супер! Я бы заказала съемку снова!</span>
+                </div>
+                <p class="text-11">Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все
+                    прошло просто
+                    замечательно. Фотки получились великолепные, отдельное спасибо фотографу!</p>
+                <p class="text-gray">27 Апреля, 2019г.</p>
+                <hr class="line">
+            </div>
+        </div>
+        <div class="textInsideComment">
+            <div class="comment_2">
+            </div>
+            <div class="commentRow_2">
+                <p class="header-13-500">Виталий Петров</p>
+                <p class="textNormal">Фотограф</p>
+                <div class="starsAndText">
+                    <img class="stars" src="./images/icons/stars.png" alt="#">
+                    <img src="./images/icons/tick.png" alt="#">
+                    <span class="text-gray">Супер! Я бы заказала съемку снова!</span>
+                </div>
+                <p class="text-11">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный октябрьский
+                    день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление.
+                    Организация полёта отличная. Спасибо!</p>
+                <p class="text-gray">27 Апреля, 2019г.</p>
+                <hr class="line">
+            </div>
+        </div>
+        <div class="textInsideComment">
+            <div class="comment_3">
+            </div>
+            <div class="commentRow_2">
+                <p class="header-13-500">Джим Керри</p>
+                <div class="starsAndText">
+                    <img class="stars" src="./images/icons/stars.png" alt="#">
+                    <img src="./images/icons/tick.png" alt="#">
+                    <span class="text-gray">Супер! Я бы заказала съемку снова!</span>
+                </div>
+                <p class="text-11">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были
+                    вкусными и сытными))Мы
+                    с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще нам всем
+                    напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но все равно
+                    приятно. Короче, Презентстар – проверено. Оценка: пять!</p>
+                <p class="text-gray">27 Апреля, 2019г.</p>
+                <hr class="line">
+            </div>
+
+        </div>
+        <div class="textShowPhoto">
+            <div class="arrow"><img src="./images/icons/Arrow.svg" alt="#"></div>
+            <p class="text-11-500-blue">Показать Все (134)</p>
+            <div class="arrow"><img src="./images/icons/Arrow.svg" alt="#"></div>
+        </div>
+    </div>
+
+
+    <!-- футер -->
+    <div class="footerMainPage"></div>
+
+
 </body>
 
 </html>
