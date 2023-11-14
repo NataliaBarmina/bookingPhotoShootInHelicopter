@@ -464,6 +464,7 @@ h6 {
     margin-left: 26rem;
     width: 55rem;
     padding-top: 2rem;
+    padding-bottom: 3rem;
 
 }
 
@@ -522,6 +523,68 @@ h6 {
 }
 
 /* <!-- карта --> */
+.map {
+    height: 32rem;
+    background-image: url(./images/bigMap.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.textInsideMap {
+    width: 26rem;
+    height: 29rem;
+    border: 1px solid #C7C7C7;
+    background: #FFF;
+    margin-left: 26rem;
+}
+
+.textInsideMap .header-15-500 {
+    padding-top: 2rem;
+}
+
+.textInsideMap .text-13 {
+    padding-top: 0.4rem;
+}
+
+.textInsideMap .text-11-500-blue {
+    padding-top: 0.4rem;
+}
+
+.text1 {
+    padding-top: 2.8rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.number {
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: #FC9B09;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.number p {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.cont {
+    width: 3.8rem;
+    height: 3.8rem;
+    background-image: url(./images/photoPhotographer.png);
+    background-size: cover;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
 
 /* <!-- отзывы --> */
 
