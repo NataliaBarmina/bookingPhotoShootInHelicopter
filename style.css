@@ -40,6 +40,7 @@ body {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    font-family: Montserrat;
 }
 
 input,
@@ -98,20 +99,14 @@ h6 {
 
 }
 
-.textNormal {
-    font-family: Montserrat;
-}
-
 .text-500 {
     font-weight: 500;
     font-size: 0.9rem;
-    font-family: Montserrat;
 }
 
 .text-13 {
     font-size: 1.3rem;
     line-height: 1.8rem;
-    font-family: Montserrat;
 }
 
 .text-13-600 {
@@ -119,30 +114,25 @@ h6 {
     font-weight: 600;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-family: Montserrat;
 }
 
 .text-gray {
     color: #B3B3B3;
-    font-family: Montserrat;
 }
 
 .text-11-500-blue {
     color: #5286EC;
     font-weight: 500;
-    font-family: Montserrat;
 }
 
 .header-15-500 {
     font-size: 1.3rem;
     font-weight: 500;
-    font-family: Montserrat;
 }
 
 .header-13-500 {
     font-size: 1.2rem;
     font-weight: 500;
-    font-family: Montserrat;
 }
 
 
@@ -151,7 +141,6 @@ h6 {
 .mainPage {
     width: 100%;
     max-width: 1920px;
-    font-family: Montserrat;
     color: #37373F;
 }
 
@@ -295,7 +284,6 @@ h6 {
     padding-top: 1rem;
     display: flex;
     align-items: center;
-
 }
 
 .iconCircle::before {
@@ -485,7 +473,6 @@ h6 {
     width: 55rem;
     padding-top: 2rem;
     padding-bottom: 3rem;
-
 }
 
 .availableSlots .header-15-500 {
@@ -594,7 +581,6 @@ h6 {
     color: white;
     font-size: 3rem;
     font-weight: 700;
-    font-family: Montserrat;
 }
 
 .cont {
@@ -606,18 +592,19 @@ h6 {
     margin-right: 1rem;
 }
 
-
-
 /* <!-- отзывы --> */
 
 .comment {
     padding-top: 4rem;
     margin-left: 26rem;
-    width: 44rem;
+    width: 49rem;
+}
+
+.comment .header-15-500 {
+    padding-bottom: 3rem;
 }
 
 .textInsideComment {
-    padding-top: 1rem;
     display: flex;
     flex-direction: row;
 }
@@ -644,11 +631,21 @@ h6 {
 }
 
 .comment .header-13-500 {
+    padding-top: 1rem;
     padding-bottom: 0.6rem;
 }
 
+.comment .text-11 {
+    padding-bottom: 1rem;
+}
+
+.commentRow_2 .line {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
 .commentRow_2 {
-    width: 32rem;
+    width: 38rem;
 }
 
 .starsAndText {
@@ -664,4 +661,33 @@ h6 {
 }
 
 /* <!-- футер --> */
-s
+.footerTop {
+    padding-left: 30rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.social {
+    padding-left: 50rem;
+    padding-right: 1rem;
+}
+
+.footerBottom {
+    padding-left: 30rem;
+    padding-bottom: 2rem;
+    background: #FAF9F8;
+    display: flex;
+    flex-direction: row;
+}
+
+.visa {
+    padding-right: 23rem;
+    padding-left: 1rem;
+    padding-top: 0.8rem;
+}
+
+.footerBottom .text-gray {
+    line-height: 1.7rem;
+}
