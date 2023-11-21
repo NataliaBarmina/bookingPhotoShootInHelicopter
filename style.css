@@ -40,6 +40,7 @@ body {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    font-family: Montserrat;
 }
 
 input,
@@ -91,55 +92,98 @@ h6 {
 /*--------------------*/
 
 /* ШРИФТЫ */
-.text-11 {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    padding-top: 1.5rem;
-    font-weight: 100;
+
+.text-12 {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
 }
 
-.text-500 {
+.text-09-500 {
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .text-13 {
-    font-size: 1.5rem;
-    line-height: 1.7rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
 }
 
-.text-11-500-blue {
+.text-15-600 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.text-gray {
+    color: #B3B3B3;
+}
+
+.text-500-blue {
     color: #5286EC;
     font-weight: 500;
-    font-size: 1.3rem;
+    cursor: pointer;
 }
 
-.header-15-500 {
-    font-size: 1.7rem;
+.header-14-500 {
+    font-size: 1.4rem;
     font-weight: 500;
 }
 
-.header-13-500 {
-    font-size: 1.6rem;
+.header-12-500 {
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
+/* отступы */
+.mb06 {
+    margin-bottom: 0.6rem;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
+}
+
+.mb15 {
+    margin-bottom: 1.5rem;
+}
+
+.mb2 {
+    margin-bottom: 2rem;
+}
+
+.mb3 {
+    margin-bottom: 3rem;
+}
+
+.mb45 {
+    margin-bottom: 4.5rem;
+}
+
+.mt1 {
+    margin-top: 1rem;
+}
+
+.mt25 {
+    margin-top: 2.5rem;
+}
 
 /* < !-- главная страница --> */
 
 .mainPage {
     width: 100%;
     max-width: 1920px;
-    font-family: Montserrat;
     color: #37373F;
+    display: block;
+    text-align: center;
 }
 
 /* < !-- логотип и телефон --> */
+.bl {
+    width: 83rem;
+    display: inline-block;
+    text-align: left;
+}
 
 .mainPageheader {
-    height: 5.5rem;
-    margin-left: 26rem;
-    padding-top: 2.45rem;
     display: flex;
     flex-direction: row;
 }
@@ -150,14 +194,15 @@ h6 {
 }
 
 .phone {
-    padding-left: 2.25rem;
+    margin-left: 2.3rem;
     color: #B3B3B3;
     font-size: 1.1rem;
 }
 
 .numberPhone {
-    padding-left: 0.2rem;
+    margin-left: 0.2rem;
     font-size: 1.1rem;
+    color: #37373F;
 }
 
 /* <!-- фото вертолета --> */
@@ -165,18 +210,15 @@ h6 {
 .mainHelicoptersPictures {
     background-image: url(./images/helimain.png);
     background-size: cover;
-    height: 53rem;
-    padding-left: 26rem;
-    padding-top: 18rem;
     color: #FFF;
 }
 
 .headerBooking {
     width: 55.5rem;
-    height: 5.5rem;
     font-size: 3rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-weight: 700;
+    margin-top: 17rem;
 }
 
 .text-accent {
@@ -184,9 +226,8 @@ h6 {
 }
 
 .textInsideSticker {
-    width: 14rem;
-    height: 6rem;
-    margin-top: 2rem;
+    width: 16rem;
+    height: 7rem;
     margin-left: -0.3rem;
     background-image: url(./images/bubble.svg);
     background-repeat: no-repeat;
@@ -196,10 +237,8 @@ h6 {
 }
 
 .wordPrice {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-left: 1.4rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.2rem;
 }
 
 .cost {
@@ -210,8 +249,8 @@ h6 {
 
 .percent {
     margin-left: 1.3rem;
-    margin-top: 1rem;
-    width: 2.7rem;
+    display: flex;
+    align-items: center;
 }
 
 .circle {
@@ -219,28 +258,22 @@ h6 {
     font-weight: 800;
     border: 1px solid white;
     border-radius: 50%;
-    padding: 0.18rem;
-    display: flex;
-    justify-content: center;
+    padding: 0.5rem;
 }
 
 .buttonBooking {
-    margin-top: 1rem;
     width: 19rem;
     height: 4.25rem;
     border-radius: 0.2rem;
     border: 0.2rem solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
     background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 15rem;
 }
 
 .textButton {
     color: #FFF;
-    text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
 }
 
@@ -249,8 +282,7 @@ h6 {
 .leadBlock {
     display: flex;
     flex-direction: row;
-    padding-top: 4.4rem;
-    padding-left: 26rem;
+    justify-content: space-between;
 }
 
 .leadBlockRow_1 {
@@ -258,12 +290,8 @@ h6 {
 }
 
 .headerLeadBlock {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 1.3rem;
-}
-
-.textIcon {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
     font-weight: 500;
 }
 
@@ -271,51 +299,50 @@ h6 {
 .iconCamera,
 .iconMap,
 .iconSpeechBubble {
-    padding-top: 1rem;
     display: flex;
     align-items: center;
+}
 
+.iconCircle::before,
+.iconCamera::before,
+.iconMap::before,
+.iconSpeechBubble::before,
+.iconCup::before {
+    margin-right: 0.5rem;
 }
 
 .iconCircle::before {
     content: url(./images/icons/circle.png);
-    padding-right: 0.5rem;
 }
 
 .iconCamera::before {
     content: url(./images/icons/camera.png);
-    padding-right: 0.5rem;
 }
 
 .iconMap::before {
     content: url(./images/icons/map.png);
-    padding-right: 0.5rem;
 }
 
 .iconSpeechBubble::before {
     content: url(./images/icons/speechBubble.png);
-    padding-right: 0.5rem;
 }
 
-.line {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-    border: 1px solid rgb(227, 225, 225);
-}
-
-.iconCup {
+.iconCups {
     display: flex;
     align-items: center;
 }
 
 .iconCup::before {
     content: url(./images/icons/cup.png);
-    padding-right: 0.5rem;
 }
 
 .iconCup::after {
     content: url(./images/icons/stars.png);
-    padding-left: 0.9rem;
+    margin-left: 0.9rem;
+}
+
+.line {
+    border: 1px solid #B3B3B3;
 }
 
 .text-13 span {
@@ -323,77 +350,51 @@ h6 {
 }
 
 .leadBlockRow_2 {
-    margin-left: 6rem;
     width: 37rem;
     height: 26rem;
     border-radius: 0.25rem;
     background-image: url(./images/photoKiss.jpg);
     background-size: cover;
-    display: flex;
-    align-items: end;
-    justify-content: end;
+    position: relative;
 }
 
 .vector {
-    margin-right: 2rem;
-    margin-bottom: 2rem;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
 }
 
 /* галерея фотографий */
 
-.galleryBlock {
-    padding-left: 26rem;
-    width: 106rem;
-    margin-top: 1.5rem;
-}
-
 .gallery {
-    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .girl,
 .runway,
 .photoKiss,
 .helicopterAndGirl {
-    width: 19rem;
+    width: 20rem;
     height: 13.5rem;
     background-size: cover;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
     border-radius: 0.25rem;
 }
 
-.girl {
-    background-image: url(./images/girl.jpg);
-}
-
-.runway {
-    background-image: url(./images/runway.jpg)
-}
-
-.photoKiss {
-    background-image: url(./images/photoKiss.jpg)
-}
-
-.helicopterAndGirl {
-    background-image: url(./images/helicopterAndGirl.jpg)
-}
-
 .textShowPhoto {
-    display: flex;
-    padding-top: 1.8rem;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
-.arrow {
-    height: 1.3rem;
-    display: flex;
-    align-items: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+.arrow_2::before {
+    content: url(./images/icons/Arrow.svg);
+    margin-right: 0.5rem;
+}
+
+.arrow_2::after {
+    content: url(./images/icons/Arrow.svg);
+    margin-left: 0.5rem;
 }
 
 /* <!-- блок об авторе --> */
@@ -404,59 +405,217 @@ h6 {
 }
 
 .textAboutPhotogpapher {
-    padding-left: 26rem;
-    width: 65rem;
+    width: 45rem;
 }
 
-.textAboutPhotogpapher .header-13-500 {
-    padding-top: 2rem;
+.textAboutPhotogpapher .textShowPhoto {
+    text-align: start;
 }
 
-.readMore {
-    display: flex;
-    padding-top: 0.5rem;
+.arrow_1::after {
+    content: url(./images/icons/Arrow.svg);
+    margin-left: 0.5rem;
 }
 
 .photoPhotographer {
     width: 18rem;
+    margin-left: 12rem;
+    display: flex;
+    flex-direction: row;
     text-align: center;
-    margin-left: 10rem;
-    padding-top: 2rem;
 }
 
-.photoPhotographer .header-13-500 {
-    padding-top: 0.8rem;
-    padding-bottom: 0.4rem;
-}
-
-.photoPhotographer .text-500 {
-    color: #5286EC;
-    padding-top: 0.4rem;
-}
-
-.container {
-    width: 8.6rem;
-    height: 8.6rem;
+.photoContainer {
+    width: 10rem;
+    height: 10rem;
     background-image: url(./images/photoPhotographer.png);
     background-size: cover;
     display: inline-block;
 }
 
-/* линия */
-.line_1 {
-    margin-left: 26rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border: 1px solid rgb(227, 225, 225);
-    width: 77rem;
+.heart {
+    margin-left: 1.5rem;
 }
 
 /* <!-- Доступная съемка в ближайшее время: --> */
 
+.availableSlots .header-14-500 {
+    line-height: 2rem;
+}
+
+.availableSlotsHeader {
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.availableSlotsHeader::after {
+    content: url(./images/icons/calendar.png);
+    margin-left: 1rem;
+}
+
+.textInsideAvailableSlots {
+    border: 2px solid #B3B3B3;
+    width: 55rem;
+}
+
+.line_2 {
+    border: 0.5px solid #B3B3B3;
+    width: 35rem;
+}
+
+.availableTimes {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonAvailableTimes {
+    margin-left: 27rem;
+    color: #FC9B09;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 9rem;
+    height: 3.5rem;
+    border-radius: 0.3rem;
+    border: 2px solid #FC9B09;
+    background: #FFF;
+}
+
+.availableSlots .iconCup {
+    margin-left: 2rem;
+}
 
 /* <!-- карта --> */
+.map {
+    height: 32rem;
+    background-image: url(./images/bigMap.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.textInsideMap {
+    width: 26rem;
+    height: 29rem;
+    border: 1px solid #B3B3B3;
+    background: #FFF;
+}
+
+.text1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.number {
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: #FC9B09;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.number p {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.cont {
+    width: 3.8rem;
+    height: 3.8rem;
+    background-image: url(./images/photoPhotographer.png);
+    background-size: cover;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 
 /* <!-- отзывы --> */
 
+.comments {
+    width: 49rem;
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+}
+
+.photocontainer_1,
+.photocontainer_2,
+.photocontainer_3 {
+    height: 6.5rem;
+    width: 6.5rem;
+    background-size: cover;
+    margin-right: 1rem;
+}
+
+.photocontainer_1 {
+    background-image: url(./images/comment_1.png);
+}
+
+.photocontainer_2 {
+    background-image: url(./images/commant_2.png);
+}
+
+.photocontainer_3 {
+    background-image: url(./images/comment_3.png);
+}
+
+.commentRow_2 {
+    width: 38rem;
+}
+
+.stars {
+    margin-right: 2.5rem;
+}
+
+.comments .textShowPhoto {
+    text-align: end;
+}
 
 /* <!-- футер --> */
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language {
+    color: #5286EC;
+}
+
+.language::before {
+    content: url(./images/icons/Social.png);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.language::after {
+    content: url(./images/icons/Arrow.svg);
+    margin-left: 0.5rem;
+}
+
+.footerBottom {
+    background-color: #FAF9F8;
+}
+
+.container {
+    width: 49rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerBottom .text-gray {
+    line-height: 1.7rem;
+}
