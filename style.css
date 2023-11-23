@@ -93,62 +93,87 @@ h6 {
 
 /* ШРИФТЫ */
 
-.text-12 {
-    font-size: 1.2rem;
-    line-height: 1.9rem;
+.t-09-400 {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
 }
 
-.text-09-500 {
+.t-09-500 {
     font-weight: 500;
     font-size: 0.9rem;
 }
 
-.text-13 {
+.t-09-600 {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.t-10-400 {
+    line-height: 1.3rem;
+}
+
+.t-10-500 {
+    font-weight: 500;
+}
+
+.t-10-600 {
+    font-weight: 600;
+}
+
+.t-12-400 {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+}
+
+.t-12-500 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.t-13-400 {
     font-size: 1.3rem;
     line-height: 1.8rem;
 }
 
-.text-15-600 {
+.t-13-500 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.t-13-600 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.t-14-500 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.t-15-600 {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.text-gray {
+.t-18-400 {
+    font-size: 1.8rem;
+}
+
+.t-gray {
     color: #B3B3B3;
 }
 
-.text-500-blue {
+.t-08-gray {
+    color: #B3B3B3;
+    font-size: 0.8rem;
+}
+
+.t-10-500-blue {
     color: #5286EC;
     font-weight: 500;
     cursor: pointer;
 }
 
-.text-600 {
-    font-weight: 600;
-}
-
-.text-500 {
-    font-weight: 500;
-}
-
-.text-400 {
-    font-weight: 400;
-}
-
-.header-14-500 {
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-
-.header-12-500 {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.header-13-600 {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
 
 /* отступы */
 .mb06 {
@@ -183,6 +208,14 @@ h6 {
     margin-top: 2.5rem;
 }
 
+.tal {
+    text-align: left;
+}
+
+.tac {
+    text-align: center;
+}
+
 /* < !-- главная страница --> */
 body {
     width: 100%;
@@ -192,8 +225,6 @@ body {
 .mainPage {
 
     color: #37373F;
-    /* display: block; */
-
 }
 
 /* расположение крупных блоков */
@@ -322,7 +353,9 @@ body {
 .iconCircle,
 .iconCamera,
 .iconMap,
-.iconSpeechBubble {
+.iconSpeechBubble,
+.icon3Hours,
+.iconMoney {
     display: flex;
     align-items: center;
 }
@@ -369,7 +402,7 @@ body {
     border: 1px solid #B3B3B3;
 }
 
-.text-13 span {
+.t-13-400 span {
     font-weight: 600;
 }
 
@@ -403,12 +436,7 @@ body {
 .helicopterAndGirl {
     width: 20rem;
     height: 13.5rem;
-    background-size: cover;
     border-radius: 0.25rem;
-}
-
-.textShowPhoto {
-    text-align: center;
 }
 
 .arrow_2::before {
@@ -432,7 +460,7 @@ body {
     width: 45rem;
 }
 
-.textAboutPhotogpapher .textShowPhoto {
+.textAboutPhotogpapher .tac {
     text-align: start;
 }
 
@@ -446,7 +474,6 @@ body {
     margin-left: 12rem;
     display: flex;
     flex-direction: row;
-    text-align: center;
 }
 
 .photoContainer {
@@ -463,7 +490,7 @@ body {
 
 /* <!-- Доступная съемка в ближайшее время: --> */
 
-.availableSlots .header-14-500 {
+.availableSlots .t-14-500 {
     line-height: 2rem;
 }
 
@@ -590,7 +617,7 @@ body {
     margin-right: 2.5rem;
 }
 
-.comments .textShowPhoto {
+.comments .tac {
     text-align: end;
 }
 
@@ -629,7 +656,7 @@ body {
     justify-content: space-between;
 }
 
-.footerBottom .text-gray {
+.footerBottom .t-gray {
     line-height: 1.7rem;
 }
 
@@ -640,8 +667,6 @@ body {
     background: #FFF;
     border: 1px solid #C7C7C7;
     display: inline-block;
-    text-align: center;
-    margin-top: 20rem;
 }
 
 .contentModalWindow {
@@ -653,7 +678,7 @@ body {
     color: #C94042;
 }
 
-.modalWindow .text-500 {
+.modalWindow .t-10-500 {
     text-align: left;
 }
 
@@ -683,18 +708,6 @@ body {
 
 .halfContainer:last-child {
     border-top-style: none;
-}
-
-.contentModalWindow .text-400 {
-    text-align: left;
-}
-
-.contentModalWindow .text-400 p {
-    margin-left: 1rem;
-}
-
-.changeColor {
-    text-align: left;
 }
 
 .changeColor input {
@@ -739,4 +752,161 @@ body {
     border-radius: 0.2rem;
     background: #FC9B09;
     color: #FFF
+}
+
+
+
+
+
+
+/* <!-- СТРАНИЦА ДЛЯ ТЕЛЕФОНА!!!! -->
+    <!-- главная страница --> */
+.phonePage {
+    width: 20rem;
+    display: inline-block;
+    border: 1px solid blue;
+}
+
+.mainPhoneHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.Moscow {
+    color: #5286EC;
+    font-size: 0.9rem;
+}
+
+.phoneHelicoptersPictures {
+    background-image: url(./images/helimain_2.png);
+    background-size: cover;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    color: #FFF;
+    padding-left: 1rem;
+}
+
+.phoneheaderBooking {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.buttonBooking_2 {
+    width: 17.5rem;
+    border-radius: 0.4rem;
+    border: 3px solid #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
+    padding: 1rem;
+    background: transparent;
+    color: #FFF;
+    font-weight: 900;
+}
+
+.leadBlock_2 {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.headerLeadBlock_2 {
+    color: #37373F;
+    font-size: 1.75rem;
+}
+
+.photoLeadBlock {
+    background-image: url(./images/photoKiss.jpg);
+    background-size: cover;
+    width: 18rem;
+    height: 12rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+}
+
+.textInsideAvailableSlots_2 {
+    width: 19rem;
+    display: inline-block;
+}
+
+.block_1,
+.block_2 {
+    border: 1px solid #C7C7C7;
+    padding: 1.5rem 0rem 1.5rem 1rem;
+}
+
+.button_3 {
+    width: 8rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    border: 2px solid #FC9B09;
+    color: #FC9B09;
+}
+
+.map_1 {
+    overflow: hidden;
+}
+
+.comments_1 {
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.comments_1 .line {
+    margin-right: 1rem;
+}
+
+.icon3Hours::before {
+    content: url(./images/icons/3hours.png);
+    border: 3px solid #727275;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
+    padding: 0.3rem 0.2rem 0.1rem 0.2rem;
+    margin-right: 0.5rem;
+}
+
+.iconMoney::before {
+    content: url(./images/icons/money.png);
+    margin-right: 0.5rem;
+}
+
+.iconCups_2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconCups_2 .tal {
+    margin-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.girl_2,
+.runway_2,
+.photoKiss_2,
+.helicopterAndGirl_2 {
+    width: 17rem;
+    height: 11rem;
+    border-radius: 0.25rem;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.pl1 {
+    padding-left: 1rem;
+}
+
+.footer {
+    padding: 0rem 1rem 2rem 1rem
+}
+
+.footerMiddle,
+.footerTop_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow_3::after {
+    content: url(./images/icons/Arrow_2.png);
+    margin-left: 0.5rem;
 }
