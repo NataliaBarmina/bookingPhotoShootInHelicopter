@@ -33,7 +33,6 @@ aside {
 html,
 body {
     height: 100%;
-    width: 100%;
     font-size: 100%;
     line-height: 1;
     font-size: 14px;
@@ -95,7 +94,7 @@ h6 {
 
 .t-09-400 {
     font-size: 0.9rem;
-    line-height: 1.1rem;
+    line-height: 1.2rem;
 }
 
 .t-09-500 {
@@ -108,9 +107,9 @@ h6 {
     font-size: 0.9rem;
 }
 
-.t-10-400 {
+/* .t-10-400 {
     line-height: 1.3rem;
-}
+} */
 
 .t-10-500 {
     font-weight: 500;
@@ -163,8 +162,7 @@ h6 {
     color: #B3B3B3;
 }
 
-.t-08-gray {
-    color: #B3B3B3;
+.t-08-400 {
     font-size: 0.8rem;
 }
 
@@ -208,41 +206,47 @@ h6 {
     margin-top: 2.5rem;
 }
 
-.tal {
-    text-align: left;
-}
-
 .tac {
     text-align: center;
 }
 
 /* < !-- главная страница --> */
 body {
-    width: 100%;
+    max-width: 1920px;
     text-align: center;
 }
 
 .mainPage {
-
     color: #37373F;
 }
 
 /* расположение крупных блоков */
 .bl {
-    width: 83rem;
+    width: 80%;
     display: inline-block;
     text-align: left;
 }
 
-/* < !-- логотип и телефон --> */
-.mainPageheader {
+.logotype {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.forSmallScreen .t-08-400 {
+    color: #5286EC;
+}
+
+.forSmallScreen .logotype {
+    justify-content: space-between;
 }
 
 .logo {
-    width: 7rem;
-    height: 1.3rem;
+    max-width: 7rem;
+    max-height: 1.3rem;
+    display: inline-block;
 }
 
 .phone {
@@ -255,21 +259,21 @@ body {
     margin-left: 0.2rem;
     font-size: 1.1rem;
     color: #37373F;
-    display: block;
+    display: inline-block;
 }
+
 
 /* <!-- фото вертолета --> */
 
 .mainHelicoptersPictures {
     background-image: url(./images/helimain.png);
     background-size: cover;
-    color: #FFF;
-    padding-top: 17rem;
     padding-bottom: 17rem;
+    color: #FFF;
 }
 
 .headerBooking {
-    width: 55.5rem;
+    margin-top: 17rem;
     font-size: 3rem;
     line-height: 3.5rem;
     font-weight: 700;
@@ -283,7 +287,7 @@ body {
     width: 16rem;
     height: 7rem;
     margin-left: -0.3rem;
-    background-image: url(./images/bubble.svg);
+    background-image: url(./images/Rectangle.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -341,13 +345,15 @@ body {
 }
 
 .leadBlockRow_1 {
-    width: 35rem;
+    width: 47%;
+    padding-right: 2rem;
 }
 
 .headerLeadBlock {
     font-size: 2.8rem;
     line-height: 2.8rem;
     font-weight: 500;
+
 }
 
 .iconCircle,
@@ -384,6 +390,20 @@ body {
     content: url(./images/icons/speechBubble.png);
 }
 
+.iconMoney::before {
+    content: url(./images/icons/money.png);
+    margin-right: 0.5rem;
+}
+
+.icon3Hours::before {
+    content: url(./images/icons/3hours.png);
+    border: 3px solid #727275;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
+    padding: 0.3rem 0.2rem 0.1rem 0.2rem;
+    margin-right: 0.5rem;
+}
+
 .iconCups {
     display: flex;
     align-items: center;
@@ -398,17 +418,21 @@ body {
     margin-left: 0.9rem;
 }
 
+.mr1 {
+    margin-right: 1rem;
+}
+
 .line {
     border: 1px solid #B3B3B3;
 }
 
-.t-13-400 span {
+.t-13-500 span {
     font-weight: 600;
 }
 
 .leadBlockRow_2 {
-    width: 37rem;
-    height: 26rem;
+    width: 47%;
+    height: 23vw;
     border-radius: 0.25rem;
     background-image: url(./images/photoKiss.jpg);
     background-size: cover;
@@ -426,7 +450,7 @@ body {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 1rem;
 }
 
@@ -434,8 +458,8 @@ body {
 .runway,
 .photoKiss,
 .helicopterAndGirl {
-    width: 20rem;
-    height: 13.5rem;
+    width: 23rem;
+    height: 14rem;
     border-radius: 0.25rem;
 }
 
@@ -451,16 +475,18 @@ body {
 
 /* <!-- блок об авторе --> */
 
-.infrormationAboutPhotographer {
+.informationAboutPhotographer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
 }
 
-.textAboutPhotogpapher {
-    width: 45rem;
+.textAboutPhotographer {
+    width: 57%;
 }
 
-.textAboutPhotogpapher .tac {
+.textAboutPhotographer .tac {
     text-align: start;
 }
 
@@ -470,22 +496,20 @@ body {
 }
 
 .photoPhotographer {
-    width: 18rem;
-    margin-left: 12rem;
-    display: flex;
-    flex-direction: row;
+    max-width: 45rem;
 }
 
 .photoContainer {
-    width: 10rem;
-    height: 10rem;
-    background-image: url(./images/photoPhotographer.png);
-    background-size: cover;
-    display: inline-block;
+    max-width: 12rem;
+    max-height: 12rem;
+    object-fit: cover;
+    margin-right: 1rem;
 }
 
 .heart {
-    margin-left: 1.5rem;
+    max-width: 3.5rem;
+    max-height: 1.8rem;
+    object-fit: cover;
 }
 
 /* <!-- Доступная съемка в ближайшее время: --> */
@@ -494,8 +518,13 @@ body {
     line-height: 2rem;
 }
 
+.textInsideAvailableSlots {
+    border: 2px solid #B3B3B3;
+    width: 60%;
+    padding: 1.5rem 2rem 1.5rem 3rem;
+}
+
 .availableSlotsHeader {
-    margin-left: 3rem;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
@@ -503,27 +532,20 @@ body {
 
 .availableSlotsHeader::after {
     content: url(./images/icons/calendar.png);
-    margin-left: 1rem;
-}
-
-.textInsideAvailableSlots {
-    border: 2px solid #B3B3B3;
-    width: 55rem;
 }
 
 .line_2 {
     border: 0.5px solid #B3B3B3;
-    width: 35rem;
+    width: 60%;
 }
 
 .availableTimes {
-    margin-left: 3rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .buttonAvailableTimes {
-    margin-left: 27rem;
     color: #FC9B09;
     font-size: 1.1rem;
     font-weight: 500;
@@ -534,42 +556,63 @@ body {
     background: #FFF;
 }
 
-.availableSlots .iconCup {
-    margin-left: 2rem;
-}
 
 /* <!-- карта --> */
 .map {
-    height: 32rem;
+    /* height: 30vw; */
+    min-height: 32rem;
     background-image: url(./images/bigMap.jpg);
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
 }
 
 .textInsideMap {
-    width: 26rem;
-    height: 29rem;
+    max-width: 22rem;
+    min-height: 28rem;
     border: 1px solid #B3B3B3;
     background: #FFF;
+    padding: 2rem 0rem 1rem 1rem;
+
 }
 
-.text1 {
-    display: flex;
-    flex-direction: row;
+.whereDoWeMeet {
+    border: 1px solid #B3B3B3;
+    padding: 3rem 3rem 3rem 2rem;
+    max-width: 25rem;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.aic {
+    align-items: center;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.yellow {
+    background-color: #FC9B09;
+}
+
+.arrowCont {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: cover;
 }
 
 .number {
-    width: 3.8rem;
+    min-width: 3.8rem;
     height: 3.8rem;
     background-color: #FC9B09;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1rem;
     margin-right: 1rem;
 }
 
@@ -580,37 +623,39 @@ body {
 }
 
 .cont {
-    width: 3.8rem;
-    height: 3.8rem;
-    background-image: url(./images/photoPhotographer.png);
-    background-size: cover;
-    margin-left: 1rem;
     margin-right: 1rem;
+    max-width: 4rem;
+    max-height: 4rem;
+    object-fit: cover;
+
 }
+
+
+.round {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    border: 1px solid #37373F;
+    margin-right: 0.5rem;
+}
+
+
 
 /* <!-- отзывы --> */
 
 .comments {
-    width: 49rem;
+    width: 60%;
 }
 
-.comment {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.photocontainer_1,
-.photocontainer_2,
-.photocontainer_3 {
-    height: 6.5rem;
-    width: 6.5rem;
+.photocontainer_1 {
+    max-height: 6.5rem;
+    max-width: 6.5rem;
     margin-right: 2rem;
+    object-fit: cover;
 }
-
 
 .commentRow_2 {
-    width: 38rem;
+    width: 82%;
 }
 
 .stars {
@@ -621,35 +666,52 @@ body {
     text-align: end;
 }
 
+.photocontainer_11 {
+    max-width: 4rem;
+    max-height: 4rem;
+    object-fit: cover;
+}
+
+.ml1 {
+    margin-left: 1rem;
+}
+
 /* <!-- футер --> */
 
 .footerTop {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
+
 
 .language {
     color: #5286EC;
+    display: inline-block;
 }
 
-.language::before {
-    content: url(./images/icons/Social.png);
-    margin-right: 0.5rem;
-    vertical-align: middle;
-}
 
 .language::after {
     content: url(./images/icons/Arrow.svg);
     margin-left: 0.5rem;
 }
 
+.footerTop span {
+    vertical-align: middle;
+}
+
+.socialContainer {
+    width: 10rem;
+    height: 1.3rem;
+    object-fit: contain;
+}
+
+
 .footerBottom {
     background-color: #FAF9F8;
 }
 
 .container {
-    width: 49rem;
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -662,7 +724,7 @@ body {
 
 /*  модальное окно*/
 .modalWindow {
-    width: 38rem;
+    width: 42%;
     border-radius: 0.375rem;
     background: #FFF;
     border: 1px solid #C7C7C7;
@@ -670,7 +732,7 @@ body {
 }
 
 .contentModalWindow {
-    width: 26rem;
+    width: 85%;
     display: inline-block;
 }
 
@@ -691,8 +753,12 @@ body {
     border: 1px solid #C7C7C7;
 }
 
-.halfContainer {
-    width: 50%;
+.container_60_percent {
+    width: 60%;
+}
+
+.container_40_percent {
+    width: 40%;
 }
 
 .flexRow {
@@ -700,14 +766,17 @@ body {
     flex-direction: row;
 }
 
-.halfContainer:first-child {
+.container_60_percent {
     border-top-style: none;
     border-right-style: none;
-
 }
 
-.halfContainer:last-child {
+.container_40_percent {
     border-top-style: none;
+}
+
+.changeColor {
+    text-align: left;
 }
 
 .changeColor input {
@@ -719,7 +788,7 @@ body {
     /* <-- стилизируем новый */
     height: 1rem;
     width: 1rem;
-    border: 1px solid gray;
+    border: 1px solid #C7C7C7;
     display: inline-block;
     position: relative;
     background-color: #FFF;
@@ -741,12 +810,12 @@ body {
     border-radius: 4px;
     font-size: 1rem;
     background-image: url(./images/icons/calendar.png);
-    background-position: 20rem;
+    background-position: 95%;
     background-repeat: no-repeat;
 }
 
 .button_2 {
-    width: 24rem;
+    width: 75%;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-radius: 0.2rem;
@@ -754,159 +823,187 @@ body {
     color: #FFF
 }
 
-
-
-
-
-
-/* <!-- СТРАНИЦА ДЛЯ ТЕЛЕФОНА!!!! -->
-    <!-- главная страница --> */
-.phonePage {
-    width: 20rem;
-    display: inline-block;
-    border: 1px solid blue;
+/* !медиазапросы */
+@media(max-width:1920) {
+    body {
+        max-width: 1280;
+    }
 }
 
-.mainPhoneHeader {
-    display: flex;
-    justify-content: space-around;
-    align-items: end;
+@media (max-width: 1295px) {
+    body {
+        max-width: 1024;
+    }
 }
 
-.Moscow {
-    color: #5286EC;
-    font-size: 0.9rem;
+@media (max-width: 1024px) {
+    body {
+        max-width: 768;
+    }
 }
 
-.phoneHelicoptersPictures {
-    background-image: url(./images/helimain_2.png);
-    background-size: cover;
-    padding-top: 15rem;
-    padding-bottom: 15rem;
-    color: #FFF;
-    padding-left: 1rem;
+@media (max-width: 768px) {
+    body {
+        max-width: 600;
+    }
 }
 
-.phoneheaderBooking {
-    font-size: 2rem;
-    font-weight: 700;
+@media (max-width: 610px) {
+    body {
+        max-width: 480;
+    }
+
+    html,
+    body {
+        font-size: 12.5px;
+    }
+
+    .headerLeadBlock {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        font-weight: 500;
+    }
+
+    .bl {
+        width: 85%;
+    }
+
+    .modalWindow {
+        width: 52%;
+    }
+
+    .comments,
+    .textInsideAvailableSlots {
+        width: 85%;
+    }
+
 }
 
-.buttonBooking_2 {
-    width: 17.5rem;
-    border-radius: 0.4rem;
-    border: 3px solid #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
-    padding: 1rem;
-    background: transparent;
-    color: #FFF;
-    font-weight: 900;
+@media (max-width: 480px) {
+    body {
+        max-width: 320;
+    }
+
+    html,
+    body {
+        font-size: 10px;
+    }
+
+    .photoContainer {
+        max-width: 10rem;
+        max-height: 10rem;
+    }
+
+    .modalWindow {
+        width: 80%;
+    }
 }
 
-.leadBlock_2 {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+@media (max-width: 320px) {
+    body {
+        max-width: none;
+    }
+
+    .availableSlotsHeader::after,
+    .forBigScreen {
+        display: none;
+    }
+
+    .mainHelicoptersPictures {
+        background-image: url(./images/helimain_2.png);
+    }
+
+    .headerBooking {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .wordPrice {
+        font-size: 1.1rem;
+    }
+
+    .cost,
+    .circle {
+        font-size: 1.9rem;
+        font-weight: 800;
+    }
+
+    .textButton {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .leadBlockRow_2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    .t-14-500 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .informationAboutPhotographer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .photoPhotographer {
+        order: -1;
+        width: 100%;
+        margin-bottom: 2rem;
+
+    }
+
+    .photoPhotographer .flexRow {
+        justify-content: center;
+    }
+
+    .textAboutPhotographer {
+        width: 100%;
+    }
+
+    .line_2,
+    .textInsideAvailableSlots {
+        width: 100%;
+        padding: 0rem;
+    }
+
+    .availableTimes {
+        flex-direction: column;
+    }
+
+    .textInsideAvailableSlots .flexRow,
+    .availableSlotsHeader,
+    .availableTimes,
+    .iconCups {
+        margin-left: 1rem;
+    }
+
+    .buttonAvailableTimes {
+        margin-bottom: 2rem;
+    }
+
+    .contentModalWindow .flexRow {
+        flex-direction: column;
+    }
+
+    .container_60_percent,
+    .container_40_percent {
+        width: 100%;
+    }
+
+    .container_60_percent {
+        border-right: 1px solid #C7C7C7;
+    }
 }
 
-.headerLeadBlock_2 {
-    color: #37373F;
-    font-size: 1.75rem;
-}
 
-.photoLeadBlock {
-    background-image: url(./images/photoKiss.jpg);
-    background-size: cover;
-    width: 18rem;
-    height: 12rem;
-    border-radius: 0.25rem;
-    display: inline-block;
-    position: relative;
-}
 
-.textInsideAvailableSlots_2 {
-    width: 19rem;
-    display: inline-block;
-}
 
-.block_1,
-.block_2 {
-    border: 1px solid #C7C7C7;
-    padding: 1.5rem 0rem 1.5rem 1rem;
-}
+@media(min-width:321px) {
 
-.button_3 {
-    width: 8rem;
-    height: 3rem;
-    border-radius: 0.2rem;
-    border: 2px solid #FC9B09;
-    color: #FC9B09;
-}
-
-.map_1 {
-    overflow: hidden;
-}
-
-.comments_1 {
-    padding: 1rem 0rem 1rem 1rem;
-}
-
-.comments_1 .line {
-    margin-right: 1rem;
-}
-
-.icon3Hours::before {
-    content: url(./images/icons/3hours.png);
-    border: 3px solid #727275;
-    border-radius: 50%;
-    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
-    padding: 0.3rem 0.2rem 0.1rem 0.2rem;
-    margin-right: 0.5rem;
-}
-
-.iconMoney::before {
-    content: url(./images/icons/money.png);
-    margin-right: 0.5rem;
-}
-
-.iconCups_2 {
-    display: flex;
-    flex-direction: row;
-}
-
-.iconCups_2 .tal {
-    margin-left: 1rem;
-    padding-top: 0.5rem;
-}
-
-.girl_2,
-.runway_2,
-.photoKiss_2,
-.helicopterAndGirl_2 {
-    width: 17rem;
-    height: 11rem;
-    border-radius: 0.25rem;
-}
-
-.jcc {
-    justify-content: center;
-}
-
-.pl1 {
-    padding-left: 1rem;
-}
-
-.footer {
-    padding: 0rem 1rem 2rem 1rem
-}
-
-.footerMiddle,
-.footerTop_2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.arrow_3::after {
-    content: url(./images/icons/Arrow_2.png);
-    margin-left: 0.5rem;
+    .forSmallScreen {
+        display: none;
+    }
 }

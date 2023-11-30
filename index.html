@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=?, initial-scale=1.0">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 
@@ -18,13 +18,26 @@
     <div class="mainPage">
 
         <!-- логотип и телефон -->
-        <div class="bl">
-            <div class="mainPageheader mt25 mb3">
+
+        <div class="forBigScreen bl">
+            <div class="logotype">
                 <img class="logo" src="./images/HELYFLY.jpg" alt="logotype">
-                <div class="phone">Телефон:</div>
-                <a class="numberPhone" href="tel:8(800)-123-12-12">8(800)-123-12-12</a>
+                <div class="phone"><span>Телефон:</span>
+                    <a class="numberPhone" href="tel:8(800)-123-12-12">8(800)-123-12-12</a>
+                </div>
             </div>
+
         </div>
+
+        <div class="forSmallScreen bl">
+            <div class=" logotype">
+                <img class="logo" src="./images/HELYFLY.jpg" alt="logotype">
+                <p class="t-08-400">Москва</p>
+                <img class="figure" src="./images/icons/Фигура.png" alt="">
+            </div>
+
+        </div>
+
         <!--   -->
         <!-- фото вертолета -->
         <div class="mainHelicoptersPictures mb45">
@@ -50,9 +63,10 @@
                 </button>
             </div>
         </div>
+
         <!-- leadBlock-->
-        <div class="bl">
-            <div class="leadBlock mb3">
+        <div class="bl forBigScreen">
+            <div class="leadBlock   mb3">
                 <div class="leadBlockRow_1">
                     <p class="headerLeadBlock mb15">Фотосессия</br>в вертолете</p>
                     <p class="t-13-400">Полет на вертолете это прекрасная возможность<br>получить новые ощущения! А наш
@@ -71,19 +85,60 @@
                     </div>
                     <hr class="line mb1">
                     <div class="iconCups ">
-                        <p class="t-13-400 iconCup mb2">Более <span>50</span> отзывов с оценкой </p>
+                        <p class="t-13-500 iconCup mb2">Более <span>50</span> отзывов с оценкой </p>
                     </div>
                     <hr class="line">
                 </div>
 
-
                 <div class="leadBlockRow_2">
                     <div class="vector"><img src="./images/icons/Vector.png" alt="vector"></div>
                 </div>
+            </div>
+        </div>
 
+        <!-- ! для ТЕЛЕФОНА -->
+        <div class="forSmallScreen bl mb3">
+            <p class="headerLeadBlock_2 t-18-400 tac mb15">Фотосессия</br>в вертолете</p>
+            <div class="leadBlockRow_2 tac mb2">
+                <div class="vector"><img src="./images/icons/Vector.png" alt="vector"></div>
+            </div>
+            <p class="t-09-400 mb2">Полет на вертолете это прекрасная возможность получить новые ощущения! А наш
+                замечательный фотограф запечатлит лучшие моменты</p>
+
+            <div class="icon3Hours mb1">
+                <p class="t-09-500">3 часа съемки</p>
             </div>
 
-            <!--галерея фотографий -->
+            <div class="iconSpeechBubble mb1">
+                <p class="t-09-500">Русский</p>
+            </div>
+            <div class="iconMoney mb1">
+                <p class="t-09-500">от <span class="t-09-600">850$</span> </p>
+            </div>
+
+            <div class="iconMap mb1">
+                <p class="t-09-500">Дубаи</p>
+            </div>
+
+            <div class="iconCamera mb2">
+                <p class="t-09-500">Более 50 фотографий</p>
+            </div>
+            <hr class="line mb1">
+
+            <div class="flexRow t-09-400 mb2">
+                <div class="mr1"><img src="./images/icons/cup.png" alt="#"></div>
+                <div>
+                    <p>Более <span class="t-09-600">150</span> отзывов с оценкой </p>
+                    <img src="./images/icons/stars.png" alt="#">
+                </div>
+
+            </div>
+            <hr class="line">
+        </div>
+
+
+        <!--галерея фотографий -->
+        <div class="bl">
             <div class="mb3">
                 <p class="t-14-500 mb3">Фотографии пакета:</p>
                 <div class="gallery mb2">
@@ -96,16 +151,16 @@
                     <img class="runway" src="./images/runway.jpg" alt="#">
                     <img class="photoKiss" src="./images/photoKiss.jpg" alt="#">
                 </div>
-                <div class="tac mb2 t-10-500-blue">
+                <div class="forBigScreen tac mb2 t-10-500-blue">
                     <p class="arrow_2">Показать все фото</p>
                 </div>
-                <hr class="line">
+                <hr class="line forBigScreen">
             </div>
 
 
             <!-- блок об авторе -->
-            <div class="infrormationAboutPhotographer mb15">
-                <div class="textAboutPhotogpapher">
+            <div class="informationAboutPhotographer bl mb15">
+                <div class="textAboutPhotographer">
                     <p class="t-12-500 mb15">Об организаторе:</p>
                     <p class="t-12-400 mb1">Всем привет! Я фотограф Мария! И помимо фотосъемки я так же являюсь членом
                         группы экспертов туристической отрасли, которые хорошо разбираются в маркетинге, операциях и
@@ -132,14 +187,13 @@
                 </div>
 
                 <div class="photoPhotographer tac">
-                    <div>
-                        <div class="photoContainer mb06"></div>
-                        <p class="t-12-500 mb06">Марина Иванова</p>
-                        <p class="mb06">Фотограф</p>
-                        <p class="t-10-500-blue ">Показать больше<br> информации о фотографе</p>
+                    <div class="flexRow">
+                        <img class="photoContainer mb06" src="./images/photoPhotographer.png"></img>
+                        <img class="heart" src="./images/icons/heart.png" alt="#">
                     </div>
-
-                    <div class="heart"><img src="./images/icons/heart.png" alt="#"></div>
+                    <p class="t-12-500 mb06">Марина Иванова</p>
+                    <p class="mb06">Фотограф</p>
+                    <p class="t-10-500-blue ">Показать больше<br> информации о фотографе</p>
 
                 </div>
 
@@ -149,7 +203,7 @@
 
             <!-- Доступная съемка в ближайшее время: -->
 
-            <div class="availableSlots mb3">
+            <div class="availableSlots bl mb3">
                 <p class="t-14-500 mb2">Доступная съемка <br>в ближайшее время:</p>
                 <div class="textInsideAvailableSlots mb2">
                     <p class="availableSlotsHeader mt1 mb2">Пятница, 14 сентября</p>
@@ -173,19 +227,26 @@
                         </div>
                         <button class="buttonAvailableTimes">Выбрать</button>
                     </div>
-                    <div class="iconCups ">
+                    <div class="iconCups forBigScreen">
                         <p class="t-13-400 iconCup mb2">Более <span>50</span> отзывов с оценкой </p>
                     </div>
-                </div>
+                    <div class="flexRow forSmallScreen mb2">
+                        <div class="mr1"><img src="./images/icons/cup.png" alt="#"></div>
+                        <div>
+                            <p>Более <span class="t-09-600">150</span> отзывов с оценкой </p>
+                            <img src="./images/icons/stars.png" alt="#">
+                        </div>
 
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- карта -->
-        <div class="map mb3">
+        <div class="forBigScreen map mb3">
             <div class="bl">
                 <div class="textInsideMap ">
-                    <div class="text1 mt25 mb2">
+                    <div class="flexRow  mb2">
                         <div class="number">
                             <p>1</p>
                         </div>
@@ -194,7 +255,7 @@
                             <p class="t-13-400">Москва</p>
                         </div>
                     </div>
-                    <div class="text1 mb2">
+                    <div class="flexRow mb2">
                         <div class="number">
                             <p>2</p>
                         </div>
@@ -203,7 +264,7 @@
                             <p class="t-13-400">3 часа</p>
                         </div>
                     </div>
-                    <div class="text1 mb3">
+                    <div class="flexRow mb3">
                         <div class="number">
                             <p>3</p>
                         </div>
@@ -212,9 +273,8 @@
                             <p class="t-13-400">2 места</p>
                         </div>
                     </div>
-                    <div class="text1 ">
-                        <div class="cont">
-                        </div>
+                    <div class="flexRow ">
+                        <img class="cont" src="./images/photoPhotographer.png" alt="#">
                         <div>
                             <p class="t-12-500 mb06">Мария Иванова</p>
                             <p class="t-13-400 mb06">Фотограф</p>
@@ -225,14 +285,95 @@
             </div>
         </div>
 
+        <!-- ! Для телефона-->
+        <div class="forSmallScreen ">
+            <img class="mb2" src="./images/mapSmall.png" alt="#">
+            <div class=" whereDoWeMeet bl mb1">
+                <div class="flexRow jcsb aic mb2">
+                    <img class="arrowCont" src="./images/icons/Arrow_1.png" alt="#">
+                    <div class="number">
+                        <p>1</p>
+                    </div>
+                    <img class="arrowCont" src="./images/icons/Arrow_2.png" alt="#">
+                </div>
+                <p class="t-12-500 tac mb06">Где встречаемся?</p>
+                <p class="t-13-400 tac mb2">Москва</p>
+                <div class="flexRow jcc">
+                    <div class="round yellow"></div>
+                    <div class="round"></div>
+                    <div class="round mb2"></div>
+                </div>
+                <div class="flexRow  mb1">
+                    <img class="cont" src="./images/photoPhotographer.png" alt="#">
+                    <div>
+                        <p class="t-12-500 mb06">Мария Иванова</p>
+                        <p class="t-13-400 mb06">Фотограф</p>
+                        <p class="t-10-500-blue">Показать больше информации о фотографе</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" whereDoWeMeet bl mb1">
+                <div class="flexRow jcsb aic mb2">
+                    <img class="arrowCont" src="./images/icons/Arrow_1.png" alt="#">
+                    <div class="number">
+                        <p>2</p>
+                    </div>
+                    <img class="arrowCont" src="./images/icons/Arrow_2.png" alt="#">
+                </div>
+                <p class="t-12-500 tac mb06">Время съемки</p>
+                <p class="t-13-400 tac mb2">3 часа</p>
+                <div class="flexRow jcc">
+                    <div class="round"></div>
+                    <div class="round yellow"></div>
+                    <div class="round mb2"></div>
+                </div>
+                <div class="flexRow  mb1">
+                    <img class="cont" src="./images/photoPhotographer.png" alt="#">
+                    <div>
+                        <p class="t-12-500 mb06">Мария Иванова</p>
+                        <p class="t-13-400 mb06">Фотограф</p>
+                        <p class="t-10-500-blue">Показать больше информации о фотографе</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" whereDoWeMeet bl mb1">
+                <div class="flexRow jcsb aic mb2">
+                    <img class="arrowCont" src="./images/icons/Arrow_1.png" alt="#">
+                    <div class="number">
+                        <p>3</p>
+                    </div>
+                    <img class="arrowCont" src="./images/icons/Arrow_2.png" alt="#">
+                </div>
+                <p class="t-12-500 tac mb06">Мест осталось:</p>
+                <p class="t-13-400 tac mb2">2 места</p>
+                <div class="flexRow jcc">
+                    <div class="round "></div>
+                    <div class="round "></div>
+                    <div class="round yellow mb2"></div>
+                </div>
+                <div class="flexRow  mb1">
+                    <img class="cont" src="./images/photoPhotographer.png" alt="#">
+                    <div>
+                        <p class="t-12-500 mb06">Мария Иванова</p>
+                        <p class="t-13-400 mb06">Фотограф</p>
+                        <p class="t-10-500-blue">Показать больше информации о фотографе</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
         <!-- отзывы -->
-        <div class="bl">
+        <div class="forBigScreen bl">
             <div class="comments mb45">
                 <p class="t-14-500 mb3">Отзывы:</p>
-                <div class="comment">
-                    <div class="photocontainer_1">
-                        <img src="./images/comment_1.png" alt="#">
-                    </div>
+                <div class="flexRow">
+                    <img class="photocontainer_1" src="./images/comment_1.png" alt="#">
                     <div class="commentRow_2 mt1">
                         <p class="t-12-500 mb06">Валерия Антонова</p>
                         <p class="mb06">Арт-директор </p>
@@ -250,10 +391,8 @@
                         <hr class="line mb2">
                     </div>
                 </div>
-                <div class="comment">
-                    <div class="photocontainer_2">
-                        <img src="./images/commant_2.png" alt="#">
-                    </div>
+                <div class="flexRow">
+                    <img class="photocontainer_1" src="./images/commant_2.png" alt="#">
                     <div class="commentRow_2">
                         <p class="t-12-500 mb06">Виталий Петров</p>
                         <p class="mb06">Фотограф</p>
@@ -262,7 +401,8 @@
                             <img src="./images/icons/tick.png" alt="#">
                             <span class="t-gray">Супер! Я бы заказала съемку снова!</span>
                         </div>
-                        <p class="t-12-400 mb1">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный
+                        <p class="t-12-400 mb1">Восторг! :) Очень понравилось :) Захватили последний теплый,
+                            солнечный
                             октябрьский
                             день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление.
                             Организация полёта отличная. Спасибо!</p>
@@ -270,10 +410,8 @@
                         <hr class="line mb2">
                     </div>
                 </div>
-                <div class="comment">
-                    <div class="photocontainer_3">
-                        <img src="./images/comment_3.png" alt="#">
-                    </div>
+                <div class="flexRow">
+                    <img class="photocontainer_1" src="./images/comment_3.png" alt="#">
                     <div class="commentRow_2">
                         <p class="t-12-500 mb06">Джим Керри</p>
                         <p> </p>
@@ -282,38 +420,129 @@
                             <img src="./images/icons/tick.png" alt="#">
                             <span class="t-gray">Супер! Я бы заказала съемку снова!</span>
                         </div>
-                        <p class="t-12-400 mb1">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати
+                        <p class="t-12-400 mb1">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!!
+                            Кстати
                             закуски
                             были
                             вкусными и сытными))Мы
-                            с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще нам
+                            с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще
+                            нам
                             всем
-                            напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но
+                            напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить)))
+                            Но
                             все
                             равно
                             приятно. Короче, Презентстар – проверено. Оценка: пять!</p>
                         <p class="t-gray mb15">27 Апреля, 2019г.</p>
                         <hr class="line mb06">
                     </div>
-
                 </div>
                 <div class="tac t-10-500-blue">
                     <p class="arrow_1">Показать Все (134)</p>
                 </div>
             </div>
+
         </div>
 
+        <!-- ! ДЛЯ ТЕЛЕФОНА!!!! -->
+        <div class="forSmallScreen bl mb45">
+
+            <p class="t-18-400 mb3">Отзывы:</p>
+
+            <div class="flexRow">
+                <div class="mb2">
+                    <img src="./images/comment_1.png" alt="#">
+                </div>
+                <div class="mt1 ml1">
+                    <p class="t-10-500 mb06">Валерия Антонова</p>
+                    <p class="t-09-400 mb06">Арт-директор </p>
+                    <div class="mb1">
+                        <img class="stars" src="./images/icons/stars.png" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="mb2">
+                <img src="./images/icons/tick.png" alt="#">
+                <span class="t-08-gray ">Супер! Я бы заказала съемку снова!</span>
+            </div>
+            <p class="t-09-400 mb1">Хотим выразить огромную благодарность вашей компании! Получили море ощущений,
+                все
+                прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!</p>
+            <p class="t-08-gray mb15">27 Апреля, 2019г.</p>
+            <hr class="line mb2">
+
+
+            <div class="flexRow">
+                <div class="mb2 ">
+                    <img src="./images/commant_2.png" alt="#">
+                </div>
+                <div class="commentRow_2 ml1 mt1">
+                    <p class="t-10-500 mb06">Виталий Петров</p>
+                    <p class="t-09-400 mb06">Фотограф</p>
+                    <div class="mb1">
+                        <img class="stars" src="./images/icons/stars.png" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="mb2">
+                <img src="./images/icons/tick.png" alt="#">
+                <span class="t-08-gray">Супер! Я бы заказала съемку снова!</span>
+            </div>
+            <p class="t-09-400 mb1">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный
+                октябрьский
+                день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление.
+                Организация полёта отличная. Спасибо!</p>
+            <p class="t-08-gray mb15">19 Апреля, 2019г.</p>
+            <hr class="line mb2">
+
+
+            <div class="flexRow">
+                <div class="mb2">
+                    <img src="./images/comment_3.png" alt="#">
+                </div>
+                <div class="commentRow_2 ml1 mt1">
+                    <p class="t-10-500 mb06">Джим Керри</p>
+                    <p> </p>
+                    <div class="mb1">
+                        <img class="stars" src="./images/icons/stars.png" alt="#">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb2">
+                <img src="./images/icons/tick.png" alt="#">
+                <span class="t-08-gray">Супер! Я бы заказала съемку снова!</span>
+            </div>
+            <p class="t-09-400 mb1">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски
+                были
+                вкусными и сытными)) Мы
+                с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще нам всем
+                напечатали
+                по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но
+                все равно приятно. Короче, Презентстар – проверено. Оценка: пять!</p>
+            <p class="t-08-gray mb15">17 Апреля, 2019г.</p>
+            <hr class="line mb1">
+
+
+            <div class="tac t-10-500-blue">
+                <p class="arrow_3">Показать Все (134)</p>
+            </div>
+        </div>
+
+
+
         <!-- футер -->
-        <div class="bl">
+        <div class="forBigScreen bl">
             <div class="footerTop mb2">
                 <img class="logo" src="./images/HELYFLY.jpg" alt="logotype">
                 <div>
-                    <p class="language">RU</p>
+                    <img class="socialContainer" src="./images/icons/Social.png" alt="#">
+                    <span class="language">RU</span></p>
                 </div>
             </div>
         </div>
 
-        <div class="footerBottom mb45">
+        <div class="forBigScreen footerBottom mb45">
             <div class="bl">
                 <div class="container">
                     <div>
@@ -328,6 +557,32 @@
             </div>
         </div>
 
+
+        <!-- ! ДЛЯ ТЕЛЕФОНА!!!! -->
+        <div class="forSmallScreen bl">
+            <div class="flexRow jcsb mb2">
+                <div><img class="logo" src="./images/HELYFLY.jpg" alt="logotype"></div>
+                <div><img class="socialContainer" src="./images/icons/Social.png" alt="#"></div>
+
+            </div>
+            <hr class="line mb1">
+
+            <div class="flexRow jcsb mb2">
+                <div>
+                    <img src="./images/icons/MC.png" alt="#">
+                    <img src="./images/icons/VISA.png" alt="#">
+                    <img src="./images/icons/PP.png" alt="">
+                </div>
+                <div>
+                    <p class="arrow_1 ml1">RU</p>
+                </div>
+            </div>
+
+            <div class="textFooter tac mb45">
+                <p class="t-08-gray">Тех. поддержка: 8(800)700-00-00<br>© 2018 HELYFLY. All Rights Reserved.
+                </p>
+            </div>
+        </div>
 
         <div class="modalWindow tac mb45">
             <div class="contentModalWindow">
@@ -370,18 +625,18 @@
                     </label>
                 </form>
                 <div class="flexRow mb2">
-                    <form class="form halfContainer">
+                    <form class="form container_60_percent">
                         <label>
                             <input type="text" placeholder="Срок действия"></input>
                         </label>
                     </form>
-                    <form class="form halfContainer">
+                    <form class="form container_40_percent">
                         <label>
                             <input type="text" placeholder="CVV"></input>
                         </label>
                     </form>
                 </div>
-                <form class="changeColor tal flexRow mb2">
+                <form class="changeColor flexRow mb2">
                     <label>
                         <input type='checkbox'>
                         <span></span>
@@ -396,327 +651,6 @@
 
     </div>
 
-
-
-
-    <!-- СТРАНИЦА ДЛЯ ТЕЛЕФОНА!!!! -->
-    <!-- главная страница -->
-    <div class="phonePage">
-
-        <!-- логотип и телефон -->
-        <div class="mainPhoneHeader mt25 mb3">
-            <img class="logo" src="./images/HELYFLY.jpg" alt="logotype">
-            <div class="Moscow">Москва</div>
-            <img src="./images/icons/Фигура.png" alt="#">
-        </div>
-
-        <!-- фото вертолета -->
-        <div class="phoneHelicoptersPictures tal mb2">
-            <div class="textInsidePhoneHelicotersPictures">
-                <p class="phoneheaderBooking mb2">Эксклюзивная <span class="text-accent">фотосессия</span><br>при
-                    полете<br>на вертолете
-                </p>
-
-                <div class="textInsideSticker">
-                    <div>
-                        <p class="wordPrice">Стоимость:</p>
-                        <p class="cost">1500₽</p>
-                    </div>
-                    <div class="percent">
-                        <div>
-                            <p class="circle">%</p>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="buttonBooking_2">Забронировать место
-                </button>
-            </div>
-        </div>
-
-        <!-- leadBlock-->
-        <div class="leadBlock_2 mb3">
-            <p class="headerLeadBlock_2 tac mb15">Фотосессия</br>в вертолете</p>
-            <div class="photoLeadBlock tac mb2">
-                <div class="vector"><img src="./images/icons/Vector.png" alt="vector"></div>
-            </div>
-            <p class="tal t-09-400 mb2">Полет на вертолете это прекрасная возможность получить новые ощущения! А наш
-                замечательный фотограф запечатлит лучшие моменты</p>
-
-            <div class="icon3Hours mb1">
-                <p class="t-09-500">3 часа съемки</p>
-            </div>
-
-            <div class="iconSpeechBubble mb1">
-                <p class="t-09-500">Русский</p>
-            </div>
-            <div class="iconMoney mb1">
-                <p class="t-09-500">от <span class="t-09-600">850$</span> </p>
-            </div>
-
-            <div class="iconMap mb1">
-                <p class="t-09-500">Дубаи</p>
-            </div>
-
-            <div class="iconCamera mb2">
-                <p class="t-09-500">Более 50 фотографий</p>
-            </div>
-            <hr class="line mb1">
-
-            <div class="iconCups_2 t-09-400 mb2">
-                <div><img src="./images/icons/cup.png" alt="#"></div>
-                <div class="tal">
-                    <p>Более <span class="t-09-600">150</span> отзывов с оценкой </p>
-                    <img src="./images/icons/stars.png" alt="#">
-                </div>
-
-            </div>
-            <hr class="line">
-        </div>
-
-
-        <!--галерея фотографий -->
-        <div class="mb45">
-            <p class="t-18-400 mb2">Фотографии<br>пакета:</p>
-            <div class="mb2">
-                <img class="girl_2" src="./images/girl.jpg" alt="#">
-                <img class="runway_2" src="./images/runway.jpg" alt="#">
-                <img class="photoKiss_2" src="./images/photoKiss.jpg" alt="#">
-                <img class="helicopterAndGirl_2" src="./images/helicopterAndGirl.jpg" alt="#">
-            </div>
-
-        </div>
-
-
-        <!-- блок об авторе -->
-        <div>
-            <div class="flexRow jcc mb15">
-                <div class="photoContainer mb06">
-                </div>
-                <div class="heart"><img src="./images/icons/heart.png" alt="#"></div>
-            </div>
-            <p class="t-12-500 mb06">Марина Иванова</p>
-            <p class="t-09-400 mb06">Фотограф</p>
-            <p class="t-10-500-blue mb15">Показать больше<br> информации о фотографе</p>
-
-
-            <div class="pl1 tal">
-                <p class="t-12-500 mb15">Об организаторе:</p>
-                <p class="t-10-400 mb1">Всем привет! Я фотограф Мария! И помимо фотосъемки я так же являюсь членом
-                    группы
-                    экспертов туристической отрасли, которые хорошо разбираются в маркетинге, операциях и
-                    услугах обслуживания клиентов, специализирующихся на совместном использовании и частных турах.</p>
-                <p class="t-10-400 mb06">Cначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем
-                    подходящее решение, которое соответствует бюджету и планам клиента. Мы никогда не зависим от
-                    субпоставщиков
-                    и не свяжемся…</p>
-                <div class="tac t-10-500-blue">
-                    <p class="arrow_1 tal mb2">Читать еще</p>
-                </div>
-                <p class="t-12-500 mb15">Что я предоставлю:</p>
-                <p class="t-10-400  mb06">Встречу вас на машине после длительного перелёта. Качественный подбор места и
-                    локации для вашей съемки. При необходимости всегда возможно прерваться на обед/ужин.Более 50
-                    фотографий
-                    на выходе с обработкой и замечательные впечатления о Дубае !</p>
-                <div class="tac t-10-500-blue">
-                    <p class="arrow_1 tal mb2">Читать еще</p>
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- Доступная съемка в ближайшее время: -->
-        <div class="availableSlots tac mb15">
-            <p class="t-18-400 mb2">Доступная съемка в ближайшее время:</p>
-
-            <div class="textInsideAvailableSlots_2">
-                <p class="block_1 t-13-400 ">Пятница, 14 сентября</p>
-
-                <div class="block_2 tal">
-                    <p class="t-13-400  mb1">15:00 - 18:00</p>
-                    <p class="t-13-600  mb1">1500₽</p>
-                    <p class="t-13-400  mb1">Осталось — 1 место</p>
-                    <button class="button_3">Выбрать</button>
-                </div>
-
-                <div class="block_2 tal">
-                    <p class="t-13-400 mb1">19:00 - 22:00</p>
-                    <p class="t-13-600 mb1">1500₽</p>
-                    <p class="t-13-400 mb2">Осталось — 1 место</p>
-                    <button class="button_3">Выбрать</button>
-                </div>
-
-
-                <div class="iconCups_2 block_1 t-09-400 mb2">
-                    <div><img src="./images/icons/cup.png" alt="#"></div>
-                    <div class="tal">
-                        <p>Более 150 отзывов с оценкой </p>
-                        <img src="./images/icons/stars.png" alt="#">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- карта -->
-        <div class="map_1 mb3">
-            <img src="./images/map_2.png" alt="#">
-        </div>
-
-
-        <!-- Блок где стречаемся -->
-        <div class="text1 mt25 mb2">
-            <div class="number">
-                <p>1</p>
-            </div>
-            <div>
-                <p class="t-12-500  mb06">Где встречаемся?</p>
-                <p class="t-13-400">Москва</p>
-            </div>
-        </div>
-        <div class="text1 mb2">
-            <div class="number">
-                <p>2</p>
-            </div>
-            <div>
-                <p class="t-12-500 mb06">Время съемки</p>
-                <p class="t-13-400">3 часа</p>
-            </div>
-        </div>
-        <div class="text1 mb3">
-            <div class="number">
-                <p>3</p>
-            </div>
-            <div>
-                <p class="t-12-500 mb06">Мест осталось:</p>
-                <p class="t-13-400">2 места</p>
-            </div>
-        </div>
-        <div class="text1 mb3">
-            <div class="cont">
-            </div>
-            <div>
-                <p class="t-12-500 mb06">Мария Иванова</p>
-                <p class="t-13-400 mb06">Фотограф</p>
-                <p class="t-10-500-blue">Показать больше информации</p>
-            </div>
-        </div>
-
-
-
-        <!-- отзывы -->
-        <div class="comments_1 tal mb45">
-            <p class="t-18-400 mb3">Отзывы:</p>
-
-            <div class="comment">
-                <div class="photocontainer_1 mb2">
-                    <img src="./images/comment_1.png" alt="#">
-                </div>
-                <div class="commentRow_2 mt1">
-                    <p class="t-10-500 mb06">Валерия Антонова</p>
-                    <p class="t-09-400 mb06">Арт-директор </p>
-                    <div class="mb1">
-                        <img class="stars" src="./images/icons/stars.png" alt="#">
-                    </div>
-                </div>
-            </div>
-            <div class="mb2">
-                <img src="./images/icons/tick.png" alt="#">
-                <span class="t-08-gray ">Супер! Я бы заказала съемку снова!</span>
-            </div>
-            <p class="t-09-400 mb1">Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все
-                прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!</p>
-            <p class="t-08-gray mb15">27 Апреля, 2019г.</p>
-            <hr class="line mb2">
-
-
-            <div class="comment">
-                <div class="photocontainer_2 mb2">
-                    <img src="./images/commant_2.png" alt="#">
-                </div>
-                <div class="commentRow_2 mt1">
-                    <p class="t-10-500 mb06">Виталий Петров</p>
-                    <p class="t-09-400 mb06">Фотограф</p>
-                    <div class="mb1">
-                        <img class="stars" src="./images/icons/stars.png" alt="#">
-                    </div>
-                </div>
-            </div>
-            <div class="mb2">
-                <img src="./images/icons/tick.png" alt="#">
-                <span class="t-08-gray">Супер! Я бы заказала съемку снова!</span>
-            </div>
-            <p class="t-09-400 mb1">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный октябрьский
-                день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление.
-                Организация полёта отличная. Спасибо!</p>
-            <p class="t-08-gray mb15">19 Апреля, 2019г.</p>
-            <hr class="line mb2">
-
-
-            <div class="comment">
-                <div class="photocontainer_3 mb2">
-                    <img src="./images/comment_3.png" alt="#">
-                </div>
-                <div class="commentRow_2 mt1">
-                    <p class="t-10-500 mb06">Джим Керри</p>
-                    <p> </p>
-                    <div class="mb1">
-                        <img class="stars" src="./images/icons/stars.png" alt="#">
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb2">
-                <img src="./images/icons/tick.png" alt="#">
-                <span class="t-08-gray">Супер! Я бы заказала съемку снова!</span>
-            </div>
-            <p class="t-09-400 mb1">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были
-                вкусными и сытными)) Мы
-                с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще нам всем
-                напечатали
-                по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но
-                все равно приятно. Короче, Презентстар – проверено. Оценка: пять!</p>
-            <p class="t-08-gray mb15">17 Апреля, 2019г.</p>
-            <hr class="line mb1">
-
-
-            <div class="tac t-10-500-blue">
-                <p class="arrow_3">Показать Все (134)</p>
-            </div>
-        </div>
-
-        <!-- футер -->
-        <div class="footer">
-            <div class="footerTop_2 mb2">
-                <img class="logo" src="./images/HELYFLY.jpg" alt="logotype">
-                <img src="./images/icons/Social.png" alt="#">
-
-            </div>
-            <hr class="line mb1">
-
-            <div class="footerMiddle mb2">
-                <div>
-                    <img src="./images/icons/MC.png" alt="#">
-                    <img src="./images/icons/VISA.png" alt="#">
-                    <img src="./images/icons/PP.png" alt="">
-                </div>
-                <div>
-                    <p class="arrow_1">RU</p>
-                </div>
-            </div>
-
-            <div class="textFooter">
-                <p class="t-08-gray">Тех. поддержка: 8(800)700-00-00<br>© 2018 HELYFLY. All Rights Reserved.
-                </p>
-            </div>
-        </div>
-
-
-
-
-
-    </div>
 </body>
 
 </html>
