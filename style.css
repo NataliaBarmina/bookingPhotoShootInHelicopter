@@ -107,10 +107,6 @@ h6 {
     font-size: 0.9rem;
 }
 
-/* .t-10-400 {
-    line-height: 1.3rem;
-} */
-
 .t-10-500 {
     font-weight: 500;
 }
@@ -210,6 +206,43 @@ h6 {
     text-align: center;
 }
 
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
+}
+
+/* FLEX */
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex {
+    display: flex;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.aic {
+    align-items: center;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+/* BACKGROUND */
+
+.yellow {
+    background-color: #FC9B09;
+}
+
 /* < !-- главная страница --> */
 body {
     max-width: 1920px;
@@ -228,19 +261,12 @@ body {
 }
 
 .logotype {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
 
 .forSmallScreen .t-08-400 {
     color: #5286EC;
-}
-
-.forSmallScreen .logotype {
-    justify-content: space-between;
 }
 
 .logo {
@@ -290,8 +316,6 @@ body {
     background-image: url(./images/Rectangle.png);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: row;
     padding-top: 1rem;
     padding-bottom: 2rem;
 }
@@ -309,8 +333,6 @@ body {
 
 .percent {
     margin-left: 1.3rem;
-    display: flex;
-    align-items: center;
 }
 
 .circle {
@@ -338,12 +360,6 @@ body {
 
 /* leadBlock */
 
-.leadBlock {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .leadBlockRow_1 {
     width: 47%;
     padding-right: 2rem;
@@ -353,7 +369,6 @@ body {
     font-size: 2.8rem;
     line-height: 2.8rem;
     font-weight: 500;
-
 }
 
 .iconCircle,
@@ -361,7 +376,8 @@ body {
 .iconMap,
 .iconSpeechBubble,
 .icon3Hours,
-.iconMoney {
+.iconMoney,
+.iconCups {
     display: flex;
     align-items: center;
 }
@@ -402,11 +418,6 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
     padding: 0.3rem 0.2rem 0.1rem 0.2rem;
     margin-right: 0.5rem;
-}
-
-.iconCups {
-    display: flex;
-    align-items: center;
 }
 
 .iconCup::before {
@@ -476,18 +487,11 @@ body {
 /* <!-- блок об авторе --> */
 
 .informationAboutPhotographer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
+    width: 120%;
 }
 
 .textAboutPhotographer {
-    width: 57%;
-}
-
-.textAboutPhotographer .tac {
-    text-align: start;
+    width: 110%;
 }
 
 .arrow_1::after {
@@ -496,7 +500,9 @@ body {
 }
 
 .photoPhotographer {
-    max-width: 45rem;
+    /* width: 100rem; */
+    width: 90%;
+    text-align: center;
 }
 
 .photoContainer {
@@ -526,8 +532,6 @@ body {
 
 .availableSlotsHeader {
     font-size: 1.5rem;
-    display: flex;
-    align-items: center;
 }
 
 .availableSlotsHeader::after {
@@ -537,12 +541,6 @@ body {
 .line_2 {
     border: 0.5px solid #B3B3B3;
     width: 60%;
-}
-
-.availableTimes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .buttonAvailableTimes {
@@ -559,13 +557,11 @@ body {
 
 /* <!-- карта --> */
 .map {
-    /* height: 30vw; */
     min-height: 32rem;
     background-image: url(./images/bigMap.jpg);
     background-size: cover;
     padding-top: 2rem;
     padding-bottom: 2rem;
-
 }
 
 .textInsideMap {
@@ -574,29 +570,12 @@ body {
     border: 1px solid #B3B3B3;
     background: #FFF;
     padding: 2rem 0rem 1rem 1rem;
-
 }
 
 .whereDoWeMeet {
     border: 1px solid #B3B3B3;
     padding: 3rem 3rem 3rem 2rem;
     max-width: 25rem;
-}
-
-.jcsb {
-    justify-content: space-between;
-}
-
-.aic {
-    align-items: center;
-}
-
-.jcc {
-    justify-content: center;
-}
-
-.yellow {
-    background-color: #FC9B09;
 }
 
 .arrowCont {
@@ -627,9 +606,7 @@ body {
     max-width: 4rem;
     max-height: 4rem;
     object-fit: cover;
-
 }
-
 
 .round {
     width: 0.7rem;
@@ -638,8 +615,6 @@ body {
     border: 1px solid #37373F;
     margin-right: 0.5rem;
 }
-
-
 
 /* <!-- отзывы --> */
 
@@ -662,10 +637,6 @@ body {
     margin-right: 2.5rem;
 }
 
-.comments .tac {
-    text-align: end;
-}
-
 .photocontainer_11 {
     max-width: 4rem;
     max-height: 4rem;
@@ -675,14 +646,6 @@ body {
 .ml1 {
     margin-left: 1rem;
 }
-
-/* <!-- футер --> */
-
-.footerTop {
-    display: flex;
-    justify-content: space-between;
-}
-
 
 .language {
     color: #5286EC;
@@ -705,17 +668,12 @@ body {
     object-fit: contain;
 }
 
-
 .footerBottom {
     background-color: #FAF9F8;
 }
 
 .container {
     width: 60%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .footerBottom .t-gray {
@@ -740,10 +698,6 @@ body {
     color: #C94042;
 }
 
-.modalWindow .t-10-500 {
-    text-align: left;
-}
-
 .form {
     text-align: left;
     padding-left: 0.6rem;
@@ -761,11 +715,6 @@ body {
     width: 40%;
 }
 
-.flexRow {
-    display: flex;
-    flex-direction: row;
-}
-
 .container_60_percent {
     border-top-style: none;
     border-right-style: none;
@@ -773,10 +722,6 @@ body {
 
 .container_40_percent {
     border-top-style: none;
-}
-
-.changeColor {
-    text-align: left;
 }
 
 .changeColor input {
@@ -945,18 +890,13 @@ body {
 
     .informationAboutPhotographer {
         flex-direction: column;
-        width: 100%;
+        width: 119%;
     }
 
     .photoPhotographer {
         order: -1;
-        width: 100%;
         margin-bottom: 2rem;
-
-    }
-
-    .photoPhotographer .flexRow {
-        justify-content: center;
+        width: 100%;
     }
 
     .textAboutPhotographer {
@@ -995,6 +935,12 @@ body {
 
     .container_60_percent {
         border-right: 1px solid #C7C7C7;
+    }
+
+    .line {
+        height: 1px;
+        border: none;
+        background-color: #B3B3B3;
     }
 }
 
