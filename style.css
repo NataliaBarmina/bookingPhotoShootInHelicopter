@@ -247,7 +247,6 @@ h6 {
 body {
     max-width: 1920px;
     text-align: center;
-    background-color: #5286EC;
 }
 
 .mainPage {
@@ -573,6 +572,11 @@ body {
     padding: 2rem 0rem 1rem 1rem;
 }
 
+.smallMap {
+    object-fit: contain;
+    width: 100%;
+}
+
 .whereDoWeMeet {
     border: 1px solid #B3B3B3;
     padding: 3rem 3rem 3rem 2rem;
@@ -773,35 +777,30 @@ body {
 @media(max-width:1920) {
     body {
         max-width: 1280;
-        background-color: #5286EC;
     }
 }
 
 @media (max-width: 1295px) {
     body {
         max-width: 1024;
-        background-color: chartreuse;
     }
 }
 
 @media (max-width: 1024px) {
     body {
         max-width: 768;
-        background-color: chocolate;
     }
 }
 
 @media (max-width: 768px) {
     body {
         max-width: 600;
-        background-color: darkorchid;
     }
 }
 
 @media (max-width: 610px) {
     body {
         max-width: 480;
-        background-color: greenyellow;
     }
 
     html,
@@ -854,7 +853,6 @@ body {
 @media (max-width: 480px) {
     body {
         max-width: none;
-        background-color: deeppink;
     }
 
     .availableSlotsHeader::after,
@@ -955,7 +953,7 @@ body {
 
 
 
-@media(min-width:321px) {
+@media(min-width:481px) {
 
     .forSmallScreen {
         display: none;
