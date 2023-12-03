@@ -830,7 +830,7 @@ body {
 
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     body {
         max-width: 320;
         background-color: aqua;
@@ -849,9 +849,9 @@ body {
     .modalWindow {
         width: 80%;
     }
-}
+} */
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
     body {
         max-width: none;
         background-color: deeppink;
