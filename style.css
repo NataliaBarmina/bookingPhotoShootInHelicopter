@@ -247,6 +247,7 @@ h6 {
 body {
     max-width: 1920px;
     text-align: center;
+    background-color: #5286EC;
 }
 
 .mainPage {
@@ -772,30 +773,35 @@ body {
 @media(max-width:1920) {
     body {
         max-width: 1280;
+        background-color: #5286EC;
     }
 }
 
 @media (max-width: 1295px) {
     body {
         max-width: 1024;
+        background-color: chartreuse;
     }
 }
 
 @media (max-width: 1024px) {
     body {
         max-width: 768;
+        background-color: chocolate;
     }
 }
 
 @media (max-width: 768px) {
     body {
         max-width: 600;
+        background-color: darkorchid;
     }
 }
 
 @media (max-width: 610px) {
     body {
         max-width: 480;
+        background-color: greenyellow;
     }
 
     html,
@@ -827,6 +833,7 @@ body {
 @media (max-width: 480px) {
     body {
         max-width: 320;
+        background-color: aqua;
     }
 
     html,
@@ -847,6 +854,7 @@ body {
 @media (max-width: 320px) {
     body {
         max-width: none;
+        background-color: deeppink;
     }
 
     .availableSlotsHeader::after,
