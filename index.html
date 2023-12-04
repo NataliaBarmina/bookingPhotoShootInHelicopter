@@ -91,9 +91,16 @@
                 </div>
 
                 <div class="leadBlockRow_2">
-                    <div class="vector"><img src="./images/icons/Vector.png" alt="vector"></div>
+                    <img class="bigPhotoKiss" src="./images/photoKiss.jpg" alt="#">
+                    <img class="vector" src="./images/icons/Vector.png" alt="vector">
+                    <iframe class="video" width="560" height="315"
+                        src="https://www.youtube.com/embed/daGL-Ou2mZY?si=qqMy8jgH-MK4Z58z&amp;start=19"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
+
         </div>
 
         <!-- ! для ТЕЛЕФОНА -->
@@ -591,72 +598,92 @@
             </div>
         </div>
 
-        <div class="modalWindow tac mb45">
-            <div class="contentModalWindow">
-                <p class="t-13-600 mb1 mt1">Бронирование</p>
-                <p class="t-10-500 mb1 tal">Дата<span>*</span></p>
-                <form class="form mb06">
-                    <label>
-                        <input type="date" value="14.09.2023"></input>
-                    </label>
-                </form>
-                <p class="t-10-500 mb1 tal">Email<span>*</span></p>
-                <form class="form mb1">
-                    <label>
-                        <input type="email" placeholder="Электронная почта"></input>
-                    </label>
-                </form>
-                <p class="t-10-500 mb1 tal">Имя<span>*</span></p>
-                <form class="form mb1">
-                    <label>
-                        <input type="text" placeholder="Иван"></input>
-                    </label>
-                </form>
-                <p class="t-10-500 mb1 tal">Фамилия<span>*</span></p>
-                <form class="form mb1 ">
-                    <label>
-                        <input type="text" placeholder="Громов"></input>
-                    </label>
-                </form>
-                <p class="t-10-500 mb1 tal">Телефон<span>*</span></p>
-                <form class="form mb1 ">
-                    <label>
-                        <input type="tel" placeholder="+7(905)184-81-40"></input>
-                    </label>
-                </form>
-                <p class="t-10-500 mb1 tal">Данные карты<span>*</span></p>
 
-                <form class="form">
-                    <label>
-                        <input type="text" placeholder="Номер карты"></input>
-                    </label>
-                </form>
-                <div class="flexRow mb2">
-                    <form class="form container_60_percent">
+        <!-- !МОДАЛЬНОЕ ОКНО -->
+        <form>
+            <div class="modalWindow tac mb45">
+                <div class="contentModalWindow">
+                    <p class="t-13-600 mb1 mt1">Бронирование</p>
+
+                    <div class="mb1">
+                        <p class="t-10-500 mb1 tal">Дата<span>*</span></p>
                         <label>
-                            <input type="text" placeholder="Срок действия"></input>
+                            <input class="border" type="date" placeholder="04.12.2023" required></input>
                         </label>
-                    </form>
-                    <form class="form container_40_percent">
+                    </div>
+
+                    <div class="mb1">
+                        <p class="t-10-500 mb1 tal">Email<span>*</span></p>
                         <label>
-                            <input type="text" placeholder="CVV"></input>
+                            <input class="border" type="email" placeholder="Электронная почта" required></input>
                         </label>
-                    </form>
+                    </div>
+
+                    <div class="mb1">
+                        <p class="t-10-500 mb1 tal">Имя<span>*</span></p>
+                        <label>
+                            <input class="border" type="text" placeholder="Иван" required></input>
+                        </label>
+                    </div>
+
+                    <div class="mb1 ">
+                        <p class="t-10-500 mb1 tal">Фамилия<span>*</span></p>
+                        <label>
+                            <input class="border" type="text" placeholder="Громов" required></input>
+                        </label>
+                    </div>
+
+                    <div class="mb1 ">
+                        <p class="t-10-500 mb1 tal">Телефон<span>*</span></p>
+                        <label>
+                            <input class="border" type="tel" pattern="[0-9]+" minlength="6" maxlength="16"
+                                placeholder="+7(905)184-81-40" required></input>
+                        </label>
+                    </div>
+
+                    <div class="mb1 ">
+                        <p class="t-10-500 mb1 tal">Данные карты<span>*</span></p>
+                        <label>
+                            <input class="border" type="text" placeholder="Номер карты" pattern="[0-9]{16}"
+                                minlength="16" maxlength="16" required></input>
+                        </label>
+                        <div class="flexRow mb2">
+                            <div class="container_60_percent">
+                                <label>
+                                    <input class="border" type="month" placeholder="Срок действия" required></input>
+                                </label>
+                            </div>
+                            <div class="container_40_percent">
+                                <label>
+                                    <input class="border" type="text" pattern="[0-9]{3}" minlength="3" maxlength="3"
+                                        placeholder="CVV" required></input>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="changeColor flexRow tal mb2">
+                        <label>
+                            <input type='checkbox' required>
+                            <span></span>
+                        </label>
+                        <p>Я согласен с пользовательским<br> соглашением и публичной офертой</p>
+                    </div>
+
+                    <button class="button_2 t-10-600 mb2">Забронировать</button>
+
                 </div>
-                <form class="changeColor flexRow tal mb2">
-                    <label>
-                        <input type='checkbox'>
-                        <span></span>
-                    </label>
-                    <p>Я согласен с пользовательским<br> соглашением и публичной офертой</p>
-                </form>
-
-                <button class="button_2 t-10-600 mb2">Забронировать</button>
-
             </div>
-        </div>
-
+        </form>
     </div>
+
+    <script>
+        const vector = document.querySelector('.vector');
+        const video = document.querySelector('.video')
+        vector.onclick = function (event) {
+            video.style.zIndex = '3';
+        }
+    </script>
 
 </body>
 
