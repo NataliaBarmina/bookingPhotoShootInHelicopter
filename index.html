@@ -93,7 +93,7 @@
                 <div class="leadBlockRow_2">
                     <img class="bigPhotoKiss" src="./images/photoKiss.jpg" alt="#">
                     <img class="vector" src="./images/icons/Vector.png" alt="vector">
-                    <iframe class="video" width="560" height="315"
+                    <iframe class="video"
                         src="https://www.youtube.com/embed/daGL-Ou2mZY?si=qqMy8jgH-MK4Z58z&amp;start=19"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -106,14 +106,11 @@
         <!-- ! для ТЕЛЕФОНА -->
         <div class="forSmallScreen bl mb3">
             <p class="headerLeadBlock_2 t-18-400 tac mb15">Фотосессия</br>в вертолете</p>
-            <!-- <div class="leadBlockRow_2 tac mb2">
-                <div class="vector"><img src="./images/icons/Vector.png" alt="vector"></div>
-            </div> -->
+
             <div class="leadBlockRow_2">
                 <img class="bigPhotoKiss" src="./images/photoKiss.jpg" alt="#">
                 <img class="vector" src="./images/icons/Vector.png" alt="vector">
-                <iframe class="video" width="560" height="315"
-                    src="https://www.youtube.com/embed/daGL-Ou2mZY?si=qqMy8jgH-MK4Z58z&amp;start=19"
+                <iframe class="video" src="https://www.youtube.com/embed/daGL-Ou2mZY?si=qqMy8jgH-MK4Z58z&amp;start=19"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -689,10 +686,11 @@
     </div>
 
     <script>
-        const vector = document.querySelector('.vector');
-        const video = document.querySelector('.video')
-        vector.onclick = function (event) {
-            video.style.zIndex = '3';
+        const vector = document.querySelectorAll('.vector');
+        const video = document.querySelectorAll('.video')
+
+        for (let i = 0; i < vector.length; i++) {
+            vector[i].addEventListener('click', () => video[i].style.zIndex = '3');
         }
     </script>
 
