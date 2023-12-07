@@ -214,6 +214,8 @@ h6 {
     text-align: right;
 }
 
+
+
 /* FLEX */
 
 .flexRow {
@@ -528,10 +530,21 @@ body {
     width: 110%;
 }
 
-.arrow_1::after {
+.showAll {
+    display: inline-block;
+}
+
+/* .arrowContainer {
+    width: 0.8rem;
+    height: 0.8rem;
+    object-fit: contain;
+    vertical-align: bottom;
+} */
+
+/* .arrow_1::after {
     content: url(./images/icons/Arrow.svg);
     margin-left: 0.5rem;
-}
+} */
 
 .photoPhotographer {
     /* width: 100rem; */
@@ -659,7 +672,12 @@ body {
 
 .comments {
     width: 60%;
+
 }
+
+/* .comment {
+    width: 100%;
+} */
 
 .photocontainer_1 {
     max-height: 6.5rem;
@@ -686,20 +704,16 @@ body {
     margin-left: 1rem;
 }
 
-.language {
+/* .language {
     color: #5286EC;
     display: inline-block;
-}
+} */
 
 
-.language::after {
+/* .language::after {
     content: url(./images/icons/Arrow.svg);
     margin-left: 0.5rem;
-}
-
-.footerTop span {
-    vertical-align: middle;
-}
+} */
 
 .socialContainer {
     width: 10rem;
