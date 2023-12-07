@@ -243,6 +243,18 @@ h6 {
     background-color: #FC9B09;
 }
 
+/* видимость блоков */
+.dn {
+    display: none;
+}
+
+/* расположение крупных блоков */
+.bl {
+    width: 80%;
+    display: inline-block;
+    text-align: left;
+}
+
 /* < !-- главная страница --> */
 body {
     max-width: 1920px;
@@ -253,12 +265,7 @@ body {
     color: #37373F;
 }
 
-/* расположение крупных блоков */
-.bl {
-    width: 80%;
-    display: inline-block;
-    text-align: left;
-}
+
 
 .logotype {
     padding-top: 2.5rem;
@@ -477,20 +484,19 @@ body {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 1rem;
 }
 
-.girl,
-.runway,
-.photoKiss,
-.helicopterAndGirl {
+.galleryContainer {
     width: 23rem;
     height: 14rem;
+    object-fit: cover;
     border-radius: 0.25rem;
+    background-color: aquamarine;
 }
 
-.arrow_2::before {
+/* .arrow_2::before {
     content: url(./images/icons/Arrow.svg);
     margin-right: 0.5rem;
 }
@@ -498,7 +504,19 @@ body {
 .arrow_2::after {
     content: url(./images/icons/Arrow.svg);
     margin-left: 0.5rem;
+} */
+
+.showAllPhoto {
+    display: inline-block;
 }
+
+.arrowContainer {
+    width: 0.8rem;
+    height: 0.8rem;
+    object-fit: contain;
+    vertical-align: bottom;
+}
+
 
 /* <!-- блок об авторе --> */
 

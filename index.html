@@ -157,18 +157,32 @@
             <div class="mb3">
                 <p class="t-14-500 mb3">Фотографии пакета:</p>
                 <div class="gallery mb2">
-                    <img class="girl" src="./images/girl.jpg" alt="#">
-                    <img class="runway" src="./images/runway.jpg" alt="#">
-                    <img class="photoKiss" src="./images/photoKiss.jpg" alt="#">
-                    <img class="helicopterAndGirl" src="./images/helicopterAndGirl.jpg" alt="#">
-                    <img class="photoKiss" src="./images/photoKiss.jpg" alt="#">
-                    <img class="helicopterAndGirl" src="./images/helicopterAndGirl.jpg" alt="#">
-                    <img class="runway" src="./images/runway.jpg" alt="#">
-                    <img class="photoKiss" src="./images/photoKiss.jpg" alt="#">
+                    <img class="galleryContainer" src="./images/girl.jpg" alt="#">
+                    <img class="galleryContainer" src="./images/runway.jpg" alt="#">
+                    <img class="galleryContainer" src="./images/photoKiss.jpg" alt="#">
+                    <img class="galleryContainer" src="./images/helicopterAndGirl.jpg" alt="#">
+                    <img class="galleryContainer" src="./images/photoKiss.jpg" alt="#">
+                    <img class="galleryContainer" src="./images/helicopterAndGirl.jpg" alt="#">
+                    <img class="galleryContainer" src="./images/runway.jpg" alt="#">
+                    <img class="galleryContainer" src="./images/photoKiss.jpg" alt="#">
+                    <img class="galleryContainer dn" src="./images/helimain_2.png" alt="photo">
+                    <img class="galleryContainer dn" src="./images/helimain_2.png" alt="photo">
+                    <img class="galleryContainer dn" src="./images/helimain_2.png" alt="photo">
+                    <img class="galleryContainer dn" src="./images/helimain_2.png" alt="photo">
                 </div>
-                <div class="forBigScreen tac mb2 t-10-500-blue">
+                <!-- <div class="forBigScreen tac mb2 t-10-500-blue">
                     <p class="arrow_2">Показать все фото</p>
+                </div> -->
+
+                <!-- !change arrow -->
+                <div class="forBigScreen  tac mb2 t-10-500-blue">
+                    <img class="arrowContainer" src="./images/icons/Arrow.svg" alt="#">
+                    <p class="showAllPhoto">Показать все фото</p>
+                    <img class="arrowContainer" src="./images/icons/Arrow.svg" alt="#">
                 </div>
+
+
+
                 <hr class="line forBigScreen">
             </div>
 
@@ -686,12 +700,41 @@
     </div>
 
     <script>
+        // включает видео в окне с фото целующейся пары, при нажатии на треугольник
         const vector = document.querySelectorAll('.vector');
         const video = document.querySelectorAll('.video')
 
-        for (let i = 0; i < vector.length; i++) {
-            vector[i].addEventListener('click', () => video[i].style.zIndex = '3');
+        for (let i = 0; i < vector.length; i += 1) {
+            vector[i].addEventListener('click', () => { video[i].style.zIndex = '3' });
         }
+
+
+        // показывает все фотографии
+        const btnShowPhoto = document.querySelector('.showAllPhoto');
+        const hiddenPhotos = document.querySelectorAll('.gallery .dn');
+        const arrow = document.querySelectorAll('.arrowContainer');
+
+        btnShowPhoto.addEventListener('click', () => {
+            console.log(hiddenPhotos[0].style);
+            const isVisible = !hiddenPhotos[0].classList.contains('dn');
+            if (isVisible) {
+                hiddenPhotos.forEach((item, index, array) => {
+                    hiddenPhotos[index].classList.add('dn');
+                    btnShowPhoto.innerHTML = "Показать больше фото";
+                    arrow[0].style.transform = "rotate(0deg)";
+                    arrow[1].style.transform = "rotate(0deg)";
+                })
+            } else {
+                hiddenPhotos.forEach((item, index, array) => {
+                    hiddenPhotos[index].classList.remove('dn');
+                    btnShowPhoto.innerHTML = "Показать меньше фото";
+                    arrow[0].style.transform = "rotate(180deg)";
+                    arrow[1].style.transform = "rotate(180deg)";
+                })
+            }
+        });
+
+
     </script>
 
 </body>
