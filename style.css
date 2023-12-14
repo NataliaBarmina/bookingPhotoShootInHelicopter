@@ -526,20 +526,7 @@ body {
     display: inline-block;
 }
 
-/* .arrowContainer {
-    width: 0.8rem;
-    height: 0.8rem;
-    object-fit: contain;
-    vertical-align: bottom;
-} */
-
-/* .arrow_1::after {
-    content: url(./images/icons/Arrow.svg);
-    margin-left: 0.5rem;
-} */
-
 .photoPhotographer {
-    /* width: 100rem; */
     width: 90%;
     text-align: center;
 }
@@ -876,27 +863,6 @@ body {
     }
 
 }
-
-/* @media (max-width: 480px) {
-    body {
-        max-width: 320;
-        background-color: aqua;
-    }
-
-    html,
-    body {
-        font-size: 10px;
-    }
-
-    .photoContainer {
-        max-width: 10rem;
-        max-height: 10rem;
-    }
-
-    .modalWindow {
-        width: 80%;
-    }
-} */
 
 @media (max-width: 480px) {
     body {
