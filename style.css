@@ -268,9 +268,10 @@ body {
 
 .mainPage {
     color: #37373F;
+    position: relative;
+    /* z-index: 100; */
+    /* background-color: aquamarine; */
 }
-
-
 
 .logotype {
     padding-top: 2.5rem;
@@ -635,6 +636,7 @@ body {
     color: white;
     font-size: 3rem;
     font-weight: 700;
+    margin-right: 1rem;
 }
 
 .sliderWhereDoWeMeet .previous,
@@ -729,8 +731,15 @@ body {
 }
 
 /*  модальное окно*/
+.orderForm {
+    position: absolute;
+    top: 10rem;
+    left: 30%;
+    z-index: 100;
+}
+
 .modalWindow {
-    width: 42%;
+    width: 40rem;
     border-radius: 0.375rem;
     background: #FFF;
     border: 1px solid #C7C7C7;
