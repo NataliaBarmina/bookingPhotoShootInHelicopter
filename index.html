@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Document</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8e6a78df-3919-465f-9893-86b007f674fd&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    <script src="placemark.js" type="text/javascript"></script>
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -282,18 +286,8 @@
         </div>
 
         <!-- карта -->
-        <div class="forBigScreen mb45">
-            <div class="pr">
-                <div class="mapContainer">
-                    <a href="https://yandex.ru/maps/118515/kudrovo/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Кудрово</a>
-                    <a href="https://yandex.ru/maps/118515/kudrovo/?ll=30.513569%2C59.908489&utm_medium=mapframe&utm_source=maps&z=15"
-                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт,
-                        навигация,
-                        поиск мест</a>
-                    <iframe class="map" src="https://yandex.ru/map-widget/v1/?ll=30.513569%2C59.908489&z=15"
-                        frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-                </div>
+        <div class="pr mb45">
+            <div id="map" class="mapContainer ">
                 <div class="bl">
                     <div class="textInsideMap ">
                         <div class="flexRow  mb2">
@@ -336,24 +330,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
 
         <!-- ! Для телефона -->
         <div class="forSmallScreen ">
-            <div class="mapContainer mb2" style="position:relative;overflow:hidden;"><a
-                    href="https://yandex.ru/maps/118515/kudrovo/?utm_medium=mapframe&utm_source=maps"
-                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Кудрово</a><a
-                    href="https://yandex.ru/maps/118515/kudrovo/?ll=30.513569%2C59.908489&utm_medium=mapframe&utm_source=maps&z=15"
-                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация,
-                    поиск мест</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.513569%2C59.908489&z=15"
-                    width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-            </div>
-
-
             <div class="bl mb3">
                 <div class="sliderWhereDoWeMeet ">
                     <div class=" whereDoWeMeet">
@@ -448,9 +429,9 @@
                     <a class="previous">❮</a>
                     <a class="next">❯</a>
                 </div>
-
             </div>
         </div>
+
         <!-- отзывы -->
         <div class="forBigScreen bl">
             <div class="comments mb45">
@@ -755,6 +736,22 @@
         </div>
     </form>
 
+    <script type="text/javascript">
+
+        ymaps.ready(init);
+        function init() {
+            const myMap = new ymaps.Map("map", {
+                center: [59.940312, 30.314601],
+                zoom: 7
+            });
+            const myPlacemark = new ymaps.Placemark([59.940312, 30.314601], {
+                balloonContent: 'Встречаемся здесь!',
+            });
+            myMap.geoObjects.add(myPlacemark);
+        }
+
+
+    </script>
 
     <script>
         //показывает модальное окно
