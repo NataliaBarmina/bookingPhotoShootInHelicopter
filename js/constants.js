@@ -10,9 +10,11 @@ const ELEMENTS = {
         elements: document.querySelectorAll('.video')
     },
     // initGallery  
-    btnShowPhoto: document.querySelector('.containerShowAllPhoto .showAllPhoto'),
-    hiddenPhotos: document.querySelectorAll('.gallery .dn'),
-    arrow: document.querySelectorAll('.containerShowAllPhoto .arrowContainer'),
+    gallery: {
+        trigger: document.querySelector('.containerShowAllPhoto .showAllPhoto'),
+        elements: document.querySelectorAll('.gallery .dn'),
+        triggerParts: document.querySelectorAll('.containerShowAllPhoto .arrowContainer'),
+    },
     // initShowMoreAboutPhotographer
     btnReadMore: document.querySelectorAll('.textAboutPhotographer .tal .showAll'),
     hiddenText: document.querySelectorAll('.textAboutPhotographer .dn'),

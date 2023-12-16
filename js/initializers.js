@@ -45,25 +45,25 @@ function initVideo() {
 }
 
 
+// показывает все фотографии
 function initGallery() {
-    // показывает все фотографии
-    const {btnShowPhoto, hiddenPhotos, arrow} = ELEMENTS;
+    const {gallery: {trigger, elements, triggerParts}} = ELEMENTS;
 
-    btnShowPhoto.addEventListener('click', () => {
-        const isVisible = !hiddenPhotos[0].classList.contains('dn');
+    trigger.addEventListener('click', () => {
+        const isVisible = !elements[0].classList.contains('dn');
         if (isVisible) {
-            hiddenPhotos.forEach((item, index, array) => {
-                hiddenPhotos[index].classList.add('dn');
-                btnShowPhoto.innerHTML = "Показать больше фото";
-                arrow[0].style.transform = "rotate(0deg)";
-                arrow[1].style.transform = "rotate(0deg)";
+            elements.forEach((item, index, array) => {
+                elements[index].classList.add('dn');
+                trigger.innerHTML = "Показать больше фото";
+                triggerParts[0].style.transform = "rotate(0deg)";
+                triggerParts[1].style.transform = "rotate(0deg)";
             })
         } else {
-            hiddenPhotos.forEach((item, index, array) => {
-                hiddenPhotos[index].classList.remove('dn');
-                btnShowPhoto.innerHTML = "Показать меньше фото";
-                arrow[0].style.transform = "rotate(180deg)";
-                arrow[1].style.transform = "rotate(180deg)";
+            elements.forEach((item, index, array) => {
+                elements[index].classList.remove('dn');
+                trigger.innerHTML = "Показать меньше фото";
+                triggerParts[0].style.transform = "rotate(180deg)";
+                triggerParts[1].style.transform = "rotate(180deg)";
             })
         }
     });
