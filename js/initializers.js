@@ -17,17 +17,18 @@ function initYandexMap() {
 
 //показывает модальное окно
 function initBookingForm() {
-    const {bookingModalToggleButton, bookingModal} = ELEMENTS;
+    const {bookingModal: {element, trigger}} = ELEMENTS;
+    // const {element, trigger} = ELEMENTS.bookingModal;
 
-    bookingModalToggleButton.addEventListener('click', () => {
-        const isModalHidden = bookingModal.classList.contains('dn');
+    trigger.addEventListener('click', () => {
+        const isModalHidden = element.classList.contains('dn');
         if (isModalHidden) {
-            bookingModalToggleButton.innerHTML = "Скрыть";
+            trigger.innerHTML = "Скрыть";
         } else {
-            bookingModalToggleButton.innerHTML = "Забронировать место";
+            trigger.innerHTML = "Забронировать место";
         }
         
-        bookingModal.classList.toggle('dn');
+        element.classList.toggle('dn');
     });
 }
 
