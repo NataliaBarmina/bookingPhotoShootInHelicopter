@@ -50,8 +50,14 @@ function initGallery() {
     const {gallery: {trigger, elements, triggerParts}} = ELEMENTS;
 
     const direction = {
-        expand: "rotate(0deg)",
-        collapse: "rotate(180deg)"
+        expand: {
+            style: "rotate(0deg)",
+            label: "Показать больше фото"
+        },
+        collapse:  {
+            style: "rotate(180deg)",
+            label: "Показать меньше фото"
+        },
     };
 
     trigger.addEventListener('click', () => {
@@ -59,16 +65,16 @@ function initGallery() {
         if (isGalleryExpanded) {
             elements.forEach((_i, index, _a) => {
                 elements[index].classList.add('dn');
-                trigger.innerHTML = "Показать больше фото";
-                triggerParts[0].style.transform = direction.expand;
-                triggerParts[1].style.transform = direction.expand;
+                trigger.innerHTML = direction.expand.label;
+                triggerParts[0].style.transform = direction.expand.style;
+                triggerParts[1].style.transform = direction.expand.style;
             })
         } else {
             elements.forEach((_i, index, _a) => {
                 elements[index].classList.remove('dn');
-                trigger.innerHTML = "Показать меньше фото";
-                triggerParts[0].style.transform = direction.collapse;
-                triggerParts[1].style.transform = direction.collapse;
+                trigger.innerHTML = direction.collapse.label;
+                triggerParts[0].style.transform = direction.collapse.style;
+                triggerParts[1].style.transform = direction.collapse.style;
             })
         }
     });
