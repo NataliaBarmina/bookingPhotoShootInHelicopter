@@ -15,18 +15,19 @@ function initYandexMap() {
     });
 }
 
+//показывает модальное окно
 function initBookingForm() {
-    //показывает модальное окно
-    const {buttonBooking, modalWindow} = ELEMENTS;
+    const {bookingModalToggleButton, bookingModal} = ELEMENTS;
 
-    buttonBooking.addEventListener('click', () => {
-        if (modalWindow.classList.contains('dn')) {
-            modalWindow.classList.remove('dn');
-            buttonBooking.innerHTML = "Скрыть";
+    bookingModalToggleButton.addEventListener('click', () => {
+        const isModalHidden = bookingModal.classList.contains('dn');
+        if (isModalHidden) {
+            bookingModalToggleButton.innerHTML = "Скрыть";
         } else {
-            modalWindow.classList.add('dn');
-            buttonBooking.innerHTML = "Забронировать место";
+            bookingModalToggleButton.innerHTML = "Забронировать место";
         }
+        
+        bookingModal.classList.toggle('dn');
     });
 }
 

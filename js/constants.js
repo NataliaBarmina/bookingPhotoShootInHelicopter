@@ -1,7 +1,7 @@
 const ELEMENTS = {
     // initBookingForm: modal window in the top
-    modalWindow: document.querySelector('.orderForm'),
-    buttonBooking: document.querySelector('.buttonBooking'),
+    bookingModal: document.querySelector('.orderForm'),
+    bookingModalToggleButton: document.querySelector('.buttonBooking'),
     // initVideo: youtube player
     vector: document.querySelectorAll('.vector'),
     video: document.querySelectorAll('.video'),
