@@ -23,15 +23,19 @@ function initMobileFeatures() {
 }
 
 function initYandexMap() {
+    const mapContainerId = "map";
+    const coordinates = [59.940312, 30.314601];
+
     ymaps.ready(() => {
-        const myMap = new ymaps.Map("map", {
-            center: [59.940312, 30.314601],
+        const map = new ymaps.Map(mapContainerId, {
+            center: coordinates,
             zoom: 7
         });
-        const myPlacemark = new ymaps.Placemark([59.940312, 30.314601], {
+        const placemark = new ymaps.Placemark(coordinates, {
             balloonContent: 'Встречаемся здесь!',
         });
-        myMap.geoObjects.add(myPlacemark);
+        
+        map.geoObjects.add(placemark);
     });
 }
 
