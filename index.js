@@ -1,6 +1,28 @@
 // IIFE - invoke function immediately. We don't need this function anymore after
-// map initialization - so we can define it and call it in the same place
-(function initYandexMap() {
+// application initialization - so we can define it and call it in the same place
+(function initApp() {
+    initBookingForm();
+    initVideo();
+    initGallery();
+    initShowMoreAboutPhotographer();
+    initAnotherShowMore();
+    initYandexMap();
+
+    initDesktopFeatures();
+    initMobileFeatures();
+})();
+
+function initDesktopFeatures() {
+    initDesktopFeedbackBlock();
+    initDesktopLanguageSwitcher();
+}
+function initMobileFeatures() {
+    initMobileFeedbackBlock();
+    initMobileLanguageSwitcher();
+    initMobileFeedbackSlider();
+}
+
+function initYandexMap() {
     ymaps.ready(() => {
         const myMap = new ymaps.Map("map", {
             center: [59.940312, 30.314601],
@@ -11,9 +33,9 @@
         });
         myMap.geoObjects.add(myPlacemark);
     });
-})();
+}
 
-(function initBookingForm() {
+function initBookingForm() {
     //показывает модальное окно
     const modalWindow = document.querySelector('.orderForm');
     const buttonBooking = document.querySelector('.buttonBooking');
@@ -27,10 +49,10 @@
             buttonBooking.innerHTML = "Забронировать место";
         }
     });
-})();
+}
 
 
-(function initVideo() {
+function initVideo() {
     // включает видео в окне с фото целующейся пары, при нажатии на треугольник
     const vector = document.querySelectorAll('.vector');
     const video = document.querySelectorAll('.video')
@@ -38,10 +60,10 @@
     for (let i = 0; i < vector.length; i += 1) {
         vector[i].addEventListener('click', () => { video[i].style.zIndex = '3' });
     }
-})();
+}
 
 
-(function initGallery() {
+function initGallery() {
     // показывает все фотографии
     const btnShowPhoto = document.querySelector('.containerShowAllPhoto .showAllPhoto');
     const hiddenPhotos = document.querySelectorAll('.gallery .dn');
@@ -65,10 +87,10 @@
             })
         }
     });
-})();
+}
 
 
-(function initShowMoreAboutPhotographer() {
+function initShowMoreAboutPhotographer() {
     // показывает дополнительный текст о фотографе
     const btnReadMore = document.querySelectorAll('.textAboutPhotographer .tal .showAll');
     const hiddenText = document.querySelectorAll('.textAboutPhotographer .dn');
@@ -88,10 +110,10 @@
         }
         )
     }
-})();
+}
 
 // TO DO: rename this function to make it more obvious
-(function initAnotherShowMore() {
+function initAnotherShowMore() {
     // показывает информацию об авторе
     const btnMoreInf = document.querySelectorAll('.buttonMoreInformation');
     const showMoreInf = document.querySelectorAll('.moreInformation');
@@ -101,9 +123,9 @@
             showMoreInf[i].classList.toggle("dn");
         })
     }
-})();
+}
 
-(function initFeedbackDesktopBlock() {
+function initDesktopFeedbackBlock() {
     // показывает количество отзывов и скрытые отзывы
     const comments = document.querySelectorAll('.comments .comment');
     const btnShowComments = document.querySelector('.comments .tar .showAll');
@@ -126,9 +148,9 @@
             })
         }
     })
-})();
+}
 
-(function initFeedbackMobileBlock() {
+function initMobileFeedbackBlock() {
     // показывает скрытые отзывы для маленького экрана
     const comments = document.querySelectorAll('.comments .comment');
     const hiddenCommentsSC = document.querySelectorAll('.forSmallScreen .dn');
@@ -151,9 +173,9 @@
             })
         }
     })
-})();
+}
 
-(function initDesktopLanguageSwitcher() {
+function initDesktopLanguageSwitcher() {
     // показывает выбор языка
     const btnShowLanguage = document.querySelector('.footerTop .flex .showAll');
     const arrowLanguage = document.querySelector('.footerTop .flex .arrowContainer');
@@ -165,9 +187,9 @@
             btnShowLanguage.innerHTML = "RU";
         }
     })
-})();
+}
 
-(function initMobileLanguageSwitcher() {
+function initMobileLanguageSwitcher() {
     // показывает выбор языка для маленького экрана
     const btnShowLanguageSC = document.querySelector('.language .showAll');
     const arrowLanguageSC = document.querySelector('.language .arrowContainer');
@@ -179,10 +201,10 @@
             btnShowLanguageSC.innerHTML = "RU";
         }
     })
-})();
+}
 
 
-(function initSlider() {
+function initMobileFeedbackSlider() {
     // / !слайдер /
     // const slides = document.getElementsByClassName("whereDoWeMeet");
     // const buttonPrevious = document.querySelector('.previous');
@@ -255,4 +277,4 @@
         }
         slides[slideIndex].classList.remove('dn');
     }
-})();
+}
