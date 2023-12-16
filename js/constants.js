@@ -12,7 +12,7 @@ const ELEMENTS = {
     // initGallery  
     gallery: {
         trigger: document.querySelector('.containerShowAllPhoto .showAllPhoto'),
-        elements: document.querySelectorAll('.gallery .dn'),
+        elements: document.querySelectorAll('.additionalGalleryPhoto'),
         triggerParts: document.querySelectorAll('.containerShowAllPhoto .arrowContainer'),
     },
     // initShowMoreAboutPhotographer

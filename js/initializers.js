@@ -61,22 +61,18 @@ function initGallery() {
     };
 
     trigger.addEventListener('click', () => {
-        const isGalleryExpanded = !elements[0].classList.contains('dn');
-        if (isGalleryExpanded) {
-            elements.forEach((_i, index, _a) => {
-                elements[index].classList.add('dn');
-                trigger.innerHTML = direction.expand.label;
-                triggerParts[0].style.transform = direction.expand.style;
-                triggerParts[1].style.transform = direction.expand.style;
-            })
-        } else {
-            elements.forEach((_i, index, _a) => {
-                elements[index].classList.remove('dn');
-                trigger.innerHTML = direction.collapse.label;
-                triggerParts[0].style.transform = direction.collapse.style;
-                triggerParts[1].style.transform = direction.collapse.style;
-            })
-        }
+        const isGalleryCollapsed = elements[0].classList.contains('dn');
+        const currentDir = isGalleryCollapsed ? 'collapse' : 'expand';
+
+        elements.forEach((_i, index, _a) => {
+            const {style, label} = direction[currentDir];
+            
+            elements[index].classList.toggle('dn');
+
+            trigger.innerHTML = label;
+            triggerParts[0].style.transform = style;
+            triggerParts[1].style.transform = style;
+        });
     });
 }
 
