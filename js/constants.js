@@ -5,8 +5,10 @@ const ELEMENTS = {
         element: document.querySelector('.orderForm'),
     },
     // initVideo: youtube player
-    vector: document.querySelectorAll('.vector'),
-    video: document.querySelectorAll('.video'),
+    videoPlayer: {
+        triggers: document.querySelectorAll('.vector'),
+        elements: document.querySelectorAll('.video')
+    },
     // initGallery  
     btnShowPhoto: document.querySelector('.containerShowAllPhoto .showAllPhoto'),
     hiddenPhotos: document.querySelectorAll('.gallery .dn'),

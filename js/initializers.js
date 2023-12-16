@@ -33,12 +33,14 @@ function initBookingForm() {
 }
 
 
+// включает видео в окне с фото целующейся пары, при нажатии на треугольник
 function initVideo() {
-    // включает видео в окне с фото целующейся пары, при нажатии на треугольник
-    const {vector, video} = ELEMENTS;
+    const {videoPlayer: {element, triggers}} = ELEMENTS;
 
-    for (let i = 0; i < vector.length; i += 1) {
-        vector[i].addEventListener('click', () => { video[i].style.zIndex = '3' });
+    for (let i = 0; i < triggers.length; i += 1) {
+        triggers[i].addEventListener('click', () => { 
+            element[i].style.zIndex = '3';
+        });
     }
 }
 
