@@ -49,21 +49,26 @@ function initVideo() {
 function initGallery() {
     const {gallery: {trigger, elements, triggerParts}} = ELEMENTS;
 
+    const direction = {
+        expand: "rotate(0deg)",
+        collapse: "rotate(180deg)"
+    };
+
     trigger.addEventListener('click', () => {
-        const isVisible = !elements[0].classList.contains('dn');
-        if (isVisible) {
-            elements.forEach((item, index, array) => {
+        const isGalleryExpanded = !elements[0].classList.contains('dn');
+        if (isGalleryExpanded) {
+            elements.forEach((_i, index, _a) => {
                 elements[index].classList.add('dn');
                 trigger.innerHTML = "Показать больше фото";
-                triggerParts[0].style.transform = "rotate(0deg)";
-                triggerParts[1].style.transform = "rotate(0deg)";
+                triggerParts[0].style.transform = direction.expand;
+                triggerParts[1].style.transform = direction.expand;
             })
         } else {
-            elements.forEach((item, index, array) => {
+            elements.forEach((_i, index, _a) => {
                 elements[index].classList.remove('dn');
                 trigger.innerHTML = "Показать меньше фото";
-                triggerParts[0].style.transform = "rotate(180deg)";
-                triggerParts[1].style.transform = "rotate(180deg)";
+                triggerParts[0].style.transform = direction.collapse;
+                triggerParts[1].style.transform = direction.collapse;
             })
         }
     });
