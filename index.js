@@ -1,14 +1,17 @@
-ymaps.ready(init);
-function init() {
-    const myMap = new ymaps.Map("map", {
-        center: [59.940312, 30.314601],
-        zoom: 7
+// IIFE - invoke function immediately. We don't need this function anymore after
+// map initialization - so we can define it and call it in the same place
+(function initYandexMap() {
+    ymaps.ready(() => {
+        const myMap = new ymaps.Map("map", {
+            center: [59.940312, 30.314601],
+            zoom: 7
+        });
+        const myPlacemark = new ymaps.Placemark([59.940312, 30.314601], {
+            balloonContent: 'Встречаемся здесь!',
+        });
+        myMap.geoObjects.add(myPlacemark);
     });
-    const myPlacemark = new ymaps.Placemark([59.940312, 30.314601], {
-        balloonContent: 'Встречаемся здесь!',
-    });
-    myMap.geoObjects.add(myPlacemark);
-}
+})();
 
  //показывает модальное окно
  const modalWindow = document.querySelector('.orderForm');
