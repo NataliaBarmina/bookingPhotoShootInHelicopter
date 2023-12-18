@@ -298,11 +298,11 @@ h6 {
     background-image: url(./images/helimain.png);
     background-size: cover;
     padding-bottom: 17rem;
+    padding-top: 17rem;
     color: #FFF;
 }
 
 .headerBooking {
-    margin-top: 17rem;
     font-size: 3rem;
     line-height: 3.5rem;
     font-weight: 700;
@@ -334,37 +334,41 @@ h6 {
     margin-left: 1.4rem;
 }
 
-.percent {
-    margin-left: 1.3rem;
-}
-
 .circle {
+    margin-left: 1.3rem;
     font-size: 2.2rem;
     font-weight: 800;
     border: 1px solid white;
     border-radius: 50%;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .buttonBooking {
     width: 19rem;
     height: 4.25rem;
     border-radius: 0.2rem;
-    border: 0.2rem solid #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25), 0px 4px 70px 0px rgba(255, 255, 255, 0.70);
+    border: 0.1rem solid #FC9B09;
+    box-shadow: 7px 7px 3px 0px rgba(34, 60, 80, 0.27);
+    /* box-shadow: 0px 2px 2px 0px rgba(252, 207, 28, 0.25), 0px 4px 70px 0px rgba(198, 94, 129, 0.901); */
     background: transparent;
 }
 
 .textButton {
-    color: #FFF;
+    color: #FC9B09;
     font-size: 1.3rem;
     font-weight: 800;
 }
 
 /* LEADBLOCK */
+.leadBlock {
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
 
 .leadBlockRow_1 {
-    width: 47%;
+    width: 40%;
     padding-right: 2rem;
 }
 
@@ -445,8 +449,8 @@ h6 {
 }
 
 .leadBlockRow_2 {
-    width: 47%;
-    height: 23vw;
+    width: 40%;
+    height: 22vw;
     position: relative;
 }
 
@@ -505,12 +509,8 @@ h6 {
 
 /* БЛОК ОБ АВТОРЕ */
 
-.informationAboutPhotographer {
-    width: 120%;
-}
-
 .textAboutPhotographer {
-    width: 110%;
+    width: 50%;
 }
 
 .showAll {
@@ -518,7 +518,7 @@ h6 {
 }
 
 .photoPhotographer {
-    width: 90%;
+    width: 40%;
     text-align: center;
 }
 
@@ -899,11 +899,15 @@ h6 {
 
     .buttonBooking {
         width: 15rem;
+        border: 0.1rem solid #FFF;
+        background-color: #9e9eb0;
+        opacity: 0.9;
     }
 
     .textButton {
         font-size: 1rem;
         font-weight: 900;
+        color: #FFF;
     }
 
     .leadBlockRow_2 {
@@ -931,7 +935,6 @@ h6 {
 
     .informationAboutPhotographer {
         flex-direction: column;
-        width: 119%;
     }
 
     .photoPhotographer {
@@ -948,6 +951,10 @@ h6 {
     .textInsideAvailableSlots {
         width: 100%;
         padding: 0rem;
+    }
+
+    .textInsideAvailableSlots {
+        padding-top: 2rem;
     }
 
     .availableTimes {
