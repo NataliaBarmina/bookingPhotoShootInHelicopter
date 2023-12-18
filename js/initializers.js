@@ -1,3 +1,4 @@
+// ДОБАВЛЯЕТ ЯНДЕКС КАРТУ, МЕТКУ, при нажатии на метку открывается балун с текстом, но метка не скрывается
 function initYandexMap() {
     const mapContainerId = "map";
     const coordinates = [59.940312, 30.314601];
@@ -8,16 +9,19 @@ function initYandexMap() {
             zoom: 7
         });
         const placemark = new ymaps.Placemark(coordinates, {
-            balloonContent: 'Встречаемся здесь!',
+            balloonContentHeader: 'Встречаемся здесь!',
+        }, {
+            hideIconOnBalloonOpen: false,
+            balloonOffset: [3, -40]
         });
-        
+
         map.geoObjects.add(placemark);
     });
 }
 
 //показывает модальное окно
 function initBookingForm() {
-    const {bookingModal: {element, trigger}} = ELEMENTS;
+    const { bookingModal: { element, trigger } } = ELEMENTS;
     // const {element, trigger} = ELEMENTS.bookingModal;
 
     trigger.addEventListener('click', () => {
@@ -27,7 +31,7 @@ function initBookingForm() {
         } else {
             trigger.innerHTML = "Забронировать место";
         }
-        
+
         element.classList.toggle('dn');
     });
 }
@@ -35,10 +39,10 @@ function initBookingForm() {
 
 // включает видео в окне с фото целующейся пары, при нажатии на треугольник
 function initVideo() {
-    const {videoPlayer: {elements, triggers}} = ELEMENTS;
+    const { videoPlayer: { elements, triggers } } = ELEMENTS;
 
     triggers.forEach((t, i) => {
-        t.addEventListener('click', () => { 
+        t.addEventListener('click', () => {
             elements[i].style.zIndex = '3';
         });
     });
@@ -47,14 +51,14 @@ function initVideo() {
 
 // показывает все фотографии
 function initGallery() {
-    const {gallery: {trigger, elements, triggerParts}} = ELEMENTS;
+    const { gallery: { trigger, elements, triggerParts } } = ELEMENTS;
 
     const direction = {
         expand: {
             style: "rotate(0deg)",
             label: "Показать больше фото"
         },
-        collapse:  {
+        collapse: {
             style: "rotate(180deg)",
             label: "Показать меньше фото"
         },
@@ -65,8 +69,8 @@ function initGallery() {
         const currentDir = isGalleryCollapsed ? 'collapse' : 'expand';
 
         elements.forEach((_i, index, _a) => {
-            const {style, label} = direction[currentDir];
-            
+            const { style, label } = direction[currentDir];
+
             elements[index].classList.toggle('dn');
 
             trigger.innerHTML = label;
@@ -79,7 +83,7 @@ function initGallery() {
 
 function initShowMoreAboutPhotographer() {
     // показывает дополнительный текст о фотографе
-    const {btnReadMore, hiddenText, arrowReadMore} = ELEMENTS;
+    const { btnReadMore, hiddenText, arrowReadMore } = ELEMENTS;
 
     for (let i = 0; i < btnReadMore.length; i += 1) {
         btnReadMore[i].addEventListener('click', () => {
@@ -100,7 +104,7 @@ function initShowMoreAboutPhotographer() {
 // TO DO: rename this function to make it more obvious
 function initAnotherShowMore() {
     // показывает информацию об авторе
-    const {btnMoreInf, showMoreInf} = ELEMENTS;
+    const { btnMoreInf, showMoreInf } = ELEMENTS;
 
     for (let i = 0; i < btnMoreInf.length; i += 1) {
         btnMoreInf[i].addEventListener('click', () => {
@@ -111,7 +115,7 @@ function initAnotherShowMore() {
 
 function initDesktopFeedbackBlock() {
     // показывает количество отзывов и скрытые отзывы
-    const {comments, btnShowComments,  hiddenComments, arrowComments} = ELEMENTS
+    const { comments, btnShowComments, hiddenComments, arrowComments } = ELEMENTS
 
     btnShowComments.innerHTML = `Показать Все (${comments.length})`;
 
@@ -134,7 +138,7 @@ function initDesktopFeedbackBlock() {
 
 function initMobileFeedbackBlock() {
     // показывает скрытые отзывы для маленького экрана
-    const {comments, hiddenCommentsSC, arrowCommentsSC, btnShowCommentsSC} = ELEMENTS;
+    const { comments, hiddenCommentsSC, arrowCommentsSC, btnShowCommentsSC } = ELEMENTS;
 
     btnShowCommentsSC.innerHTML = `Показать Все (${comments.length})`;
 
@@ -157,7 +161,7 @@ function initMobileFeedbackBlock() {
 
 function initDesktopLanguageSwitcher() {
     // показывает выбор языка
-    const {btnShowLanguage, arrowLanguage} = ELEMENTS
+    const { btnShowLanguage, arrowLanguage } = ELEMENTS
 
     btnShowLanguage.addEventListener('click', () => {
         if (btnShowLanguage.textContent === "RU") {
@@ -170,7 +174,7 @@ function initDesktopLanguageSwitcher() {
 
 function initMobileLanguageSwitcher() {
     // показывает выбор языка для маленького экрана
-    const {btnShowLanguageSC, arrowLanguageSC} = ELEMENTS
+    const { btnShowLanguageSC, arrowLanguageSC } = ELEMENTS
 
     btnShowLanguageSC.addEventListener('click', () => {
         if (btnShowLanguageSC.textContent === "RU") {
@@ -215,7 +219,7 @@ function initMobileFeedbackSlider() {
 
 
     //!!!мое решение 
-    const {slides, buttonPrevious, buttonNext} = ELEMENTS;
+    const { slides, buttonPrevious, buttonNext } = ELEMENTS;
 
     function showFirstSlide() {
         for (let i = 0; i < slides.length; i += 1) { //показываем только первый слайд

@@ -1,4 +1,4 @@
-/*Обнуление*/
+/*! Обнуление*/
 * {
     padding: 0;
     margin: 0;
@@ -90,7 +90,7 @@ h6 {
 
 /*--------------------*/
 
-/* ШРИФТЫ */
+/*! ШРИФТЫ */
 
 .t-09-400 {
     font-size: 0.9rem;
@@ -169,7 +169,7 @@ h6 {
 }
 
 
-/* отступы */
+/*! отступы */
 .mb06 {
     margin-bottom: 0.6rem;
 }
@@ -198,15 +198,7 @@ h6 {
     margin-bottom: 10rem;
 }
 
-.mt1 {
-    margin-top: 1rem;
-}
-
-.mt25 {
-    margin-top: 2.5rem;
-}
-
-/* выравнивание */
+/*! выравнивание */
 .tac {
     text-align: center;
 }
@@ -220,7 +212,7 @@ h6 {
 }
 
 
-/* FLEX */
+/*! FLEX */
 .flexRow {
     display: flex;
     flex-direction: row;
@@ -243,34 +235,34 @@ h6 {
 }
 
 
-/* BACKGROUND */
+/*! BACKGROUND */
 .yellow {
     background-color: #FC9B09;
 }
 
-/* видимость блоков */
+/*! видимость блоков */
 .dn {
     display: none;
 }
 
-/* расположение крупных блоков */
+/*! расположение крупных блоков */
 .bl {
     width: 80%;
     display: inline-block;
     text-align: left;
 }
 
-/* < !-- главная страница --> */
-body {
-    max-width: 1920px;
-    text-align: center;
-}
 
+/* !!! ГЛАВНАЯ СТРАНИЦА */
 .mainPage {
     color: #37373F;
     position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    text-align: center;
 }
 
+/* ЛОГОТИП */
 .logotype {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -300,7 +292,7 @@ body {
 }
 
 
-/* <!-- фото вертолета --> */
+/* ФОТО ВЕРТОЛЕТА */
 
 .mainHelicoptersPictures {
     background-image: url(./images/helimain.png);
@@ -369,7 +361,7 @@ body {
     font-weight: 800;
 }
 
-/* leadBlock */
+/* LEADBLOCK */
 
 .leadBlockRow_1 {
     width: 47%;
@@ -483,7 +475,7 @@ body {
     z-index: 2;
 }
 
-/* галерея фотографий */
+/* ГАЛЕРЕЯ ФОТОГРАФИЙ */
 
 .gallery {
     display: flex;
@@ -511,7 +503,7 @@ body {
 }
 
 
-/* <!-- блок об авторе --> */
+/* БЛОК ОБ АВТОРЕ */
 
 .informationAboutPhotographer {
     width: 120%;
@@ -543,7 +535,7 @@ body {
     object-fit: cover;
 }
 
-/* <!-- Доступная съемка в ближайшее время: --> */
+/* БЛОК ДОСТУПНАЯ СЪЕМКА */
 
 .availableSlots .t-14-500 {
     line-height: 2rem;
@@ -552,7 +544,7 @@ body {
 .textInsideAvailableSlots {
     border: 2px solid #B3B3B3;
     width: 60%;
-    padding: 1.5rem 2rem 1.5rem 3rem;
+    padding: 2.5rem 2rem 1.5rem 3rem;
 }
 
 .availableSlotsHeader {
@@ -580,7 +572,7 @@ body {
 }
 
 
-/* <!-- карта --> */
+/* КАРТА */
 .pr {
     position: relative;
     height: 38rem;
@@ -672,7 +664,7 @@ body {
     margin-right: 0.5rem;
 }
 
-/* <!-- отзывы --> */
+/* ОТЗЫВЫ */
 
 .comments {
     width: 60%;
@@ -704,7 +696,7 @@ body {
     margin-left: 1rem;
 }
 
-/* footer */
+/* ФУТЕР */
 .socialContainer {
     width: 10rem;
     height: 1.3rem;
@@ -723,7 +715,7 @@ body {
     line-height: 1.7rem;
 }
 
-/*  модальное окно*/
+/* *** МОДАЛЬНОЕ ОКНО*/
 .orderForm {
     position: absolute;
     top: 10rem;
@@ -737,6 +729,7 @@ body {
     background: #FFF;
     border: 1px solid #C7C7C7;
     display: inline-block;
+    padding-top: 1.5rem;
 }
 
 .contentModalWindow {
@@ -776,12 +769,12 @@ body {
 }
 
 .changeColor input {
-    /* <--скрываем дефолтный чекбокс */
+    /* скрываем дефолтный чекбокс */
     display: none;
 }
 
 .changeColor span {
-    /* <-- стилизируем новый */
+    /*  стилизируем новый */
     height: 1rem;
     width: 1rem;
     border: 1px solid #C7C7C7;
@@ -793,7 +786,7 @@ body {
 }
 
 [type=checkbox]:checked+span:before {
-    /* <-- ставим иконку, когда чекбокс включен  */
+    /*  ставим иконку, когда чекбокс включен  */
     content: '\2714';
     position: absolute;
     font-size: 1rem;
@@ -810,7 +803,8 @@ body {
     color: #FFF
 }
 
-/* !медиазапросы */
+/* !МЕДИАЗАПРОСЫ */
+
 @media(max-width:1920) {
     body {
         max-width: 1280;
