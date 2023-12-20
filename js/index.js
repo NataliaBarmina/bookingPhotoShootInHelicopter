@@ -5,8 +5,9 @@
     initVideo();
     initGallery();
     initShowMoreAboutPhotographer();
-    initAnotherShowMore();
+    initShowMoreAboutPhotoShoot();
     initYandexMap();
+    initLanguageSwitcher();
 
     initDesktopFeatures();
     initMobileFeatures();
@@ -15,12 +16,10 @@
 // specific for desktop initializers
 function initDesktopFeatures() {
     initDesktopFeedbackBlock();
-    initDesktopLanguageSwitcher();
 }
 
 // specific for mobile initializers
 function initMobileFeatures() {
     initMobileFeedbackBlock();
-    initMobileLanguageSwitcher();
     initMobileFeedbackSlider();
 }

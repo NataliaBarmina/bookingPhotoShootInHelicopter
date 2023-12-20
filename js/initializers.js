@@ -1,4 +1,4 @@
-// ДОБАВЛЯЕТ ЯНДЕКС КАРТУ, МЕТКУ, при нажатии на метку открывается балун с текстом, но метка не скрывается
+// !ДОБАВЛЯЕТ ЯНДЕКС КАРТУ, МЕТКУ, при нажатии на метку открывается балун с текстом, но метка не скрывается
 function initYandexMap() {
     const mapContainerId = "map";
     const coordinates = [59.940312, 30.314601];
@@ -19,242 +19,213 @@ function initYandexMap() {
     });
 }
 
-//показывает модальное окно
+//!показывает модальное окно
 function initBookingForm() {
-    const { bookingModal: { element, trigger } } = ELEMENTS;
-    // const {element, trigger} = ELEMENTS.bookingModal;
+    const { bookingModal: { target, trigger } } = ELEMENTS;
+    // const {target, trigger} = ELEMENTS.bookingModal;
 
     trigger.addEventListener('click', () => {
-        const isModalHidden = element.classList.contains('dn');
+        const isModalHidden = target.classList.contains('dn');
         if (isModalHidden) {
             trigger.innerHTML = "Скрыть";
         } else {
             trigger.innerHTML = "Забронировать место";
         }
 
-        element.classList.toggle('dn');
+        target.classList.toggle('dn');
     });
 }
 
 
-// включает видео в окне с фото целующейся пары, при нажатии на треугольник
+// !включает видео в окне с фото целующейся пары, при нажатии на треугольник
 function initVideo() {
-    const { videoPlayer: { elements, triggers } } = ELEMENTS;
+    const { videoPlayer: { targets, triggers } } = ELEMENTS;
 
     triggers.forEach((t, i) => {
         t.addEventListener('click', () => {
-            elements[i].style.zIndex = '3';
+            targets[i].style.zIndex = '3';
         });
     });
 }
 
 
-// показывает все фотографии
+// !показывает все фотографии
 function initGallery() {
-    const { gallery: { trigger, elements, triggerParts } } = ELEMENTS;
-
-    const direction = {
-        expand: {
-            style: "rotate(0deg)",
-            label: "Показать больше фото"
-        },
-        collapse: {
-            style: "rotate(180deg)",
-            label: "Показать меньше фото"
-        },
-    };
+    const { gallery: { trigger, targets, targetParts } } = ELEMENTS;
 
     trigger.addEventListener('click', () => {
-        const isGalleryCollapsed = elements[0].classList.contains('dn');
+        const isGalleryCollapsed = targets[0].classList.contains('dn');
         const currentDir = isGalleryCollapsed ? 'collapse' : 'expand';
 
-        elements.forEach((_i, index, _a) => {
-            const { style, label } = direction[currentDir];
+        targets.forEach((_i, index, _a) => {
+            const { style, labelShowPhoto } = DIRECTION[currentDir];
 
-            elements[index].classList.toggle('dn');
+            targets[index].classList.toggle('dn');
 
-            trigger.innerHTML = label;
-            triggerParts[0].style.transform = style;
-            triggerParts[1].style.transform = style;
+            trigger.innerHTML = labelShowPhoto;
+            targetParts[0].style.transform = style;
+            targetParts[1].style.transform = style;
         });
     });
 }
 
+// !показывает дополнительный текст о фотоcсессии
+function initShowMoreAboutPhotoShoot() {
+    const { moreAboutPhotoShoot: { triggers, targets, targetParts } } = ELEMENTS;
 
-function initShowMoreAboutPhotographer() {
-    // показывает дополнительный текст о фотографе
-    const { btnReadMore, hiddenText, arrowReadMore } = ELEMENTS;
-
-    for (let i = 0; i < btnReadMore.length; i += 1) {
-        btnReadMore[i].addEventListener('click', () => {
-            if (hiddenText[i].classList.contains('dn')) {
-                hiddenText[i].classList.remove('dn');
-                btnReadMore[i].innerHTML = "Скрыть";
-                arrowReadMore[i].style.transform = "rotate(180deg)";
+    for (let i = 0; i < triggers.length; i += 1) {
+        triggers[i].addEventListener('click', () => {
+            if (targets[i].classList.contains('dn')) {
+                targets[i].classList.remove('dn');
+                triggers[i].innerHTML = "Скрыть";
+                targetParts[i].style.transform = "rotate(180deg)";
             } else {
-                hiddenText[i].classList.add('dn');
-                btnReadMore[i].innerHTML = "Читать еще";
-                arrowReadMore[i].style.transform = "rotate(0deg)";
+                targets[i].classList.add('dn');
+                triggers[i].innerHTML = "Читать еще";
+                targetParts[i].style.transform = "rotate(0deg)";
             }
         }
         )
     }
 }
 
-// TO DO: rename this function to make it more obvious
-function initAnotherShowMore() {
-    // показывает информацию об авторе
-    const { btnMoreInf, showMoreInf } = ELEMENTS;
+//! показывает дополнительный текст о фотографе
+function initShowMoreAboutPhotographer() {
+    const { moreAboutPhotographer: { triggers, targets } } = ELEMENTS;
 
-    for (let i = 0; i < btnMoreInf.length; i += 1) {
-        btnMoreInf[i].addEventListener('click', () => {
-            showMoreInf[i].classList.toggle("dn");
+    for (let i = 0; i < triggers.length; i += 1) {
+        triggers[i].addEventListener('click', () => {
+            targets[i].classList.toggle("dn");
+        })
+    }
+}
+// !показывает количество отзывов и скрытые отзывы
+function initDesktopFeedbackBlock() {
+    const { comments, desktopFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
+
+    trigger.innerHTML = `Показать Все (${comments.length})`;
+
+    trigger.addEventListener('click', () => {
+        if (targets[0].classList.contains('dn')) {
+            targets.forEach((_i, index) => {
+                targets[index].classList.remove('dn');
+                trigger.innerHTML = "Скрыть";
+                targetPart.style.transform = "rotate(180deg)";
+            })
+        } else {
+            targets.forEach((_i, index) => {
+                targets[index].classList.add('dn');
+                trigger.innerHTML = `Показать Все (${comments.length})`;
+                targetPart.style.transform = "rotate(0deg)";
+            })
+        }
+    })
+}
+
+//! показывает скрытые отзывы для маленького экрана
+function initMobileFeedbackBlock() {
+    const { comments, mobileFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
+
+    trigger.innerHTML = `Показать Все (${comments.length})`;
+
+    trigger.addEventListener('click', () => {
+
+        if (targets[0].classList.contains('dn')) {
+            targets.forEach((_i, index) => {
+                targets[index].classList.remove('dn');
+                trigger.innerHTML = "Скрыть";
+                targetPart.style.transform = "rotate(180deg)";
+            })
+        } else {
+            targets.forEach((_i, index) => {
+                targets[index].classList.add('dn');
+                trigger.innerHTML = `Показать Все (${comments.length})`;
+                targetPart.style.transform = "rotate(0deg)";
+            })
+        }
+    })
+}
+
+//! показывает выбор языка
+function initLanguageSwitcher() {
+    const { languageSelector: { triggers } } = ELEMENTS
+
+    for (let i = 0; i < triggers.length; i += 1) {
+        triggers[i].addEventListener('click', () => {
+            if (triggers[i].textContent === "RU") {
+                triggers[i].innerHTML = "EN";
+            } else {
+                triggers[i].innerHTML = "RU";
+            }
         })
     }
 }
 
-function initDesktopFeedbackBlock() {
-    // показывает количество отзывов и скрытые отзывы
-    const { comments, btnShowComments, hiddenComments, arrowComments } = ELEMENTS
 
-    btnShowComments.innerHTML = `Показать Все (${comments.length})`;
-
-    btnShowComments.addEventListener('click', () => {
-        if (hiddenComments[0].classList.contains('dn')) {
-            hiddenComments.forEach((item, index, array) => {
-                hiddenComments[index].classList.remove('dn');
-                btnShowComments.innerHTML = "Скрыть";
-                arrowComments.style.transform = "rotate(180deg)";
-            })
-        } else {
-            hiddenComments.forEach((item, index, array) => {
-                hiddenComments[index].classList.add('dn');
-                btnShowComments.innerHTML = `Показать Все (${comments.length})`;
-                arrowComments.style.transform = "rotate(0deg)";
-            })
-        }
-    })
-}
-
-function initMobileFeedbackBlock() {
-    // показывает скрытые отзывы для маленького экрана
-    const { comments, hiddenCommentsSC, arrowCommentsSC, btnShowCommentsSC } = ELEMENTS;
-
-    btnShowCommentsSC.innerHTML = `Показать Все (${comments.length})`;
-
-    btnShowCommentsSC.addEventListener('click', () => {
-        if (hiddenCommentsSC[0].classList.contains('dn')) {
-            hiddenCommentsSC.forEach((item, index, array) => {
-                hiddenCommentsSC[index].classList.remove('dn');
-                btnShowCommentsSC.innerHTML = "Скрыть";
-                arrowCommentsSC.style.transform = "rotate(180deg)";
-            })
-        } else {
-            hiddenCommentsSC.forEach((item, index, array) => {
-                hiddenCommentsSC[index].classList.add('dn');
-                btnShowCommentsSC.innerHTML = `Показать Все (${comments.length})`;
-                arrowCommentsSC.style.transform = "rotate(0deg)";
-            })
-        }
-    })
-}
-
-function initDesktopLanguageSwitcher() {
-    // показывает выбор языка
-    const { btnShowLanguage, arrowLanguage } = ELEMENTS
-
-    btnShowLanguage.addEventListener('click', () => {
-        if (btnShowLanguage.textContent === "RU") {
-            btnShowLanguage.innerHTML = "EN";
-        } else {
-            btnShowLanguage.innerHTML = "RU";
-        }
-    })
-}
-
-function initMobileLanguageSwitcher() {
-    // показывает выбор языка для маленького экрана
-    const { btnShowLanguageSC, arrowLanguageSC } = ELEMENTS
-
-    btnShowLanguageSC.addEventListener('click', () => {
-        if (btnShowLanguageSC.textContent === "RU") {
-            btnShowLanguageSC.innerHTML = "EN";
-        } else {
-            btnShowLanguageSC.innerHTML = "RU";
-        }
-    })
-}
-
-
+//  !слайдер /
 function initMobileFeedbackSlider() {
-    // / !слайдер /
-    // const slides = document.getElementsByClassName("whereDoWeMeet");
-    // const buttonPrevious = document.querySelector('.previous');
-    // const buttonNext = document.querySelector('.next');
+    const { mobileSlider: { triggerPrevious, triggerNext, targets } } = ELEMENTS;
 
-    // buttonPrevious.addEventListener('click', previousSlide);
-    // buttonNext.addEventListener('click', nextSlide);
+    triggerPrevious.addEventListener('click', previousSlide);
+    triggerNext.addEventListener('click', nextSlide);
 
-    // let slideIndex = 1;
-    // showSlides(slideIndex);
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-    // function nextSlide() { /* следующий слайд */
-    //     showSlides(slideIndex += 1);
-    // }
-    // function previousSlide() { /*  предыдущий слайд */
-    //     showSlides(slideIndex -= 1);
-    // }
-    // function showSlides(n) {
-    //     if (n > slides.length) { /* Проверяем количество слайдов: */
-    //         slideIndex = 1
-    //     }
-    //     if (n < 1) {
-    //         slideIndex = slides.length
-    //     }
-    //     for (let slide of slides) {
-    //         slide.style.display = "none";
-    //     }
-    //     slides[slideIndex - 1].style.display = "block"; /* Делаем элемент блочным: */
-    // }
-
+    function nextSlide() { /* следующий слайд */
+        showSlides(slideIndex += 1);
+    }
+    function previousSlide() { /*  предыдущий слайд */
+        showSlides(slideIndex -= 1);
+    }
+    function showSlides(n) {
+        if (n > targets.length) { /* Проверяем количество слайдов: */
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = targets.length
+        }
+        for (let slide of targets) {
+            slide.style.display = "none";
+        }
+        targets[slideIndex - 1].style.display = "block"; /* Делаем элемент блочным: */
+    }
 
     //!!!мое решение 
-    const { slides, buttonPrevious, buttonNext } = ELEMENTS;
+    // function showFirstSlide() {
+    //     for (let i = 0; i < targets.length; i += 1) { //показываем только первый слайд
+    //         targets[i].classList.add('dn');
+    //     }
+    //     targets[0].classList.remove('dn');
+    // }
+    // showFirstSlide();
 
-    function showFirstSlide() {
-        for (let i = 0; i < slides.length; i += 1) { //показываем только первый слайд
-            slides[i].classList.add('dn');
-        }
-        slides[0].classList.remove('dn');
-    }
-    showFirstSlide();
+    // triggerPrevious.addEventListener('click', previousSlide);
+    // triggerNext.addEventListener('click', nextSlide);
 
-    buttonPrevious.addEventListener('click', previousSlide);
-    buttonNext.addEventListener('click', nextSlide);
+    // let slideIndex = 0;
 
-    let slideIndex = 0;
+    // function nextSlide() {
+    //     if (slideIndex >= targets.length - 1) {
+    //         slideIndex = 0;
+    //     } else {
+    //         slideIndex += 1;
+    //     }
+    //     for (let i = 0; i < targets.length; i += 1) {
+    //         targets[i].classList.add('dn');
+    //     }
+    //     targets[slideIndex].classList.remove('dn');
+    // }
 
-    function nextSlide() {
-        if (slideIndex >= slides.length - 1) {
-            slideIndex = 0;
-        } else {
-            slideIndex += 1;
-        }
-        for (let i = 0; i < slides.length; i += 1) {
-            slides[i].classList.add('dn');
-        }
-        slides[slideIndex].classList.remove('dn');
-    }
-
-    function previousSlide() {
-        if (slideIndex === 0) {
-            slideIndex = slides.length - 1;
-        } else {
-            slideIndex -= 1;
-        }
-        for (let i = 0; i < slides.length; i += 1) {
-            slides[i].classList.add('dn');
-        }
-        slides[slideIndex].classList.remove('dn');
-    }
+    // function previousSlide() {
+    //     if (slideIndex === 0) {
+    //         slideIndex = targets.length - 1;
+    //     } else {
+    //         slideIndex -= 1;
+    //     }
+    //     for (let i = 0; i < targets.length; i += 1) {
+    //         targets[i].classList.add('dn');
+    //     }
+    //     targets[slideIndex].classList.remove('dn');
+    // }
 }

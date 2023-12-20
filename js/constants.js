@@ -1,45 +1,81 @@
+const DIRECTION = {
+    expand: {
+        style: "rotate(0deg)",
+        labelShowPhoto: "Показать больше фото",
+        labelReadMore: "Читать еще",
+        labelShowall: "Показать все",
+        labelRU: "RU",
+    },
+    collapse: {
+        style: "rotate(180deg)",
+        labelShowPhoto: "Показать меньше фото",
+        labelHide: "Скрыть",
+        labelEN: "EN",
+    }
+}
+
 const ELEMENTS = {
+
     // initBookingForm: modal window in the top
     bookingModal: {
         trigger: document.querySelector('.buttonBooking'),
-        element: document.querySelector('.orderForm'),
+        target: document.querySelector('.orderForm'),
     },
     // initVideo: youtube player
     videoPlayer: {
         triggers: document.querySelectorAll('.vector'),
-        elements: document.querySelectorAll('.video')
+        targets: document.querySelectorAll('.video')
     },
     // initGallery  
     gallery: {
         trigger: document.querySelector('.containerShowAllPhoto .showAllPhoto'),
-        elements: document.querySelectorAll('.additionalGalleryPhoto'),
-        triggerParts: document.querySelectorAll('.containerShowAllPhoto .arrowContainer'),
+        targets: document.querySelectorAll('.js-additionalGalleryPhoto'),
+        targetParts: document.querySelectorAll('.containerShowAllPhoto .arrowContainer'),
     },
+    // initShowMoreAboutPhotoShoot
+
+    moreAboutPhotoShoot: {
+        triggers: document.querySelectorAll('.textAboutPhotoShoot .tal .showAll'),
+        targets: document.querySelectorAll('.textAboutPhotoShoot .dn'),
+        targetParts: document.querySelectorAll('.textAboutPhotoShoot .tal .arrowContainer'),
+    },
+
     // initShowMoreAboutPhotographer
-    btnReadMore: document.querySelectorAll('.textAboutPhotographer .tal .showAll'),
-    hiddenText: document.querySelectorAll('.textAboutPhotographer .dn'),
-    arrowReadMore: document.querySelectorAll('.textAboutPhotographer .tal .arrowContainer'),
-    // initAnotherShowMore
-    btnMoreInf: document.querySelectorAll('.buttonMoreInformation'),
-    showMoreInf: document.querySelectorAll('.moreInformation'),
+    moreAboutPhotographer: {
+        triggers: document.querySelectorAll('.buttonMoreInformation'),
+        targets: document.querySelectorAll('.moreInformation'),
+    },
+
     // initDesktopFeedbackBlock, initMobileFeedbackBlock
     comments: document.querySelectorAll('.comments .comment'),
+
     // initDesktopFeedbackBlock
-    btnShowComments: document.querySelector('.comments .tar .showAll'),
-    hiddenComments: document.querySelectorAll('.comments .dn'),
-    arrowComments: document.querySelector('.comments .tar .arrowContainer'),
+    desktopFeedbackBlock: {
+        trigger: document.querySelector('.comments .tar .showAll'),
+        targets: document.querySelectorAll('.comments .dn'),
+        targetPart: document.querySelector('.comments .tar .arrowContainer'),
+    },
+
     // initMobileFeedbackBlock
-    hiddenCommentsSC: document.querySelectorAll('.forSmallScreen .dn'),
-    arrowCommentsSC: document.querySelector('.forSmallScreen .tac .arrowContainer'),
-    btnShowCommentsSC: document.querySelector('.forSmallScreen .tac .showAll'),
-    // initDesktopLanguageSwitcher
-    btnShowLanguage: document.querySelector('.footerTop .flex .showAll'),
-    arrowLanguage: document.querySelector('.footerTop .flex .arrowContainer'), // NOT USED
-    // initMobileLanguageSwitcher
-    btnShowLanguageSC: document.querySelector('.language .showAll'),
-    arrowLanguageSC: document.querySelector('.language .arrowContainer'), // NOT USED
+    mobileFeedbackBlock: {
+        trigger: document.querySelector('.forSmallScreen .tac .showAll'),
+        targets: document.querySelectorAll('.forSmallScreen .dn'),
+        targetPart: document.querySelector('.forSmallScreen .tac .arrowContainer'),
+    },
+
+    // initLanguageSwitcher
+    languageSelector: {
+        triggers: document.querySelectorAll('.js-languageSelection'),
+    },
+
+
     // initMobileFeedbackSlider
-    slides: document.getElementsByClassName("whereDoWeMeet"),
-    buttonPrevious: document.querySelector('.previous'),
-    buttonNext: document.querySelector('.next'),
+    mobileSlider: {
+        triggerPrevious: document.querySelector('.previous'),
+        triggerNext: document.querySelector('.next'),
+        targets: document.getElementsByClassName("whereDoWeMeet"),
+    },
+    // slides: 
+    // buttonPrevious: 
+    // buttonNext: 
 }
