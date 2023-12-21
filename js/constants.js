@@ -52,16 +52,16 @@ const ELEMENTS = {
     },
 }
 
-const DIRECTION = {
+const STATE = {
 
-    expand: {
+    collapsed: {
         style: "rotate(0deg)",
         labelShowPhoto: "Показать больше фото",
         labelReadMore: "Читать еще",
         labelShowAll: `Показать Все (${ELEMENTS.commentsLength})`,
         labelBookPlace: "Забронировать место",
     },
-    collapse: {
+    expanded: {
         style: "rotate(180deg)",
         labelShowPhoto: "Показать меньше фото",
         labelReadMore: "Скрыть",

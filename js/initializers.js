@@ -25,8 +25,8 @@ function initBookingForm() {
 
     trigger.addEventListener('click', () => {
         const isModalHidden = target.classList.contains('dn');
-        const currentDir = isModalHidden ? 'collapse' : 'expand';
-        const { labelBookPlace } = DIRECTION[currentDir];
+        const currentDir = isModalHidden ? 'expanded' : 'collapsed';
+        const { labelBookPlace } = STATE[currentDir];
 
         trigger.innerHTML = labelBookPlace;
         target.classList.toggle('dn');
@@ -52,10 +52,10 @@ function initGallery() {
 
     trigger.addEventListener('click', () => {
         const isGalleryCollapsed = targets[0].classList.contains('dn');
-        const currentDir = isGalleryCollapsed ? 'collapse' : 'expand';
+        const currentDir = isGalleryCollapsed ? 'expanded' : 'collapsed';
 
         targets.forEach((_i, index, _a) => {
-            const { style, labelShowPhoto } = DIRECTION[currentDir];
+            const { style, labelShowPhoto } = STATE[currentDir];
 
             targets[index].classList.toggle('dn');
 
@@ -73,8 +73,8 @@ function initShowMoreAboutPhotoShoot() {
     for (let i = 0; i < triggers.length; i += 1) {
         triggers[i].addEventListener('click', () => {
             const isHiddenText = targets[i].classList.contains('dn');
-            const currentDir = isHiddenText ? 'collapse' : 'expand';
-            const { style, labelReadMore } = DIRECTION[currentDir];
+            const currentDir = isHiddenText ? 'expanded' : 'collapsed';
+            const { style, labelReadMore } = STATE[currentDir];
 
             targets[i].classList.toggle('dn');
             triggers[i].innerHTML = labelReadMore;
@@ -111,8 +111,8 @@ function initFeedbackBlock() {
     for (let i = 0; i < triggers.length; i += 1) {
         triggers[i].addEventListener('click', () => {
             const isHiddenComments = targets[0].classList.contains('dn');
-            const currentDir = isHiddenComments ? 'collapse' : 'expand';
-            const { style, labelShowAll } = DIRECTION[currentDir];
+            const currentDir = isHiddenComments ? 'expanded' : 'collapsed';
+            const { style, labelShowAll } = STATE[currentDir];
 
             for (let i = 0; i < targets.length; i += 1) {
                 targets[i].classList.toggle('dn');
