@@ -22,16 +22,13 @@ function initYandexMap() {
 //!показывает модальное окно
 function initBookingForm() {
     const { bookingModal: { target, trigger } } = ELEMENTS;
-    // const {target, trigger} = ELEMENTS.bookingModal;
 
     trigger.addEventListener('click', () => {
         const isModalHidden = target.classList.contains('dn');
-        if (isModalHidden) {
-            trigger.innerHTML = "Скрыть";
-        } else {
-            trigger.innerHTML = "Забронировать место";
-        }
+        const currentDir = isModalHidden ? 'collapse' : 'expand';
+        const { labelBookPlace } = DIRECTION[currentDir];
 
+        trigger.innerHTML = labelBookPlace;
         target.classList.toggle('dn');
     });
 }
@@ -49,7 +46,7 @@ function initVideo() {
 }
 
 
-// !показывает все фотографии
+// ! показывает все фотографии
 function initGallery() {
     const { gallery: { trigger, targets, targetParts } } = ELEMENTS;
 
@@ -75,15 +72,14 @@ function initShowMoreAboutPhotoShoot() {
 
     for (let i = 0; i < triggers.length; i += 1) {
         triggers[i].addEventListener('click', () => {
-            if (targets[i].classList.contains('dn')) {
-                targets[i].classList.remove('dn');
-                triggers[i].innerHTML = "Скрыть";
-                targetParts[i].style.transform = "rotate(180deg)";
-            } else {
-                targets[i].classList.add('dn');
-                triggers[i].innerHTML = "Читать еще";
-                targetParts[i].style.transform = "rotate(0deg)";
-            }
+            const isHiddenText = targets[i].classList.contains('dn');
+            const currentDir = isHiddenText ? 'collapse' : 'expand';
+            const { style, labelReadMore } = DIRECTION[currentDir];
+
+            targets[i].classList.toggle('dn');
+            triggers[i].innerHTML = labelReadMore;
+            targetParts[0].style.transform = style;
+            targetParts[1].style.transform = style;
         }
         )
     }
@@ -99,7 +95,7 @@ function initShowMoreAboutPhotographer() {
         })
     }
 }
-// !показывает количество отзывов и скрытые отзывы
+// показывает количество отзывов и скрытые отзывы
 function initDesktopFeedbackBlock() {
     const { comments, desktopFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
 
@@ -122,7 +118,7 @@ function initDesktopFeedbackBlock() {
     })
 }
 
-//! показывает скрытые отзывы для маленького экрана
+// показывает скрытые отзывы для маленького экрана
 function initMobileFeedbackBlock() {
     const { comments, mobileFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
 

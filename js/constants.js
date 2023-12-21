@@ -3,14 +3,15 @@ const DIRECTION = {
         style: "rotate(0deg)",
         labelShowPhoto: "Показать больше фото",
         labelReadMore: "Читать еще",
-        labelShowall: "Показать все",
-        labelRU: "RU",
+        labelShowAll: "Показать все",
+        labelBookPlace: "Забронировать место",
     },
     collapse: {
         style: "rotate(180deg)",
         labelShowPhoto: "Показать меньше фото",
-        labelHide: "Скрыть",
-        labelEN: "EN",
+        labelReadMore: "Скрыть",
+        labelShowAll: "Скрыть",
+        labelBookPlace: "Скрыть",
     }
 }
 
