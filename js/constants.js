@@ -28,16 +28,16 @@ const ELEMENTS = {
     },
     // initGallery  
     gallery: {
-        trigger: document.querySelector('.containerShowAllPhoto .showAllPhoto'),
+        trigger: document.querySelector('.showAllPhoto'),
         targets: document.querySelectorAll('.js-additionalGalleryPhoto'),
-        targetParts: document.querySelectorAll('.containerShowAllPhoto .arrowContainer'),
+        targetParts: document.querySelectorAll('.js-arrowGallery'),
     },
     // initShowMoreAboutPhotoShoot
 
     moreAboutPhotoShoot: {
-        triggers: document.querySelectorAll('.textAboutPhotoShoot .tal .showAll'),
-        targets: document.querySelectorAll('.textAboutPhotoShoot .dn'),
-        targetParts: document.querySelectorAll('.textAboutPhotoShoot .tal .arrowContainer'),
+        triggers: document.querySelectorAll('.js-readMore'),
+        targets: document.querySelectorAll('.js-hiddenText'),
+        targetParts: document.querySelectorAll('.js-arrowPhotoShoot'),
     },
 
     // initShowMoreAboutPhotographer
@@ -47,20 +47,20 @@ const ELEMENTS = {
     },
 
     // initDesktopFeedbackBlock, initMobileFeedbackBlock
-    comments: document.querySelectorAll('.comments .comment'),
+    comments: document.querySelectorAll('.comment'),
 
     // initDesktopFeedbackBlock
     desktopFeedbackBlock: {
-        trigger: document.querySelector('.comments .tar .showAll'),
-        targets: document.querySelectorAll('.comments .dn'),
-        targetPart: document.querySelector('.comments .tar .arrowContainer'),
+        trigger: document.querySelector('.js-desktopShowAll'),
+        targets: document.querySelectorAll('.js-desktopHiddenComments'),
+        targetPart: document.querySelector('.js-arrowDesktopComments'),
     },
 
     // initMobileFeedbackBlock
     mobileFeedbackBlock: {
-        trigger: document.querySelector('.forSmallScreen .tac .showAll'),
-        targets: document.querySelectorAll('.forSmallScreen .dn'),
-        targetPart: document.querySelector('.forSmallScreen .tac .arrowContainer'),
+        trigger: document.querySelector('.js-mobileShowAll'),
+        targets: document.querySelectorAll('.js-mobileHiddenComments'),
+        targetPart: document.querySelector('.js-arrowMobileComments'),
     },
 
     // initLanguageSwitcher
@@ -75,7 +75,4 @@ const ELEMENTS = {
         triggerNext: document.querySelector('.next'),
         targets: document.getElementsByClassName("whereDoWeMeet"),
     },
-    // slides: 
-    // buttonPrevious: 
-    // buttonNext: 
 }

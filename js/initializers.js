@@ -103,7 +103,7 @@ function initShowMoreAboutPhotographer() {
 function initDesktopFeedbackBlock() {
     const { comments, desktopFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
 
-    trigger.innerHTML = `Показать Все (${comments.length})`;
+    trigger.innerHTML = `Показать Все (${comments.length / 2})`;
 
     trigger.addEventListener('click', () => {
         if (targets[0].classList.contains('dn')) {
@@ -115,7 +115,7 @@ function initDesktopFeedbackBlock() {
         } else {
             targets.forEach((_i, index) => {
                 targets[index].classList.add('dn');
-                trigger.innerHTML = `Показать Все (${comments.length})`;
+                trigger.innerHTML = `Показать Все (${comments.length / 2})`;
                 targetPart.style.transform = "rotate(0deg)";
             })
         }
@@ -126,7 +126,7 @@ function initDesktopFeedbackBlock() {
 function initMobileFeedbackBlock() {
     const { comments, mobileFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
 
-    trigger.innerHTML = `Показать Все (${comments.length})`;
+    trigger.innerHTML = `Показать Все (${comments.length / 2})`;
 
     trigger.addEventListener('click', () => {
 
@@ -139,7 +139,7 @@ function initMobileFeedbackBlock() {
         } else {
             targets.forEach((_i, index) => {
                 targets[index].classList.add('dn');
-                trigger.innerHTML = `Показать Все (${comments.length})`;
+                trigger.innerHTML = `Показать Все (${comments.length / 2})`;
                 targetPart.style.transform = "rotate(0deg)";
             })
         }
