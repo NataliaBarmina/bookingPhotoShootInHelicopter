@@ -95,51 +95,35 @@ function initShowMoreAboutPhotographer() {
         })
     }
 }
-// показывает количество отзывов и скрытые отзывы
-function initDesktopFeedbackBlock() {
-    const { commentsLength, desktopFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
+// !показывает количество отзывов 
+function initFeedBackCounter() {
+    const { commentsLength, feedbackBlock: { triggers } } = ELEMENTS;
 
-    trigger.innerHTML = `Показать Все (${commentsLength})`;
-
-    trigger.addEventListener('click', () => {
-        const isHiddenComments = targets[0].classList.contains('dn');
-        const currentDir = isHiddenComments ? 'collapse' : 'expand';
-        const { style, labelShowAll } = DIRECTION[currentDir];
-
-
-        targets[0].classList.toggle('dn');
-        targets[1].classList.toggle('dn');
-
-        trigger.innerHTML = labelShowAll;
-        targetPart = style;
-
-
-    })
+    for (let i = 0; i < triggers.length; i += 1) {
+        triggers[i].innerHTML = `Показать Все (${commentsLength})`;
+    }
 }
 
-// показывает скрытые отзывы для маленького экрана
-function initMobileFeedbackBlock() {
-    const { commentsLength, mobileFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
+//! показывает скрытые отзывы
+function initFeedbackBlock() {
+    const { feedbackBlock: { triggers, targets, targetParts } } = ELEMENTS
 
-    trigger.innerHTML = `Показать Все (${commentsLength})`;
+    for (let i = 0; i < triggers.length; i += 1) {
+        triggers[i].addEventListener('click', () => {
+            const isHiddenComments = targets[0].classList.contains('dn');
+            const currentDir = isHiddenComments ? 'collapse' : 'expand';
+            const { style, labelShowAll } = DIRECTION[currentDir];
 
-    trigger.addEventListener('click', () => {
+            for (let i = 0; i < targets.length; i += 1) {
+                targets[i].classList.toggle('dn');
+            }
 
-        if (targets[0].classList.contains('dn')) {
-            targets.forEach((_i, index) => {
-                targets[index].classList.remove('dn');
-                trigger.innerHTML = "Скрыть";
-                targetPart.style.transform = "rotate(180deg)";
-            })
-        } else {
-            targets.forEach((_i, index) => {
-                targets[index].classList.add('dn');
-                trigger.innerHTML = `Показать Все (${commentsLength})`;
-                targetPart.style.transform = "rotate(0deg)";
-            })
-        }
-    })
+            triggers[i].innerHTML = labelShowAll;
+            targetParts[i] = style;
+        })
+    }
 }
+
 
 //! показывает выбор языка
 function initLanguageSwitcher() {

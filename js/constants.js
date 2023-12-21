@@ -1,5 +1,4 @@
 
-
 const ELEMENTS = {
 
     // initBookingForm: modal window in the top
@@ -32,28 +31,18 @@ const ELEMENTS = {
         targets: document.querySelectorAll('.moreInformation'),
     },
 
-    // initDesktopFeedbackBlock, initMobileFeedbackBlock
+    // iniFeedbackBlock
     commentsLength: document.querySelectorAll('.comment').length / 2,
-
-    // initDesktopFeedbackBlock
-    desktopFeedbackBlock: {
-        trigger: document.querySelector('.js-desktopShowAll'),
-        targets: document.querySelectorAll('.js-desktopHiddenComments'),
-        targetPart: document.querySelector('.js-arrowDesktopComments'),
-    },
-
-    // initMobileFeedbackBlock
-    mobileFeedbackBlock: {
-        trigger: document.querySelector('.js-mobileShowAll'),
-        targets: document.querySelectorAll('.js-mobileHiddenComments'),
-        targetPart: document.querySelector('.js-arrowMobileComments'),
+    feedbackBlock: {
+        triggers: document.querySelectorAll('.js-showAll'),
+        targets: document.querySelectorAll('.js-hiddenComments'),
+        targetParts: document.querySelectorAll('.js-arrowComments'),
     },
 
     // initLanguageSwitcher
     languageSelector: {
         triggers: document.querySelectorAll('.js-languageSelection'),
     },
-
 
     // initMobileFeedbackSlider
     mobileSlider: {

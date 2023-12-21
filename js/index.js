@@ -8,18 +8,9 @@
     initShowMoreAboutPhotoShoot();
     initYandexMap();
     initLanguageSwitcher();
+    initFeedBackCounter();
+    initFeedbackBlock();
 
-    initDesktopFeatures();
-    initMobileFeatures();
+    initMobileFeedbackSlider();
 })();
 
-// specific for desktop initializers
-function initDesktopFeatures() {
-    initDesktopFeedbackBlock();
-}
-
-// specific for mobile initializers
-function initMobileFeatures() {
-    initMobileFeedbackBlock();
-    initMobileFeedbackSlider();
-}
