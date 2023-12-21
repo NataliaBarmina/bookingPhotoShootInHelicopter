@@ -1,19 +1,4 @@
-const DIRECTION = {
-    expand: {
-        style: "rotate(0deg)",
-        labelShowPhoto: "Показать больше фото",
-        labelReadMore: "Читать еще",
-        labelShowAll: "Показать все",
-        labelBookPlace: "Забронировать место",
-    },
-    collapse: {
-        style: "rotate(180deg)",
-        labelShowPhoto: "Показать меньше фото",
-        labelReadMore: "Скрыть",
-        labelShowAll: "Скрыть",
-        labelBookPlace: "Скрыть",
-    }
-}
+
 
 const ELEMENTS = {
 
@@ -48,7 +33,7 @@ const ELEMENTS = {
     },
 
     // initDesktopFeedbackBlock, initMobileFeedbackBlock
-    comments: document.querySelectorAll('.comment'),
+    commentsLength: document.querySelectorAll('.comment').length / 2,
 
     // initDesktopFeedbackBlock
     desktopFeedbackBlock: {
@@ -76,4 +61,22 @@ const ELEMENTS = {
         triggerNext: document.querySelector('.next'),
         targets: document.getElementsByClassName("whereDoWeMeet"),
     },
+}
+
+const DIRECTION = {
+
+    expand: {
+        style: "rotate(0deg)",
+        labelShowPhoto: "Показать больше фото",
+        labelReadMore: "Читать еще",
+        labelShowAll: `Показать Все (${ELEMENTS.commentsLength})`,
+        labelBookPlace: "Забронировать место",
+    },
+    collapse: {
+        style: "rotate(180deg)",
+        labelShowPhoto: "Показать меньше фото",
+        labelReadMore: "Скрыть",
+        labelShowAll: "Скрыть",
+        labelBookPlace: "Скрыть",
+    }
 }

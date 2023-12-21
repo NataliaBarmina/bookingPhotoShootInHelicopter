@@ -97,32 +97,31 @@ function initShowMoreAboutPhotographer() {
 }
 // показывает количество отзывов и скрытые отзывы
 function initDesktopFeedbackBlock() {
-    const { comments, desktopFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
+    const { commentsLength, desktopFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
 
-    trigger.innerHTML = `Показать Все (${comments.length / 2})`;
+    trigger.innerHTML = `Показать Все (${commentsLength})`;
 
     trigger.addEventListener('click', () => {
-        if (targets[0].classList.contains('dn')) {
-            targets.forEach((_i, index) => {
-                targets[index].classList.remove('dn');
-                trigger.innerHTML = "Скрыть";
-                targetPart.style.transform = "rotate(180deg)";
-            })
-        } else {
-            targets.forEach((_i, index) => {
-                targets[index].classList.add('dn');
-                trigger.innerHTML = `Показать Все (${comments.length / 2})`;
-                targetPart.style.transform = "rotate(0deg)";
-            })
-        }
+        const isHiddenComments = targets[0].classList.contains('dn');
+        const currentDir = isHiddenComments ? 'collapse' : 'expand';
+        const { style, labelShowAll } = DIRECTION[currentDir];
+
+
+        targets[0].classList.toggle('dn');
+        targets[1].classList.toggle('dn');
+
+        trigger.innerHTML = labelShowAll;
+        targetPart = style;
+
+
     })
 }
 
 // показывает скрытые отзывы для маленького экрана
 function initMobileFeedbackBlock() {
-    const { comments, mobileFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
+    const { commentsLength, mobileFeedbackBlock: { trigger, targets, targetPart } } = ELEMENTS
 
-    trigger.innerHTML = `Показать Все (${comments.length / 2})`;
+    trigger.innerHTML = `Показать Все (${commentsLength})`;
 
     trigger.addEventListener('click', () => {
 
@@ -135,7 +134,7 @@ function initMobileFeedbackBlock() {
         } else {
             targets.forEach((_i, index) => {
                 targets[index].classList.add('dn');
-                trigger.innerHTML = `Показать Все (${comments.length / 2})`;
+                trigger.innerHTML = `Показать Все (${commentsLength})`;
                 targetPart.style.transform = "rotate(0deg)";
             })
         }
