@@ -38,8 +38,8 @@ function initBookingForm() {
 function initVideo() {
     const { videoPlayer: { targets, triggers } } = ELEMENTS;
 
-    triggers.forEach((t, i) => {
-        t.addEventListener('click', () => {
+    triggers.forEach((trigger, i) => {
+        trigger.addEventListener('click', () => {
             targets[i].style.zIndex = '3';
         });
     });
@@ -70,58 +70,74 @@ function initGallery() {
 function initShowMoreAboutPhotoShoot() {
     const { moreAboutPhotoShoot: { triggers, targets, targetParts } } = ELEMENTS;
 
-    for (let i = 0; i < triggers.length; i += 1) {
-        triggers[i].addEventListener('click', () => {
+    triggers.forEach((trigger, i) => {
+        trigger.addEventListener('click', () => {
             const isHiddenText = targets[i].classList.contains('dn');
             const currentDir = isHiddenText ? 'expanded' : 'collapsed';
             const { style, labelReadMore } = STATE[currentDir];
 
             targets[i].classList.toggle('dn');
-            triggers[i].innerHTML = labelReadMore;
+            trigger.innerHTML = labelReadMore;
             targetParts[0].style.transform = style;
             targetParts[1].style.transform = style;
-        }
-        )
-    }
+        })
+    })
 }
 
 //! показывает дополнительный текст о фотографе
 function initShowMoreAboutPhotographer() {
     const { moreAboutPhotographer: { triggers, targets } } = ELEMENTS;
 
-    for (let i = 0; i < triggers.length; i += 1) {
-        triggers[i].addEventListener('click', () => {
-            targets[i].classList.toggle("dn");
+    triggers.forEach((trigger, i) => {
+        trigger.addEventListener('click', () => {
+            targets[i].classList.toggle('dn');
         })
-    }
+    })
 }
+
 // !показывает количество отзывов 
 function initFeedBackCounter() {
     const { commentsLength, feedbackBlock: { triggers } } = ELEMENTS;
 
-    for (let i = 0; i < triggers.length; i += 1) {
-        triggers[i].innerHTML = `Показать Все (${commentsLength})`;
+    for (let trigger of triggers) {
+        trigger.innerHTML = `Показать Все (${commentsLength})`;
     }
 }
+
 
 //! показывает скрытые отзывы
 function initFeedbackBlock() {
     const { feedbackBlock: { triggers, targets, targetParts } } = ELEMENTS
 
-    for (let i = 0; i < triggers.length; i += 1) {
-        triggers[i].addEventListener('click', () => {
+    // for (let i = 0; i < triggers.length; i += 1) {
+    //     triggers[i].addEventListener('click', () => {
+    //         const isHiddenComments = targets[0].classList.contains('dn');
+    //         const currentDir = isHiddenComments ? 'expanded' : 'collapsed';
+    //         const { style, labelShowAll } = STATE[currentDir];
+
+    //         for (let target of targets) {
+    //             target.classList.toggle('dn');
+    //         }
+
+    //         triggers[i].innerHTML = labelShowAll;
+    //         targetParts[i] = style;
+    //     })
+    // }
+
+    triggers.forEach((trigger, i) => {
+        trigger.addEventListener('click', () => {
             const isHiddenComments = targets[0].classList.contains('dn');
             const currentDir = isHiddenComments ? 'expanded' : 'collapsed';
             const { style, labelShowAll } = STATE[currentDir];
 
-            for (let i = 0; i < targets.length; i += 1) {
-                targets[i].classList.toggle('dn');
+            for (let target of targets) {
+                target.classList.toggle('dn');
             }
 
-            triggers[i].innerHTML = labelShowAll;
+            trigger.innerHTML = labelShowAll;
             targetParts[i] = style;
         })
-    }
+    })
 }
 
 
