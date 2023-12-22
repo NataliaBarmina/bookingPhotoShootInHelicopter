@@ -109,21 +109,6 @@ function initFeedBackCounter() {
 function initFeedbackBlock() {
     const { feedbackBlock: { triggers, targets, targetParts } } = ELEMENTS
 
-    // for (let i = 0; i < triggers.length; i += 1) {
-    //     triggers[i].addEventListener('click', () => {
-    //         const isHiddenComments = targets[0].classList.contains('dn');
-    //         const currentDir = isHiddenComments ? 'expanded' : 'collapsed';
-    //         const { style, labelShowAll } = STATE[currentDir];
-
-    //         for (let target of targets) {
-    //             target.classList.toggle('dn');
-    //         }
-
-    //         triggers[i].innerHTML = labelShowAll;
-    //         targetParts[i] = style;
-    //     })
-    // }
-
     triggers.forEach((trigger, i) => {
         trigger.addEventListener('click', () => {
             const isHiddenComments = targets[0].classList.contains('dn');
@@ -145,13 +130,9 @@ function initFeedbackBlock() {
 function initLanguageSwitcher() {
     const { languageSelector: { triggers } } = ELEMENTS
 
-    for (let i = 0; i < triggers.length; i += 1) {
-        triggers[i].addEventListener('click', () => {
-            if (triggers[i].textContent === "RU") {
-                triggers[i].innerHTML = "EN";
-            } else {
-                triggers[i].innerHTML = "RU";
-            }
+    for (let trigger of triggers) {
+        trigger.addEventListener('click', () => {
+            (trigger.textContent === "RU") ? (trigger.innerHTML = "EN") : (trigger.innerHTML = "RU");
         })
     }
 }
