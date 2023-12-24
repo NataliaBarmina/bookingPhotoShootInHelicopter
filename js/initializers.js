@@ -132,7 +132,8 @@ function initLanguageSwitcher() {
 
     for (let trigger of triggers) {
         trigger.addEventListener('click', () => {
-            (trigger.textContent === "RU") ? (trigger.innerHTML = "EN") : (trigger.innerHTML = "RU");
+            const nextLanguage = trigger.textContent === "RU" ? "EN" : "RU";
+            trigger.innerHTML = nextLanguage;
         })
     }
 }
