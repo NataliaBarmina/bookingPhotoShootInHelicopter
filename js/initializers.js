@@ -19,7 +19,7 @@ function initYandexMap() {
     });
 }
 
-// !показывает количество отзывов 
+// !показывает реальное количество отзывов 
 function initFeedBackCounter() {
     const { commentsLength, feedbackBlock: { triggers } } = ELEMENTS;
 
@@ -91,10 +91,10 @@ function initGallery() {
         const isGalleryCollapsed = targets[0].classList.contains('dn');
         const currentDir = isGalleryCollapsed ? 'expanded' : 'collapsed';
 
-        targets.forEach((_i, index, _a) => {
+        targets.forEach((_i, i) => {
             const { style, labelShowPhoto } = STATE[currentDir];
 
-            targets[index].classList.toggle('dn');
+            targets[i].classList.toggle('dn');
 
             trigger.innerHTML = labelShowPhoto;
             targetParts[0].style.transform = style;

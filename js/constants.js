@@ -21,15 +21,7 @@ const ELEMENTS = {
 
     moreAboutPhotoShoot: {
         targetParts: document.querySelectorAll('.js-arrowPhotoShoot'),
-        // triggers: document.querySelectorAll('.js-readMore'),
-        // targets: document.querySelectorAll('.js-hiddenText'),
     },
-
-    // initShowMoreAboutPhotographer
-    // moreAboutPhotographer: {
-    //     triggers: document.querySelectorAll('.buttonMoreInformation'),
-    //     targets: document.querySelectorAll('.moreInformation'),
-    // },
 
     // iniFeedbackBlock
     commentsLength: document.querySelectorAll('.comment').length / 2,
