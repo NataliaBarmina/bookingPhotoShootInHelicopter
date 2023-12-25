@@ -56,37 +56,17 @@ function initBookingForm() {
 
 //! показывает дополнительный текст о фотографе
 function initShowMoreAboutPhotographer() {
-    const { moreAboutPhotographer: { triggers, targets } } = ELEMENTS;
-
-    triggers.forEach((trigger, i) => {
-        trigger.addEventListener('click', () => {
-            targets[i].classList.toggle('dn');
-        })
+    document.body.addEventListener('click', (event) => {
+        const eventTarget = event.target;
+        if (!eventTarget.classList.contains('buttonMoreInformation')) return;
+        const changeElem = eventTarget.nextElementSibling;
+        changeElem.classList.toggle('dn');
     })
 }
-
-// // !показывает дополнительный текст о фотоcсессии
-// function initShowMoreAboutPhotoShoot() {
-//     const { moreAboutPhotoShoot: { triggers, targets, targetParts } } = ELEMENTS;
-
-//     triggers.forEach((trigger, i) => {
-//         trigger.addEventListener('click', () => {
-//             const isHiddenText = targets[i].classList.contains('dn');
-//             const currentDir = isHiddenText ? 'expanded' : 'collapsed';
-//             const { style, labelReadMore } = STATE[currentDir];
-
-//             targets[i].classList.toggle('dn');
-//             trigger.innerHTML = labelReadMore;
-//             targetParts[0].style.transform = style;
-//             targetParts[1].style.transform = style;
-//         })
-//     })
-// }
-
-
+// ! показывает дополнительный текст о фотосъемке
 function initShowMoreAboutPhotoShoot() {
-    const { moreAboutPhotoShoot: { container, targetParts } } = ELEMENTS;
-    container.addEventListener('click', (event) => {
+    const { moreAboutPhotoShoot: { targetParts } } = ELEMENTS;
+    document.body.addEventListener('click', (event) => {
         const eventTarget = event.target;
         if (!eventTarget.classList.contains('js-readMore')) return;
 
@@ -102,9 +82,6 @@ function initShowMoreAboutPhotoShoot() {
 
     })
 }
-
-
-
 
 // ! показывает все фотографии
 function initGallery() {

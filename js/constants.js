@@ -20,17 +20,16 @@ const ELEMENTS = {
     // initShowMoreAboutPhotoShoot
 
     moreAboutPhotoShoot: {
-        container: document.querySelector('.textAboutPhotoShoot'),
         targetParts: document.querySelectorAll('.js-arrowPhotoShoot'),
         // triggers: document.querySelectorAll('.js-readMore'),
         // targets: document.querySelectorAll('.js-hiddenText'),
     },
 
     // initShowMoreAboutPhotographer
-    moreAboutPhotographer: {
-        triggers: document.querySelectorAll('.buttonMoreInformation'),
-        targets: document.querySelectorAll('.moreInformation'),
-    },
+    // moreAboutPhotographer: {
+    //     triggers: document.querySelectorAll('.buttonMoreInformation'),
+    //     targets: document.querySelectorAll('.moreInformation'),
+    // },
 
     // iniFeedbackBlock
     commentsLength: document.querySelectorAll('.comment').length / 2,
