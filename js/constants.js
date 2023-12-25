@@ -20,9 +20,10 @@ const ELEMENTS = {
     // initShowMoreAboutPhotoShoot
 
     moreAboutPhotoShoot: {
-        triggers: document.querySelectorAll('.js-readMore'),
-        targets: document.querySelectorAll('.js-hiddenText'),
+        container: document.querySelector('.textAboutPhotoShoot'),
         targetParts: document.querySelectorAll('.js-arrowPhotoShoot'),
+        // triggers: document.querySelectorAll('.js-readMore'),
+        // targets: document.querySelectorAll('.js-hiddenText'),
     },
 
     // initShowMoreAboutPhotographer
