@@ -28,7 +28,7 @@ const ELEMENTS = {
     feedbackBlock: {
         triggers: document.querySelectorAll('.js-showAll'),
         targets: document.querySelectorAll('.js-hiddenComments'),
-        targetParts: document.querySelectorAll('.js-arrowComments'),
+        // targetParts: document.querySelectorAll('.js-arrowComments'),
     },
 
     // initLanguageSwitcher

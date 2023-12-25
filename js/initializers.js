@@ -63,6 +63,7 @@ function initShowMoreAboutPhotographer() {
         changeElem.classList.toggle('dn');
     })
 }
+
 // ! показывает дополнительный текст о фотосъемке
 function initShowMoreAboutPhotoShoot() {
     const { moreAboutPhotoShoot: { targetParts } } = ELEMENTS;
@@ -77,8 +78,9 @@ function initShowMoreAboutPhotoShoot() {
         const currentDir = isHiddenText ? 'collapsed' : 'expanded';
         const { style, labelReadMore } = STATE[currentDir];
         eventTarget.innerHTML = labelReadMore;
-        targetParts[0].style.transform = style;
-        targetParts[1].style.transform = style;
+
+        const targetPart = eventTarget.nextElementSibling;
+        targetPart.style.transform = style;
 
     })
 }
@@ -105,24 +107,26 @@ function initGallery() {
 
 //! показывает скрытые отзывы
 function initFeedbackBlock() {
-    const { feedbackBlock: { triggers, targets, targetParts } } = ELEMENTS
 
-    triggers.forEach((trigger, i) => {
-        trigger.addEventListener('click', () => {
-            const isHiddenComments = targets[0].classList.contains('dn');
-            const currentDir = isHiddenComments ? 'expanded' : 'collapsed';
-            const { style, labelShowAll } = STATE[currentDir];
+    document.body.addEventListener('click', (event) => {
+        const eventTarget = event.target;
+        if (!eventTarget.classList.contains('js-showAll')) return;
 
-            for (let target of targets) {
-                target.classList.toggle('dn');
-            }
+        const changeElems = eventTarget.closest('.js-comments').querySelectorAll('.js-hiddenComments');
 
-            trigger.innerHTML = labelShowAll;
-            targetParts[i] = style;
-        })
+        for (let changeElem of changeElems) {
+            changeElem.classList.toggle('dn');
+        }
+        const isHiddenComments = changeElems[0].classList.contains('dn');
+        const currentDir = isHiddenComments ? 'collapsed' : 'expanded';
+        const { style, labelShowAll } = STATE[currentDir];
+
+        eventTarget.innerHTML = labelShowAll;
+
+        const targetPart = eventTarget.nextElementSibling;
+        targetPart.style.transform = style;
     })
 }
-
 
 //! показывает выбор языка
 function initLanguageSwitcher() {
