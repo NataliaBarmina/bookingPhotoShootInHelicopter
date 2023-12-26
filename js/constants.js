@@ -18,10 +18,15 @@ const ELEMENTS = {
         targetParts: document.querySelectorAll('.js-arrowGallery'),
     },
     // initShowMoreAboutPhotoShoot
-
     moreAboutPhotoShoot: {
         targetParts: document.querySelectorAll('.js-arrowPhotoShoot'),
     },
+
+    // initShowMoreAboutPhotographer
+    // moreAboutPhotographer: {
+    //     triggers: document.querySelectorAll('.buttonMoreInformation'),
+    //     targets: document.querySelectorAll('.moreInformation'),
+    // },
 
     // iniFeedbackBlock
     commentsLength: document.querySelectorAll('.comment').length / 2,
@@ -41,6 +46,7 @@ const ELEMENTS = {
         triggerPrevious: document.querySelector('.previous'),
         triggerNext: document.querySelector('.next'),
         targets: document.getElementsByClassName("whereDoWeMeet"),
+        addTexts: document.querySelectorAll('.sliderWhereDoWeMeet .moreInformation'),
     },
 }
 

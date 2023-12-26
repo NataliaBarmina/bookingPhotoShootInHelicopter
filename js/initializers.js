@@ -64,6 +64,16 @@ function initShowMoreAboutPhotographer() {
     })
 }
 
+// function initShowMoreAboutPhotographer() {
+//     const { moreAboutPhotographer: { triggers, targets } } = ELEMENTS;
+
+//     triggers.forEach((trigger, i) => {
+//         trigger.addEventListener('click', () => {
+//             targets[i].classList.toggle('dn');
+//         })
+//     })
+// }
+
 // ! показывает дополнительный текст о фотосъемке
 function initShowMoreAboutPhotoShoot() {
     const { moreAboutPhotoShoot: { targetParts } } = ELEMENTS;
@@ -142,7 +152,7 @@ function initLanguageSwitcher() {
 
 //  !слайдер /
 function initMobileFeedbackSlider() {
-    const { mobileSlider: { triggerPrevious, triggerNext, targets } } = ELEMENTS;
+    const { mobileSlider: { triggerPrevious, triggerNext, targets, addTexts } } = ELEMENTS;
 
     triggerPrevious.addEventListener('click', previousSlide);
     triggerNext.addEventListener('click', nextSlide);
@@ -163,10 +173,16 @@ function initMobileFeedbackSlider() {
         if (n < 1) {
             slideIndex = targets.length
         }
-        for (let slide of targets) {
-            slide.style.display = "none";
+        // всем слайдам присваиваем display:none
+        for (let i = 0; i < targets.length; i += 1) {
+            targets[i].style.display = "none";
+            // скрываем дополнительный текст о фотографе (если он был открыт) при переключении между слайдами 
+            if (!addTexts[i].classList.contains('dn')) {
+                addTexts[i].classList.add('dn');
+            }
         }
-        targets[slideIndex - 1].style.display = "block"; /* Делаем элемент блочным: */
+        //  Делаем текущий сдайд блочным: 
+        targets[slideIndex - 1].style.display = "block";
     }
 
     //!!!мое решение 
